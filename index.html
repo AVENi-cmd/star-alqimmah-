@@ -4,594 +4,1067 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ستار القمة للشقق المخدومة | TOP STAR Serviced Apartments</title>
-  <meta name="description" content="فندق ستار القمة للشقق المخدومة في الأحساء، الهفوف - حي السلمانية الجنوبية. ترخيص وزارة السياحة 10009918.">
-  <meta property="og:title" content="ستار القمة للشقق المخدومة المفروشة">
-  <meta property="og:description" content="إقامة فاخرة تجمع بين الخصوصية الفندقية وكرم الضيافة في الأحساء، الهفوف.">
+  <meta name="description" content="فندق ستار القمة للشقق المخدومة في الأحساء، الهفوف - حي السلمانية الجنوبية. ترخيص وزارة السياحة 10009918. إقامة فندقية فاخرة بالقرب من جامعة الملك فيصل ومجمع الراشد.">
+  <meta property="og:title" content="ستار القمة للشقق المخدومة | فخامة الإقامة في الأحساء">
+  <meta property="og:description" content="أجنحة وغرف عائلية مخدومة بترخيص وزارة السياحة في الهفوف. احجز إقامتك المباشرة بدون وسيط.">
   <meta property="og:image" content="images/F0F8953A-C1FD-479F-9D93-65AA69085581.jpeg">
-  
+
+  <!-- Google Fonts: Readex Pro for Ultra-Modern Clean Hospitality UI + Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-dark: #0B0D12;
-      --bg-secondary: #12151D;
-      --bg-card: #171B24;
-      --gold-primary: #C5A880;
-      --gold-light: #E0C7A6;
-      --gold-dark: #987B55;
-      --star-red: #C52222;
-      --text-white: #FFFFFF;
-      --text-primary: #F0F2F5;
-      --text-secondary: #A0A6B2;
-      --border-subtle: rgba(197, 168, 128, 0.2);
-      --border-card: rgba(255, 255, 255, 0.06);
-      --transition: all 0.3s ease;
+      --bg-cream: #FAF8F5;
+      --bg-white: #FFFFFF;
+      --text-charcoal: #1A1D20;
+      --text-muted: #5A626A;
+      --text-light: #7E8790;
+      --gold-bronze: #C5A880;
+      --gold-dark: #9E7F55;
+      --gold-soft: #F4EFEA;
+      --border-subtle: #E8E4DF;
+      --border-card: #EFECE6;
+      --shadow-sm: 0 4px 15px rgba(26, 29, 32, 0.04);
+      --shadow-md: 0 12px 32px rgba(26, 29, 32, 0.07);
+      --shadow-lg: 0 20px 48px rgba(26, 29, 32, 0.12);
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Cairo', system-ui, sans-serif;
-      background-color: var(--bg-dark);
-      color: var(--text-primary);
+      font-family: 'Readex Pro', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-charcoal);
       line-height: 1.7;
       direction: rtl;
     }
-    .latin { font-family: 'Cinzel', serif; letter-spacing: 1.5px; }
+    .latin { font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: 0.5px; }
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; height: auto; display: block; }
-    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
     .icon { width: 20px; height: 20px; fill: currentColor; display: inline-block; vertical-align: middle; flex-shrink: 0; }
 
-    /* Header */
+    /* Minimal Luxury Navbar */
     .site-header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      background: rgba(11, 13, 18, 0.95);
+      background: rgba(250, 248, 245, 0.94);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border-subtle);
+      transition: var(--transition);
     }
     .nav-wrapper { display: flex; justify-content: space-between; align-items: center; height: 80px; }
     .brand-logo { display: flex; align-items: center; gap: 12px; }
     .logo-emblem {
-      width: 44px; height: 44px; background: #171B24;
-      border: 1.5px solid var(--gold-primary); border-radius: 10px;
+      width: 42px; height: 42px;
+      background: var(--text-charcoal);
+      border-radius: 8px;
       display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 0 12px rgba(197, 168, 128, 0.2);
+      color: var(--gold-bronze);
     }
-    .brand-title { font-size: 1.25rem; font-weight: 800; color: var(--text-white); }
-    .brand-title .red { color: var(--star-red); }
-    .brand-title .gold { color: var(--gold-primary); }
-    .brand-subtitle { font-size: 0.7rem; color: var(--gold-light); font-weight: 600; }
-    .nav-links { display: flex; gap: 28px; list-style: none; }
-    .nav-links a { font-weight: 600; font-size: 0.92rem; color: var(--text-secondary); transition: var(--transition); }
-    .nav-links a:hover { color: var(--gold-primary); }
-    .btn-header-book {
-      background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
-      color: #0B0D12; font-weight: 700; font-size: 0.9rem;
-      padding: 10px 20px; border-radius: 8px; border: 1px solid var(--gold-light);
-      cursor: pointer; transition: var(--transition); display: inline-flex; align-items: center; gap: 8px;
-    }
-    .btn-header-book:hover { transform: translateY(-2px); }
+    .brand-title { font-size: 1.25rem; font-weight: 700; color: var(--text-charcoal); line-height: 1.2; }
+    .brand-title .gold { color: var(--gold-dark); }
+    .brand-subtitle { font-size: 0.68rem; color: var(--text-light); font-weight: 600; letter-spacing: 1px; }
 
-    /* Hero */
-    .hero-section {
-      min-height: 90vh; display: flex; align-items: center; position: relative;
-      padding: 130px 0 70px; text-align: center;
-      background: radial-gradient(circle at 50% 25%, #181C26 0%, #0B0D12 85%);
-      overflow: hidden;
-    }
-    .hero-image-backdrop {
-      position: absolute; inset: 0;
-      background-image: url('images/F0F8953A-C1FD-479F-9D93-65AA69085581.jpeg');
-      background-size: cover; background-position: center;
-      filter: brightness(0.35) contrast(1.1); z-index: 0;
-    }
-    .hero-bg-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(11,13,18,0.75) 0%, rgba(11,13,18,0.96) 85%, #0B0D12 100%);
-      z-index: 1;
-    }
-    .hero-content { position: relative; z-index: 2; max-width: 840px; margin: 0 auto; }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px; padding: 6px 18px;
-      background: rgba(23, 27, 36, 0.9); border: 1px solid var(--border-subtle);
-      border-radius: 50px; margin-bottom: 22px; font-size: 0.85rem; font-weight: 600; color: var(--gold-light);
-    }
-    .hero-title { font-size: 3rem; font-weight: 900; line-height: 1.25; margin-bottom: 16px; color: #fff; }
-    .hero-title .red { color: var(--star-red); }
-    .hero-title .gold { color: var(--gold-primary); }
-    .hero-subtitle-en { font-size: 1.1rem; color: var(--gold-light); margin-bottom: 18px; letter-spacing: 2px; }
-    .hero-desc { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; }
-    .hero-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
-    .btn-primary {
-      background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
-      color: #0B0D12; font-weight: 800; font-size: 1.05rem;
-      padding: 14px 34px; border-radius: 10px; border: 1px solid var(--gold-light);
-      cursor: pointer; transition: var(--transition); display: inline-flex; align-items: center; gap: 10px;
-    }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(197,168,128,0.35); }
-    .btn-secondary {
-      background: rgba(23, 27, 36, 0.7); color: var(--text-white);
-      font-weight: 700; font-size: 1.05rem; padding: 14px 30px;
-      border-radius: 10px; border: 1px solid var(--border-subtle);
-      transition: var(--transition); display: inline-flex; align-items: center; gap: 10px;
-    }
-    .btn-secondary:hover { border-color: var(--gold-primary); color: var(--gold-primary); }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { font-weight: 500; font-size: 0.95rem; color: var(--text-muted); transition: var(--transition); }
+    .nav-links a:hover { color: var(--gold-dark); }
 
-    /* Trust Bar */
-    .trust-bar { position: relative; z-index: 10; margin-top: -45px; margin-bottom: 60px; }
-    .trust-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
-      background: var(--bg-card); border: 1px solid var(--border-subtle);
-      border-radius: 14px; padding: 22px; box-shadow: 0 15px 35px rgba(0,0,0,0.6);
-    }
-    .trust-card { display: flex; align-items: center; gap: 14px; padding: 8px 12px; border-right: 1px solid rgba(255,255,255,0.06); }
-    .trust-card:last-child { border-right: none; }
-    .trust-icon-box {
-      width: 48px; height: 48px; background: rgba(197, 168, 128, 0.1);
-      border: 1px solid var(--border-subtle); border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--gold-primary); flex-shrink: 0;
-    }
-    .trust-info h4 { font-size: 1.05rem; font-weight: 800; color: var(--text-white); }
-    .trust-info p { font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px; }
-
-    /* Sections */
-    section { padding: 80px 0; }
-    .section-header { text-align: center; max-width: 650px; margin: 0 auto 50px; }
-    .section-eyebrow {
-      display: inline-flex; align-items: center; gap: 6px;
-      color: var(--gold-primary); font-size: 0.85rem; font-weight: 700;
-      letter-spacing: 2px; margin-bottom: 10px;
-    }
-    .section-heading { font-size: 2.2rem; font-weight: 800; color: var(--text-white); margin-bottom: 12px; }
-    .section-subtext { font-size: 0.98rem; color: var(--text-secondary); }
-
-    /* Units */
-    .units-section { background: var(--bg-secondary); }
-    .units-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .unit-card {
-      background: var(--bg-card); border: 1px solid var(--border-card);
-      border-radius: 16px; overflow: hidden; display: flex; flex-direction: column;
-      transition: var(--transition); position: relative;
-    }
-    .unit-card:hover { transform: translateY(-6px); border-color: var(--gold-primary); box-shadow: 0 15px 35px rgba(0,0,0,0.5); }
-    .unit-badge {
-      position: absolute; top: 16px; right: 16px;
-      background: rgba(11, 13, 18, 0.85); border: 1px solid var(--gold-primary);
-      color: var(--gold-light); font-size: 0.75rem; font-weight: 700;
-      padding: 4px 12px; border-radius: 20px; z-index: 5;
-    }
-    .unit-badge.featured { background: var(--star-red); border-color: var(--star-red); color: #fff; }
-    .unit-img-wrapper { height: 240px; overflow: hidden; position: relative; background: #11141C; }
-    .unit-img-wrapper img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.5s ease; }
-    .unit-card:hover .unit-img-wrapper img { transform: scale(1.06); }
-    .unit-details { padding: 22px; display: flex; flex-direction: column; flex-grow: 1; }
-    .unit-title { font-size: 1.3rem; font-weight: 800; color: var(--text-white); }
-    .unit-subtitle-en { font-size: 0.8rem; color: var(--gold-light); margin-bottom: 14px; }
-    .unit-features-list { list-style: none; margin-bottom: 20px; display: flex; flex-direction: column; gap: 8px; }
-    .unit-feature-item { display: flex; align-items: center; gap: 8px; font-size: 0.86rem; color: var(--text-secondary); }
-    .unit-pricing-bar {
-      margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08);
-      display: flex; justify-content: space-between; align-items: center;
-    }
-    .price-val { font-size: 1.55rem; font-weight: 900; color: var(--gold-primary); }
-    .price-unit { font-size: 0.82rem; color: var(--text-secondary); }
-    .btn-book-unit {
-      background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
-      color: #0B0D12; font-weight: 700; font-size: 0.88rem;
-      padding: 8px 18px; border-radius: 6px; border: 1px solid var(--gold-light);
-      cursor: pointer; transition: var(--transition);
-    }
-
-    /* Gallery */
-    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .gallery-item {
-      height: 280px; border-radius: 12px; overflow: hidden; position: relative;
-      cursor: pointer; border: 1px solid var(--border-card); background: #11141C;
-    }
-    .gallery-item.span-2 { grid-column: span 2; }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.5s ease; }
-    .gallery-item:hover img { transform: scale(1.05); }
-    .gallery-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg, transparent 40%, rgba(11,13,18,0.9) 100%);
-      display: flex; align-items: flex-end; padding: 18px;
-    }
-    .gallery-caption h5 { font-size: 1rem; font-weight: 700; color: var(--text-white); }
-    .gallery-caption span { font-size: 0.75rem; color: var(--gold-light); }
-
-    /* Amenities */
-    .amenities-section { background: var(--bg-secondary); }
-    .amenities-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-    .amenity-card {
-      background: var(--bg-card); border: 1px solid var(--border-card);
-      border-radius: 12px; padding: 24px 18px; text-align: center;
-    }
-    .amenity-icon {
-      width: 52px; height: 52px; margin: 0 auto 14px;
-      background: rgba(197, 168, 128, 0.08); border: 1px solid var(--border-subtle);
-      border-radius: 10px; display: flex; align-items: center; justify-content: center;
-      color: var(--gold-primary);
-    }
-    .amenity-card h4 { font-size: 1.05rem; font-weight: 700; color: var(--text-white); margin-bottom: 6px; }
-    .amenity-card p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; }
-
-    /* Real Guest Reviews */
-    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-    .review-card {
-      background: var(--bg-card); border: 1px solid var(--border-card);
-      border-radius: 14px; padding: 22px; display: flex; flex-direction: column;
-      position: relative;
-    }
-    .review-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-    .reviewer-avatar {
-      width: 42px; height: 42px; border-radius: 50%;
-      background: linear-gradient(135deg, #1E232F, #12151D);
-      border: 1px solid var(--gold-primary);
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700; color: var(--gold-primary); font-size: 0.95rem;
-    }
-    .reviewer-info h5 { font-size: 0.95rem; font-weight: 700; color: var(--text-white); line-height: 1.3; }
-    .reviewer-info span { font-size: 0.75rem; color: var(--gold-light); display: block; }
-    .review-stars-bar { color: #F5A623; margin-bottom: 10px; font-size: 0.95rem; }
-    .review-text { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 12px; }
-    .review-badge {
-      display: flex; align-items: center; gap: 6px;
-      font-size: 0.75rem; color: #4ADE80; margin-top: auto; padding-top: 10px;
-      border-top: 1px solid rgba(255,255,255,0.05);
-    }
-
-    /* Location */
-    .location-section { background: var(--bg-secondary); }
-    .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
-    .location-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 16px; padding: 30px; }
-    .location-title { font-size: 1.5rem; font-weight: 800; color: var(--text-white); margin-bottom: 10px; }
-    .location-address { font-size: 0.92rem; color: var(--gold-light); margin-bottom: 20px; line-height: 1.6; }
-    .landmarks-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
-    .landmark-item {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 8px 12px; background: rgba(255, 255, 255, 0.03); border-radius: 6px; font-size: 0.88rem;
-    }
-    .landmark-dist { color: var(--gold-primary); font-weight: 700; font-size: 0.82rem; }
-    .btn-maps {
-      background: rgba(197, 168, 128, 0.12); color: var(--gold-primary);
-      border: 1px solid var(--gold-primary); font-weight: 700; font-size: 0.9rem;
-      padding: 10px 20px; border-radius: 6px; display: inline-flex; align-items: center; gap: 8px;
-    }
-    .btn-maps:hover { background: var(--gold-primary); color: #0B0D12; }
-    .map-frame-wrapper {
-      height: 380px; border-radius: 16px; overflow: hidden;
-      border: 1px solid var(--border-subtle); background: #11141C;
-    }
-    .map-frame-wrapper iframe {
-      width: 100%; height: 100%; border: 0;
-      filter: invert(90%) hue-rotate(180deg) brightness(85%) contrast(120%);
-    }
-
-    /* Modal Booking */
-    .modal-backdrop {
-      position: fixed; inset: 0; background: rgba(5, 7, 10, 0.85);
-      backdrop-filter: blur(10px); z-index: 2000;
-      display: none; align-items: center; justify-content: center; padding: 20px;
-    }
-    .modal-backdrop.active { display: flex; }
-    .modal-dialog {
-      background: var(--bg-card); border: 1.5px solid var(--gold-primary);
-      border-radius: 16px; width: 100%; max-width: 520px; max-height: 90vh;
-      overflow-y: auto; padding: 30px; position: relative;
-    }
-    .modal-close {
-      position: absolute; top: 16px; left: 16px; background: none; border: none;
-      color: var(--text-secondary); cursor: pointer; font-size: 1.5rem; line-height: 1;
-    }
-    .modal-header { margin-bottom: 20px; text-align: right; }
-    .modal-header h3 { font-size: 1.35rem; font-weight: 800; color: var(--text-white); }
-    .modal-header p { font-size: 0.82rem; color: var(--gold-light); }
-    .booking-form { display: flex; flex-direction: column; gap: 14px; text-align: right; }
-    .form-group { display: flex; flex-direction: column; gap: 6px; }
-    .form-label { font-size: 0.82rem; font-weight: 700; color: var(--text-primary); }
-    .form-control {
-      background: #11141C; border: 1px solid var(--border-subtle);
-      border-radius: 8px; padding: 10px 14px; font-family: 'Cairo', sans-serif;
-      font-size: 0.9rem; color: var(--text-white); outline: none;
-    }
-    .form-control:focus { border-color: var(--gold-primary); }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .promo-group { display: flex; gap: 8px; }
-    .btn-apply {
-      background: var(--gold-primary); color: #0B0D12; border: none;
-      border-radius: 8px; padding: 0 16px; font-weight: 700; cursor: pointer;
-    }
-    .calc-card {
-      background: rgba(11, 13, 18, 0.6); border: 1px solid var(--border-subtle);
-      border-radius: 10px; padding: 14px; margin-top: 6px;
-    }
-    .calc-row { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 6px; }
-    .calc-row.total {
-      border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;
-      font-size: 1.1rem; font-weight: 800; color: var(--gold-primary); margin-bottom: 0;
-    }
-    .btn-submit-booking {
-      background: linear-gradient(135deg, #25D366, #128C7E);
-      color: #FFFFFF; border: none; border-radius: 10px; padding: 13px;
-      font-size: 1rem; font-weight: 800; cursor: pointer;
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-      margin-top: 6px;
-    }
-
-    /* Lightbox */
-    .lightbox-modal {
-      position: fixed; inset: 0; background: rgba(0,0,0,0.92);
-      z-index: 3000; display: none; align-items: center; justify-content: center; padding: 20px;
-    }
-    .lightbox-modal.active { display: flex; }
-    .lightbox-box { max-width: 90vw; max-height: 85vh; position: relative; }
-    .lightbox-box img { max-width: 90vw; max-height: 85vh; border-radius: 10px; border: 1px solid var(--border-subtle); }
-    .lightbox-close { position: absolute; top: -35px; left: 0; color: #fff; background: none; border: none; cursor: pointer; font-size: 1.8rem; }
-
-    /* Call & Header Buttons */
+    .header-actions { display: flex; align-items: center; gap: 12px; }
     .btn-header-call {
-      background: rgba(197, 168, 128, 0.12); color: var(--gold-primary);
-      border: 1px solid var(--border-subtle); font-weight: 700; font-size: 0.88rem;
-      padding: 9px 16px; border-radius: 8px; display: inline-flex; align-items: center; gap: 6px;
-      transition: var(--transition); text-decoration: none;
-    }
-    .btn-header-call:hover { background: var(--gold-primary); color: #0B0D12; }
-    .header-cta-group { display: flex; align-items: center; gap: 10px; }
-
-    /* Floating Actions */
-    .floating-actions {
-      position: fixed; bottom: 25px; left: 25px; z-index: 999;
-      display: flex; flex-direction: column; gap: 12px;
-    }
-    .floating-btn {
-      width: 52px; height: 52px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      color: #fff; text-decoration: none;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+      background: var(--text-charcoal); color: #FFFFFF;
+      font-weight: 500; font-size: 0.9rem;
+      padding: 10px 20px; border-radius: 6px;
+      display: inline-flex; align-items: center; gap: 8px;
       transition: var(--transition);
     }
-    .floating-btn:hover { transform: scale(1.08); }
-    .floating-btn.phone {
-      background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
-      color: #0B0D12; border: 1.5px solid var(--gold-light);
-      box-shadow: 0 6px 20px rgba(197,168,128,0.4);
+    .btn-header-call:hover { background: var(--gold-dark); transform: translateY(-1px); }
+
+    /* 1. Fullscreen Luxury Hero Section */
+    .hero-fullscreen {
+      min-height: 92vh;
+      display: flex; flex-direction: column; justify-content: center;
+      position: relative; padding: 120px 0 100px;
+      background: #111417;
+      overflow: hidden;
     }
-    .floating-btn.whatsapp {
-      background: linear-gradient(135deg, #25D366, #128C7E);
-      box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+    .hero-bg-wrap {
+      position: absolute; inset: 0; z-index: 0; overflow: hidden;
     }
+    .hero-bg-img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      filter: brightness(0.68) contrast(1.08);
+      display: block;
+    }
+    .hero-dark-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(17,20,23,0.68) 0%, rgba(17,20,23,0.76) 50%, rgba(17,20,23,0.92) 100%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 880px; margin: 0 auto; text-align: center; color: #FFFFFF;
+      padding-top: 30px;
+    }
+    .hero-rating-pill {
+      display: inline-flex; align-items: center; gap: 8px; padding: 7px 18px;
+      background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 30px; margin-bottom: 22px; font-size: 0.88rem; font-weight: 500;
+      backdrop-filter: blur(8px);
+    }
+    .hero-rating-pill .stars { color: #F59E0B; }
+    .hero-heading {
+      font-size: 3.4rem; font-weight: 700; line-height: 1.25; margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+    .hero-heading .gold { color: var(--gold-bronze); font-weight: 700; }
+    .hero-subheading {
+      font-size: 1.05rem; color: rgba(255, 255, 255, 0.82);
+      margin-bottom: 24px; font-weight: 400; max-width: 740px; margin-inline: auto;
+    }
+
+    /* Floating Hotel Booking Bar */
+    .booking-bar-wrapper {
+      position: relative; z-index: 10;
+      margin-top: -65px; margin-bottom: 80px;
+    }
+    .booking-bar {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 18px 24px;
+      box-shadow: var(--shadow-lg);
+      display: grid; grid-template-columns: 1fr 1fr 1.2fr auto;
+      gap: 16px; align-items: center;
+    }
+    .booking-bar-field {
+      display: flex; flex-direction: column; gap: 4px;
+      border-left: 1px solid var(--border-subtle); padding-left: 16px;
+    }
+    .booking-bar-field:nth-child(3) { border-left: none; }
+    .field-lbl {
+      font-size: 0.76rem; font-weight: 600; color: var(--text-light);
+      display: flex; align-items: center; gap: 6px; text-transform: uppercase;
+    }
+    .field-input {
+      border: none; outline: none; background: transparent;
+      font-family: inherit; font-size: 0.95rem; font-weight: 600;
+      color: var(--text-charcoal); cursor: pointer; padding: 4px 0;
+    }
+    .btn-booking-check {
+      background: var(--text-charcoal); color: #FFFFFF;
+      border: none; border-radius: 8px; padding: 14px 28px;
+      font-size: 0.95rem; font-weight: 600; cursor: pointer;
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: var(--transition); white-space: nowrap;
+    }
+    .btn-booking-check:hover { background: var(--gold-dark); transform: translateY(-1px); }
+
+    /* Section Headers */
+    section { padding: 90px 0; }
+    .section-head { text-align: center; max-width: 660px; margin: 0 auto 55px; }
+    .section-eyebrow {
+      display: inline-block; font-size: 0.82rem; font-weight: 600;
+      color: var(--gold-dark); letter-spacing: 1.5px; margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    .section-title {
+      font-size: 2.25rem; font-weight: 700; color: var(--text-charcoal);
+      margin-bottom: 12px; letter-spacing: -0.5px;
+    }
+    .section-desc { font-size: 0.98rem; color: var(--text-muted); line-height: 1.7; }
+
+    /* Interactive Promo Box */
+    .promo-box-container {
+      max-width: 680px; margin: -20px auto 45px auto; position: relative; z-index: 2;
+    }
+    .promo-box {
+      background: #FFFFFF; border: 1.5px dashed var(--accent-gold, #C5A880); border-radius: 12px;
+      padding: 16px 22px; display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; box-shadow: 0 4px 16px rgba(184, 138, 59, 0.08); transition: var(--transition);
+    }
+    .promo-box:hover { border-color: var(--gold-dark); box-shadow: 0 6px 20px rgba(184, 138, 59, 0.12); }
+    .promo-box-icon {
+      width: 44px; height: 44px; border-radius: 50%; background: var(--gold-soft);
+      color: var(--gold-dark); display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .promo-box-content { flex-grow: 1; }
+    .promo-box-content h4 { font-size: 0.95rem; font-weight: 700; color: var(--text-charcoal); margin-bottom: 2px; }
+    .promo-box-content p { font-size: 0.8rem; color: var(--text-muted); margin: 0; }
+    .promo-input-row { display: flex; gap: 8px; align-items: center; }
+    .promo-field {
+      padding: 9px 14px; border: 1px solid var(--border-subtle); border-radius: 8px;
+      font-size: 0.88rem; font-family: inherit; color: var(--text-charcoal); width: 180px;
+      transition: var(--transition);
+    }
+    .promo-field:focus { outline: none; border-color: var(--gold-bronze); box-shadow: 0 0 0 3px rgba(197, 168, 128, 0.15); }
+    .btn-promo-apply {
+      background: var(--text-charcoal); color: #FFFFFF; border: none; border-radius: 8px;
+      padding: 9px 18px; font-size: 0.86rem; font-weight: 600; cursor: pointer;
+      transition: var(--transition); white-space: nowrap;
+    }
+    .btn-promo-apply:hover { background: var(--gold-dark); transform: translateY(-1px); }
+    .promo-success-badge { display: flex; align-items: center; gap: 10px; }
+    .promo-badge-tag {
+      background: #DEF7EC; color: #03543F; border: 1px solid #BCF0DA; padding: 6px 14px;
+      border-radius: 20px; font-size: 0.82rem; font-weight: 700; display: inline-flex;
+      align-items: center; gap: 6px;
+    }
+    .btn-promo-reset {
+      background: transparent; border: none; color: var(--text-light); font-size: 0.78rem;
+      text-decoration: underline; cursor: pointer; padding: 4px;
+    }
+    .btn-promo-reset:hover { color: #DC2626; }
+    .promo-alert {
+      font-size: 0.82rem; margin-top: 10px; text-align: center; padding: 8px 14px;
+      border-radius: 8px; font-weight: 600;
+    }
+    .promo-alert.error { color: #991B1B; background: #FEE2E2; border: 1px solid #FCA5A5; }
+    .promo-alert.success { color: #065F46; background: #D1FAE5; border: 1px solid #A7F3D0; }
+
+    /* Card Promo Box */
+    .card-promo-section {
+      padding: 8px 12px; background: #FBF9F5; border-radius: 8px;
+      margin: 10px 0 14px 0; border: 1px dashed rgba(184, 138, 59, 0.35);
+    }
+    .card-promo-row { display: flex; gap: 8px; align-items: center; }
+    .card-promo-input {
+      flex-grow: 1; padding: 7px 10px; border: 1px solid var(--border-subtle);
+      border-radius: 6px; font-size: 0.8rem; font-family: inherit; color: var(--text-charcoal);
+      background: #FFFFFF;
+    }
+    .card-promo-input:focus { outline: none; border-color: var(--gold-bronze); }
+    .btn-card-apply {
+      background: var(--text-charcoal); color: #FFFFFF; border: none;
+      border-radius: 6px; padding: 7px 12px; font-size: 0.78rem; font-weight: 600;
+      cursor: pointer; transition: var(--transition); white-space: nowrap;
+    }
+    .btn-card-apply:hover { background: var(--gold-dark); }
+    .card-promo-active {
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 0.78rem; font-weight: 700; color: #03543F;
+    }
+    .card-promo-err-msg { font-size: 0.75rem; color: #DC2626; margin-top: 4px; font-weight: 600; }
+
+    /* 2. Room Cards with Mini Slider / Carousel */
+    .rooms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .room-card {
+      background: var(--bg-white); border: 1px solid var(--border-card);
+      border-radius: 14px; overflow: hidden; display: flex; flex-direction: column;
+      box-shadow: var(--shadow-sm); transition: var(--transition); position: relative;
+    }
+    .room-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: var(--border-subtle); }
+    
+    .carousel-container {
+      position: relative; height: 260px; overflow: hidden; background: #EAE6DF;
+      border-radius: 14px 14px 0 0;
+    }
+    .carousel-track {
+      position: relative; width: 100%; height: 100%; cursor: zoom-in;
+    }
+    .carousel-slide {
+      position: absolute; inset: 0; opacity: 0; visibility: hidden;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+    .carousel-slide.active {
+      opacity: 1; visibility: visible; z-index: 1;
+    }
+    .carousel-slide img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .carousel-counter {
+      position: absolute; top: 12px; right: 12px;
+      background: rgba(17, 20, 23, 0.75); backdrop-filter: blur(6px);
+      color: #FFFFFF; font-size: 0.75rem; font-weight: 700;
+      padding: 4px 10px; border-radius: 20px; z-index: 5;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .btn-view-photos {
+      position: absolute; bottom: 12px; left: 12px; z-index: 6;
+      background: rgba(26, 29, 32, 0.8); backdrop-filter: blur(6px);
+      color: #FFFFFF; border: 1px solid rgba(255, 255, 255, 0.22);
+      font-family: inherit; font-size: 0.74rem; font-weight: 600;
+      padding: 4px 10px; border-radius: 20px; cursor: pointer;
+      display: flex; align-items: center; gap: 5px; transition: var(--transition);
+    }
+    .btn-view-photos:hover { background: rgba(26, 29, 32, 0.96); transform: scale(1.05); }
+
+    .carousel-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255, 255, 255, 0.92); border: 1px solid rgba(0,0,0,0.08);
+      color: var(--text-charcoal); cursor: pointer; display: flex;
+      align-items: center; justify-content: center; z-index: 5;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: var(--transition);
+    }
+    .carousel-btn:hover { background: #FFFFFF; transform: translateY(-50%) scale(1.08); }
+    .carousel-btn.prev { right: 12px; }
+    .carousel-btn.next { left: 12px; }
+    .carousel-dots {
+      position: absolute; bottom: 8px; left: 0; right: 0;
+      display: flex; justify-content: center; gap: 6px; z-index: 5;
+    }
+    .carousel-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: rgba(255, 255, 255, 0.6); transition: var(--transition);
+      cursor: pointer;
+    }
+    .carousel-dot.active { background: #FFFFFF; width: 18px; border-radius: 4px; }
+    
+    /* Thumbnails Row directly below the main slide */
+    .carousel-thumbs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+      padding: 8px 12px 6px 12px;
+      background: #FDFBF8;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .carousel-thumbs.grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .carousel-thumb {
+      height: 52px;
+      border-radius: 6px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid transparent;
+      opacity: 0.6;
+      transition: all 0.25s ease;
+      background: #EAE6DF;
+    }
+    .carousel-thumb:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
+    .carousel-thumb.active {
+      border-color: var(--gold-bronze);
+      opacity: 1;
+      box-shadow: 0 2px 8px rgba(184, 138, 59, 0.3);
+    }
+    .carousel-thumb img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+
+    .room-info { padding: 24px; display: flex; flex-direction: column; flex-grow: 1; }
+    .room-name { font-size: 1.3rem; font-weight: 700; color: var(--text-charcoal); }
+    .room-sub { font-size: 0.8rem; color: var(--text-light); margin-bottom: 16px; font-weight: 500; }
+    
+    .room-specs-header {
+      display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 14px;
+    }
+    .spec-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.78rem; font-weight: 600; color: var(--text-muted);
+      background: var(--bg-cream); border: 1px solid var(--border-subtle);
+      padding: 4px 10px; border-radius: 6px;
+    }
+    .spec-badge svg { color: var(--gold-dark); }
+
+    .feature-pills {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;
+    }
+    .feature-pill {
+      background: var(--gold-soft); border: 1px solid rgba(197, 168, 128, 0.25);
+      border-radius: 6px; padding: 6px 11px;
+      font-size: 0.8rem; font-weight: 500; color: var(--text-charcoal);
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .feature-pill svg {
+      width: 14px; height: 14px; color: var(--gold-dark); flex-shrink: 0;
+    }
+
+    .room-footer {
+      margin-top: auto; padding-top: 18px; border-top: 1px solid var(--border-subtle);
+      display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    }
+    .pricing-container {
+      display: flex; flex-direction: column; gap: 2px;
+    }
+    .pricing-old-wrap {
+      display: flex; align-items: center; gap: 8px;
+    }
+    .price-strikethrough {
+      text-decoration: line-through; color: var(--text-light); font-size: 0.86rem; font-weight: 500;
+    }
+    .price-save-tag {
+      color: #059669; font-size: 0.75rem; font-weight: 600;
+      background: #DEF7EC; padding: 2px 7px; border-radius: 4px;
+    }
+    .pricing-current-wrap {
+      display: flex; align-items: baseline; gap: 4px;
+    }
+    .room-price-val { font-size: 1.65rem; font-weight: 700; color: var(--text-charcoal); }
+    .room-price-unit { font-size: 0.8rem; color: var(--text-light); }
+
+    /* Dual Action Buttons (Call + WhatsApp) */
+    .card-action-btns {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .btn-room-call {
+      background: #FFFFFF;
+      color: var(--text-charcoal);
+      border: 1.5px solid var(--text-charcoal);
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 11px 8px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .btn-room-call:hover {
+      background: var(--text-charcoal);
+      color: #FFFFFF;
+      transform: translateY(-1px);
+    }
+    .btn-room-whatsapp {
+      background: #25D366;
+      color: #FFFFFF;
+      border: none;
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 11px 8px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+    }
+    .btn-room-whatsapp:hover {
+      background: #20BD5A;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+    }
+
+    /* 3. Merged Facilities & Amenities */
+    .amenities-section { background: var(--bg-white); border-top: 1px solid var(--border-subtle); }
+    .amenities-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .amenity-card {
+      background: var(--bg-cream); border: 1px solid var(--border-card);
+      border-radius: 12px; padding: 26px 20px; text-align: center;
+      transition: var(--transition);
+    }
+    .amenity-card:hover { border-color: var(--gold-bronze); background: #FFFFFF; box-shadow: var(--shadow-sm); transform: translateY(-3px); }
+    .amenity-icon-box {
+      width: 48px; height: 48px; margin: 0 auto 16px;
+      background: var(--gold-soft); color: var(--gold-dark);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+    }
+    .amenity-card h4 { font-size: 1.05rem; font-weight: 700; color: var(--text-charcoal); margin-bottom: 6px; }
+    .amenity-card p { font-size: 0.84rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* Photo Gallery (Clean Grid) */
+    .gallery-section { background: var(--bg-cream); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .gallery-thumb {
+      height: 270px; border-radius: 12px; overflow: hidden; position: relative;
+      cursor: pointer; box-shadow: var(--shadow-sm); border: 1px solid var(--border-card);
+      background: #EAE6DF;
+    }
+    .gallery-thumb.span-2 { grid-column: span 2; }
+    .gallery-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .gallery-thumb:hover img { transform: scale(1.04); }
+    .gallery-overlay-txt {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 45%, rgba(26,29,32,0.85) 100%);
+      display: flex; align-items: flex-end; padding: 18px;
+    }
+    .gallery-overlay-txt h5 { font-size: 1rem; font-weight: 600; color: #FFFFFF; }
+    .gallery-overlay-txt span { font-size: 0.76rem; color: rgba(255,255,255,0.75); }
+
+    /* Real Guest Reviews */
+    .reviews-section { background: var(--bg-white); border-top: 1px solid var(--border-subtle); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .review-card {
+      background: var(--bg-cream); border: 1px solid var(--border-card);
+      border-radius: 12px; padding: 24px; box-shadow: var(--shadow-sm);
+      display: flex; flex-direction: column;
+    }
+    .review-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .review-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: #FFFFFF; color: var(--text-charcoal); font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid var(--border-subtle);
+    }
+    .review-author h5 { font-size: 0.95rem; font-weight: 700; color: var(--text-charcoal); }
+    .review-author span { font-size: 0.76rem; color: var(--text-light); }
+    .review-stars { color: #F59E0B; margin-bottom: 10px; font-size: 0.9rem; }
+    .review-body { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 14px; flex-grow: 1; }
+    .review-tag {
+      font-size: 0.76rem; color: var(--gold-dark); font-weight: 600;
+      padding-top: 10px; border-top: 1px solid var(--border-subtle);
+      display: flex; align-items: center; gap: 6px;
+    }
+
+    /* Location & Map */
+    .location-section { background: var(--bg-cream); border-top: 1px solid var(--border-subtle); }
+    .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center; }
+    .location-card {
+      background: var(--bg-white); border: 1px solid var(--border-card);
+      border-radius: 14px; padding: 32px; box-shadow: var(--shadow-sm);
+    }
+    .location-card h3 { font-size: 1.5rem; font-weight: 700; color: var(--text-charcoal); margin-bottom: 12px; }
+    .location-desc-txt { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 20px; line-height: 1.7; }
+    .location-places { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
+    .location-place-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 10px 14px; background: var(--bg-cream); border: 1px solid var(--border-card);
+      border-radius: 6px; font-size: 0.88rem;
+    }
+    .location-badge { color: var(--gold-dark); font-weight: 600; font-size: 0.8rem; }
+    .btn-maps-link {
+      background: var(--text-charcoal); color: #FFFFFF;
+      font-weight: 600; font-size: 0.92rem;
+      padding: 12px 22px; border-radius: 6px; display: inline-flex; align-items: center; gap: 8px;
+      transition: var(--transition);
+    }
+    .btn-maps-link:hover { background: var(--gold-dark); transform: translateY(-1px); }
+
+    .map-frame-box {
+      height: 380px; border-radius: 14px; overflow: hidden;
+      border: 1px solid var(--border-card); box-shadow: var(--shadow-sm);
+      background: #EAE6DF;
+    }
+    .map-frame-box iframe { width: 100%; height: 100%; border: 0; }
+
+    /* Lightbox Modal */
+    .lightbox-modal {
+      position: fixed; inset: 0; background: rgba(17, 20, 23, 0.96);
+      z-index: 3000; display: none; align-items: center; justify-content: center; padding: 20px;
+      backdrop-filter: blur(8px);
+    }
+    .lightbox-modal.active { display: flex; }
+    .lightbox-box {
+      max-width: 92vw; max-height: 90vh; position: relative; text-align: center;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+    }
+    .lightbox-img-wrap {
+      position: relative; max-width: 90vw; max-height: 78vh; display: flex; align-items: center; justify-content: center;
+    }
+    .lightbox-box img {
+      max-width: 100%; max-height: 76vh; border-radius: 12px; object-fit: contain;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    .lightbox-close {
+      position: absolute; top: -38px; left: 0; color: #FFFFFF; background: rgba(255,255,255,0.15);
+      border: none; cursor: pointer; font-size: 1.8rem; width: 36px; height: 36px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; transition: var(--transition);
+    }
+    .lightbox-close:hover { background: rgba(255,255,255,0.3); transform: scale(1.1); }
+    .lightbox-arrow {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255,255,255,0.3);
+      color: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center;
+      z-index: 10; transition: var(--transition);
+    }
+    .lightbox-arrow:hover { background: rgba(255, 255, 255, 0.95); color: var(--text-charcoal); transform: translateY(-50%) scale(1.1); }
+    .lightbox-arrow.lb-prev { right: -24px; }
+    .lightbox-arrow.lb-next { left: -24px; }
+    @media (max-width: 768px) {
+      .lightbox-arrow.lb-prev { right: 8px; background: rgba(0,0,0,0.6); }
+      .lightbox-arrow.lb-next { left: 8px; background: rgba(0,0,0,0.6); }
+    }
+    .lightbox-footer {
+      margin-top: 12px; display: flex; flex-direction: column; align-items: center; gap: 6px;
+    }
+    .lightbox-counter {
+      display: inline-block; background: rgba(255,255,255,0.15); color: var(--gold-bronze);
+      padding: 3px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 700;
+    }
+    .lightbox-caption {
+      color: #FFFFFF; text-align: center; font-weight: 600; font-size: 0.95rem; max-width: 600px;
+    }
+
+    /* Floating WhatsApp & Call Buttons */
+    .floating-stack {
+      position: fixed; bottom: 25px; left: 25px; z-index: 999;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .float-btn {
+      width: 50px; height: 50px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #FFFFFF; box-shadow: 0 4px 16px rgba(26, 29, 32, 0.2);
+      transition: var(--transition);
+    }
+    .float-btn:hover { transform: scale(1.08); }
+    .float-btn.call { background: var(--text-charcoal); }
+    .float-btn.chat { background: #25D366; }
 
     /* Footer */
     .site-footer {
-      background: #07080B; border-top: 1px solid var(--border-subtle);
-      padding: 60px 0 25px; color: var(--text-secondary);
+      background: #FFFFFF; border-top: 1px solid var(--border-subtle);
+      padding: 55px 0 24px; color: var(--text-muted);
     }
-    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 30px; margin-bottom: 40px; }
-    .footer-col h5 { font-size: 1rem; font-weight: 700; color: var(--text-white); margin-bottom: 16px; }
-    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; }
-    .footer-links a:hover { color: var(--gold-primary); }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px;
-      display: flex; justify-content: space-between; font-size: 0.8rem; color: #6B7280;
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 30px; margin-bottom: 35px; }
+    .footer-col h5 { font-size: 0.98rem; font-weight: 700; color: var(--text-charcoal); margin-bottom: 14px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.86rem; }
+    .footer-links a:hover { color: var(--gold-dark); }
+    .footer-sub {
+      border-top: 1px solid var(--border-subtle); padding-top: 18px;
+      display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-light);
     }
 
+    /* Responsive */
     @media (max-width: 992px) {
-      .trust-grid { grid-template-columns: repeat(2, 1fr); }
-      .units-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-heading { font-size: 2.6rem; }
+      .booking-bar { grid-template-columns: 1fr 1fr; }
+      .booking-bar-field:nth-child(2) { border-left: none; }
+      .booking-bar-field:nth-child(3) { grid-column: span 2; border-left: none; border-top: 1px solid var(--border-subtle); padding-top: 12px; }
+      .btn-booking-check { grid-column: span 2; }
+      .rooms-grid { grid-template-columns: repeat(2, 1fr); }
       .amenities-grid { grid-template-columns: repeat(2, 1fr); }
       .location-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
       .nav-links { display: none; }
-      .hero-title { font-size: 2.2rem; }
-      .trust-grid { grid-template-columns: 1fr; }
-      .units-grid { grid-template-columns: 1fr; }
+      .hero-heading { font-size: 2.1rem; }
+      .booking-bar { grid-template-columns: 1fr; gap: 14px; padding: 16px; }
+      .booking-bar-field { border-left: none; padding-left: 0; border-bottom: 1px solid var(--border-subtle); padding-bottom: 10px; }
+      .booking-bar-field:nth-child(3) { border-top: none; padding-top: 0; }
+      .rooms-grid { grid-template-columns: 1fr; }
       .gallery-grid { grid-template-columns: 1fr; }
-      .gallery-item.span-2 { grid-column: span 1; }
+      .gallery-thumb.span-2 { grid-column: span 1; }
       .reviews-grid { grid-template-columns: 1fr; }
       .amenities-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
-      .form-row { grid-template-columns: 1fr; }
+      .footer-sub { flex-direction: column; gap: 10px; text-align: center; }
+      .promo-box { flex-direction: column; text-align: center; }
+      .promo-input-row { width: 100%; }
+      .promo-field { flex-grow: 1; width: auto; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Reusable SVG Icons Sprite (Zero Emojis) -->
+  <!-- Reusable SVG Vector Sprite (Zero Emojis) -->
   <svg style="display:none;" xmlns="http://www.w3.org/2000/svg">
     <symbol id="icon-star" viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L21.8 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.9-1.01L12 2z"/></symbol>
-    <symbol id="icon-check-shield" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></symbol>
     <symbol id="icon-wifi" viewBox="0 0 24 24"><path d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98C20.93 5.9 16.69 4 12 4zm0 3.5c3.67 0 7.02 1.4 9.54 3.71L12 19.12 2.46 11.21C4.98 8.9 8.33 7.5 12 7.5z"/></symbol>
     <symbol id="icon-clock" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></symbol>
     <symbol id="icon-bed" viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></symbol>
     <symbol id="icon-bath" viewBox="0 0 24 24"><path d="M21 10.12h-6.78l2.74-2.82c.6-.62.6-1.62 0-2.24s-1.57-.62-2.17 0L10.3 9.61c-.6.62-.6 1.62 0 2.24l4.49 4.55c.6.62 1.57.62 2.17 0s.6-1.62 0-2.24l-2.74-2.82H21c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5zM2 13h2v7H2zm4-4h2v11H6z"/></symbol>
-    <symbol id="icon-coffee" viewBox="0 0 24 24"><path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/></symbol>
     <symbol id="icon-tv" viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></symbol>
-    <symbol id="icon-sofa" viewBox="0 0 24 24"><path d="M20 10V7c0-1.1-.9-2-2-2H6c-1.1 0-2 .9-2 2v3c-1.1 0-2 .9-2 2v5h1.33L4 19h1l.67-2h12.67l.66 2h1l.67-2H22v-5c0-1.1-.9-2-2-2zm-9 0H6V7h5v3zm7 0h-5V7h5v3z"/></symbol>
     <symbol id="icon-kitchen" viewBox="0 0 24 24"><path d="M18 4H6v2l6.5 6L6 18v2h12v-3h-7l5-5-5-5h7V4z"/></symbol>
-    <symbol id="icon-balcony" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></symbol>
+    <symbol id="icon-terrace" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 16H5v-4h7v4zm0-6H5V9h7v4zm7 6h-5v-4h5v4zm0-6h-5V9h5v4z"/></symbol>
     <symbol id="icon-car" viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></symbol>
-    <symbol id="icon-security" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm7 10c0 4.52-2.98 8.69-7 9.93-4.02-1.24-7-5.41-7-9.93V6.3l7-3.11 7 3.11V11z"/></symbol>
     <symbol id="icon-map-pin" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></symbol>
     <symbol id="icon-calendar" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></symbol>
-    <symbol id="icon-whatsapp" viewBox="0 0 24 24"><path d="M16.75 13.96c.25.13.41.2.46.3.06.11.04.61-.21 1.18-.2.56-.67.93-1.15 1.02-.49.09-1.12.11-3.23-.74-2.1-1-3.6-3.05-3.7-3.19-.11-.14-.85-1.13-.85-2.15 0-1.03.54-1.53.73-1.74.19-.21.41-.26.55-.26.14 0 .28 0 .4.01.13.01.3-.05.47.36.17.41.6 1.46.65 1.57.05.11.09.24.01.39-.07.16-.11.25-.22.38-.11.13-.24.29-.34.39-.11.11-.23.23-.1.45.13.22.58.96 1.25 1.55.86.77 1.59 1.01 1.81 1.12.22.11.35.09.48-.06.13-.15.56-.65.71-.87.15-.22.3-.19.51-.11zm-4.75 8.04C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10c0 1.9-.53 3.68-1.46 5.2L22 22l-4.96-1.3C15.54 21.5 13.82 22 12 22z"/></symbol>
-    <symbol id="icon-mail" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></symbol>
     <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></symbol>
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24"><path d="M16.75 13.96c.25.13.41.2.46.3.06.11.04.61-.21 1.18-.2.56-.67.93-1.15 1.02-.49.09-1.12.11-3.23-.74-2.1-1-3.6-3.05-3.7-3.19-.11-.14-.85-1.13-.85-2.15 0-1.03.54-1.53.73-1.74.19-.21.41-.26.55-.26.14 0 .28 0 .4.01.13.01.3-.05.47.36.17.41.6 1.46.65 1.57.05.11.09.24.01.39-.07.16-.11.25-.22.38-.11.13-.24.29-.34.39-.11.11-.23.23-.1.45.13.22.58.96 1.25 1.55.86.77 1.59 1.01 1.81 1.12.22.11.35.09.48-.06.13-.15.56-.65.71-.87.15-.22.3-.19.51-.11zm-4.75 8.04C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10c0 1.9-.53 3.68-1.46 5.2L22 22l-4.96-1.3C15.54 21.5 13.82 22 12 22z"/></symbol>
+    <symbol id="icon-security" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm7 10c0 4.52-2.98 8.69-7 9.93-4.02-1.24-7-5.41-7-9.93V6.3l7-3.11 7 3.11V11z"/></symbol>
+    <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></symbol>
+    <symbol id="icon-chevron-left" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></symbol>
+    <symbol id="icon-user" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></symbol>
+    <symbol id="icon-users" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></symbol>
+    <symbol id="icon-camera" viewBox="0 0 24 24"><path d="M9.4 10.5l4.77-8.26C13.47 2.09 12.75 2 12 2 6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10c0-.75-.09-1.47-.24-2.17L14.5 16.5c-.83 1.44-2.38 2.5-4.22 2.5-2.76 0-5-2.24-5-5 0-1.84 1.06-3.39 2.5-4.22l1.62.72zm5.72 1.58l-5.6-3.23c.31-.53.75-.98 1.28-1.28l5.6 3.23c-.31.53-.75.98-1.28 1.28zm-3.12 4.92c-.53-.31-.98-.75-1.28-1.28l5.6-3.23c.31.53.75.98 1.28 1.28l-5.6 3.23z"/></symbol>
+    <symbol id="icon-snowflake" viewBox="0 0 24 24"><path d="M22 11h-4.17l3.24-3.24-1.41-1.42L15 11h-2V9l4.66-4.66-1.42-1.41L13 6.17V2h-2v4.17L7.76 2.93 6.34 4.34 11 9v2H9L4.34 6.34 2.93 7.76 6.17 11H2v2h4.17l-3.24 3.24 1.41 1.42L9 13h2v2l-4.66 4.66 1.42 1.41L11 17.83V22h2v-4.17l3.24 3.24 1.42-1.41L13 15v-2h2l4.66 4.66 1.41-1.42L17.83 13H22v-2z"/></symbol>
+    <symbol id="icon-plan" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 7h10v2H7zm0 4h10v2H7zm0 4h7v2H7z"/></symbol>
+    <symbol id="icon-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+      <line x1="7" y1="7" x2="7.01" y2="7"></line>
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </symbol>
   </svg>
 
-  <!-- Site Header -->
+  <!-- Clean Navbar (4 links + Direct Call) -->
   <header class="site-header">
     <div class="container">
       <div class="nav-wrapper">
         <a href="#" class="brand-logo">
           <div class="logo-emblem">
-            <svg class="icon" style="fill:var(--star-red);"><use href="#icon-star"></use></svg>
+            <svg class="icon" style="width:22px;height:22px;"><use href="#icon-star"></use></svg>
           </div>
           <div>
-            <div class="brand-title"><span class="red">ستار</span> <span class="gold">القمة</span></div>
-            <div class="brand-subtitle latin">TOP STAR APARTMENTS</div>
+            <div class="brand-title">ستار <span class="gold">القمة</span></div>
+            <div class="brand-subtitle latin">Top Star Serviced Apartments</div>
           </div>
         </a>
 
         <ul class="nav-links">
-          <li><a href="#hero">الرئيسية</a></li>
-          <li><a href="#units">الوحدات والأسعار</a></li>
+          <li><a href="#units">الوحدات السكنية</a></li>
           <li><a href="#gallery">معرض الصور</a></li>
-          <li><a href="#amenities">الخدمات والمرافق</a></li>
-          <li><a href="#reviews">التقييمات</a></li>
           <li><a href="#location">الموقع والوصول</a></li>
+          <li><a href="#reviews">آراء النزلاء</a></li>
         </ul>
 
-        <div class="header-cta-group">
-          <a href="tel:0560411778" class="btn-header-call" title="اتصال مباشر بالفندق">
-            <svg class="icon"><use href="#icon-phone"></use></svg>
-            <span>اتصال</span>
+        <div class="header-actions">
+          <a href="tel:0560411778" class="btn-header-call" title="اتصال هاتفي مباشر بالفندق">
+            <svg class="icon" style="width:16px;height:16px;"><use href="#icon-phone"></use></svg>
+            <span>اتصال مباشر</span>
           </a>
-          <button class="btn-header-book" onclick="openBookingModal()">
-            <svg class="icon" style="margin-left:6px;"><use href="#icon-calendar"></use></svg>
-            احجز إقامتك
-          </button>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section" id="hero">
-    <div class="hero-image-backdrop"></div>
-    <div class="hero-bg-overlay"></div>
+  <!-- 1. Fullscreen Luxury Hero Section -->
+  <section class="hero-fullscreen" id="hero">
+    <div class="hero-bg-wrap">
+      <img src="images/IMG_3779.jpeg" alt="صالة الضيافة والاستراحة ودلة القهوة السعودية في ستار القمة" class="hero-bg-img">
+    </div>
+    <div class="hero-dark-overlay"></div>
     <div class="container">
       <div class="hero-content">
-        <div class="hero-badge">
-          <svg class="icon"><use href="#icon-check-shield"></use></svg>
-          <span>ترخيص وزارة السياحة الرسمي: 10009918</span>
+        <div class="hero-rating-pill">
+          <span class="stars">★ ★ ★ ★ ★</span>
+          <span>تقييم استثنائي في الأحساء: <strong>4.8 / 5</strong> | ترخيص وزارة السياحة: <strong>10009918</strong></span>
         </div>
 
-        <h1 class="hero-title">
-          فخامة الإقامة في قلب الأحساء<br>
-          <span class="red">ستار</span> <span class="gold">القمة</span> للشقق المخدومة
+        <h1 class="hero-heading">
+          فخامة الإقامة وكرم الضيافة في الأحساء<br>
+          فندق شقق <span class="gold">ستار القمة</span> المخدومة
         </h1>
 
-        <div class="hero-subtitle-en latin">TOP STAR SERVICED APARTMENTS — AL AHSA</div>
-
-        <p class="hero-desc">
-          تجربة تجمع بين أرقى معايير الفندقة ودفء الخصوصية العائلية. وحدات سكنية متكاملة ومؤثثة بذوق رفيع في حي السلمانية الجنوبية بالهفوف.
+        <p class="hero-subheading">
+          أجنحة وغرف عائلية مفروشة بأعلى المعايير في حي السلمانية الجنوبية، على مقربة من جامعة الملك فيصل ومجمع الراشد تاون سنتر ومحطة القطار.
         </p>
-
-        <div class="hero-buttons">
-          <button class="btn-primary" onclick="openBookingModal()">احجز شقتك الآن</button>
-          <a href="tel:0560411778" class="btn-secondary" title="اتصال مباشر بالاستقبال">
-            <svg class="icon"><use href="#icon-phone"></use></svg>
-            اتصال: 0560411778
-          </a>
-          <a href="https://wa.me/966560411778" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-            <svg class="icon"><use href="#icon-whatsapp"></use></svg>
-            واتساب
-          </a>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- Trust Bar -->
-  <div class="container trust-bar">
-    <div class="trust-grid">
-      <div class="trust-card">
-        <div class="trust-icon-box"><svg class="icon"><use href="#icon-star"></use></svg></div>
-        <div class="trust-info"><h4>4.5 نجوم في خرائط Google</h4><p>أكثر من 256 تقييماً موثقاً</p></div>
+  <!-- Floating Hotel Booking Bar -->
+  <div class="container booking-bar-wrapper">
+    <div class="booking-bar">
+      <div class="booking-bar-field">
+        <span class="field-lbl"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-calendar"></use></svg> تاريخ الوصول</span>
+        <input type="date" id="barCheckIn" class="field-input">
       </div>
-      <div class="trust-card">
-        <div class="trust-icon-box"><svg class="icon"><use href="#icon-wifi"></use></svg></div>
-        <div class="trust-info"><h4>تقييم الإنترنت 9.4</h4><p>ألياف بصرية فائقة السرعة</p></div>
+
+      <div class="booking-bar-field">
+        <span class="field-lbl"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-calendar"></use></svg> تاريخ المغادرة</span>
+        <input type="date" id="barCheckOut" class="field-input">
       </div>
-      <div class="trust-card">
-        <div class="trust-icon-box"><svg class="icon"><use href="#icon-check-shield"></use></svg></div>
-        <div class="trust-info"><h4>ترخيص سياحي 10009918</h4><p>معتمد رسمياً من وزارة السياحة</p></div>
+
+      <div class="booking-bar-field">
+        <span class="field-lbl"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-bed"></use></svg> نوع الوحدة والنزلاء</span>
+        <select id="barUnit" class="field-input">
+          <option value="غرفة استوديو دبل ماستر (170 ر.س)">استوديو دبل ماستر (26 م² - 170 ر.س)</option>
+          <option value="شقة ديلوكس غرفة وصالة وشرفة (220 ر.س)">شقة ديلوكس غرفة وصالة وشرفة (48 م² - 220 ر.س)</option>
+          <option value="جناح القمة العائلي غرفتين وصالة (370 ر.س)">جناح القمة العائلي غرفتين وصالة (95 م² - 370 ر.س)</option>
+        </select>
       </div>
-      <div class="trust-card">
-        <div class="trust-icon-box"><svg class="icon"><use href="#icon-clock"></use></svg></div>
-        <div class="trust-info"><h4>تسجيل 2:00 م | خروج 2:00 م</h4><p>استقبال وضيافة 24 ساعة</p></div>
-      </div>
+
+      <button class="btn-booking-check" onclick="handleBarBooking()">
+        <svg class="icon" style="width:18px;height:18px;"><use href="#icon-whatsapp"></use></svg>
+        <span>تحقق من التوفر عبر واتساب</span>
+      </button>
     </div>
   </div>
 
-  <!-- Units Section -->
+  <!-- 2. Units Section with Feature Pills, Psychological Pricing & Direct WhatsApp CTAs -->
   <section class="units-section" id="units">
     <div class="container">
-      <div class="section-header">
-        <div class="section-eyebrow"><svg class="icon"><use href="#icon-star"></use></svg> الإقامة الفندقية</div>
-        <h2 class="section-heading">أجنحة ووحدات سكنية تلائم تطلعاتك</h2>
-        <p class="section-subtext">أسعار محدثة ومناسبة لرجال الأعمال والعائلات مع كود خصم STAR10 الفوري.</p>
+      <div class="section-head">
+        <span class="section-eyebrow">أجنحة ووحدات الإقامة</span>
+        <h2 class="section-title">اختر مساحتك المناسبة للإقامة</h2>
+        <p class="section-desc">صور واقعية حصرية لكل وحدة، وميزات مفصلة وسعة واضحة مع ميزة الحجز المباشر بدون عمولات.</p>
       </div>
 
-      <div class="units-grid">
-        <!-- Unit 1: Master Studio -->
-        <div class="unit-card">
-          <div class="unit-badge">الأكثر طلباً للأفراد</div>
-          <div class="unit-img-wrapper">
-            <img src="images/EB1E5A7B-A43A-4CD6-98E7-C8B1051993F0.png" alt="غرفة استوديو دبل ماستر" onerror="if(this.src.indexOf('941BB36E')===-1){this.src='images/941BB36E-5CEF-4EC4-9CFD-C34CB0813DDA.png';}">
+      <!-- Interactive Global Promo Code Box -->
+      <div class="promo-box-container">
+        <div class="promo-box">
+          <div class="promo-box-icon">
+            <svg class="icon" style="width:22px;height:22px;"><use href="#icon-tag"></use></svg>
           </div>
-          <div class="unit-details">
-            <h3 class="unit-title">غرفة استوديو دبل ماستر</h3>
-            <div class="unit-subtitle-en latin">MASTER STUDIO ROOM</div>
-            <ul class="unit-features-list">
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-bed"></use></svg> سرير كينغ طبي فاخر (King Size)</li>
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-bath"></use></svg> دورة مياه خاصة ومستلزمات عناية</li>
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-coffee"></use></svg> ثلاجة ميني بار وركن إعداد القهوة</li>
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-tv"></use></svg> شاشة ذكية 4K وإنترنت ألياف سريع</li>
-            </ul>
-            <div class="unit-pricing-bar">
-              <div><span class="price-val">170</span> <span class="price-unit">ر.س / ليلة</span></div>
-              <button class="btn-book-unit" onclick="selectUnitAndBook('studio', 170, 'غرفة استوديو دبل ماستر')">احجز الآن</button>
+          <div class="promo-box-content">
+            <h4>كوبون خصم الحجز المباشر</h4>
+            <p>أدخل كود الخصم (STAR10) للحصول على خصم 10% فوري على كافة الوحدات</p>
+          </div>
+          <div class="promo-box-action">
+            <div class="promo-input-row" id="globalPromoRow">
+              <input type="text" id="globalPromoInput" placeholder="أدخل رمز الخصم (مثال: STAR10)" class="promo-field" autocomplete="off" onkeyup="if(event.key==='Enter') applyPromoCode(this.value)">
+              <button class="btn-promo-apply" onclick="applyPromoCode(document.getElementById('globalPromoInput').value)">تطبيق الخصم</button>
+            </div>
+            <div class="promo-success-badge" id="globalPromoSuccess" style="display:none;">
+              <span class="promo-badge-tag">
+                <svg class="icon" style="width:14px;height:14px;"><use href="#icon-check"></use></svg>
+                الكود مُفعّل: STAR10 (خصم 10%)
+              </span>
+              <button class="btn-promo-reset" onclick="removePromoCode()">إلغاء الخصم</button>
+            </div>
+          </div>
+        </div>
+        <div id="globalPromoAlert" class="promo-alert" style="display:none;"></div>
+      </div>
+
+      <div class="rooms-grid">
+        <!-- Room 1: Master Studio Room -->
+        <div class="room-card">
+          <div class="carousel-container" id="carousel-1">
+            <span class="carousel-counter" id="counter-1">1 / 2</span>
+            <button class="btn-view-photos" onclick="openLightboxFromCarousel(1)" title="استعراض صور الغرفة">
+              <svg class="icon" style="width:13px;height:13px;"><use href="#icon-camera"></use></svg>
+              <span>استعراض الصور (2)</span>
+            </button>
+            <div class="carousel-track" onclick="openLightboxFromCarousel(1)" title="انقر لتكبير الصورة">
+              <div class="carousel-slide active"><img src="images/EB1E5A7B-A43A-4CD6-98E7-C8B1051993F0.png" alt="غرفة النوم الماستر كينغ الفاخرة"></div>
+              <div class="carousel-slide"><img src="images/9866DE05-6160-4A0E-AF53-C43467A989C2.png" alt="التسريحة الفندقية المضاءة وخزانة الملابس"></div>
+            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel(1, -1)" title="الصورة السابقة"><svg class="icon"><use href="#icon-chevron-right"></use></svg></button>
+            <button class="carousel-btn next" onclick="moveCarousel(1, 1)" title="الصورة التالية"><svg class="icon"><use href="#icon-chevron-left"></use></svg></button>
+            <div class="carousel-dots">
+              <span class="carousel-dot active" onclick="setCarousel(1, 0)"></span>
+              <span class="carousel-dot" onclick="setCarousel(1, 1)"></span>
+            </div>
+          </div>
+
+          <!-- 2 Interactive Thumbnails Strip -->
+          <div class="carousel-thumbs" id="thumbs-1">
+            <div class="carousel-thumb active" onclick="setCarousel(1, 0)" title="سرير كينغ ماستر">
+              <img src="images/EB1E5A7B-A43A-4CD6-98E7-C8B1051993F0.png" alt="سرير كينغ">
+            </div>
+            <div class="carousel-thumb" onclick="setCarousel(1, 1)" title="التسريحة المضاءة والدولاب">
+              <img src="images/9866DE05-6160-4A0E-AF53-C43467A989C2.png" alt="التسريحة المضاءة">
+            </div>
+          </div>
+
+          <div class="room-info">
+            <h3 class="room-name">غرفة استوديو دبل ماستر</h3>
+            <div class="room-sub latin">Master Studio Room</div>
+
+            <div class="room-specs-header">
+              <span class="spec-badge"><svg class="icon" style="width:13px;height:13px;"><use href="#icon-plan"></use></svg> 26 م²</span>
+              <span class="spec-badge"><svg class="icon" style="width:13px;height:13px;"><use href="#icon-user"></use></svg> ضيفين (1-2 نزلاء)</span>
+            </div>
+
+            <div class="feature-pills">
+              <span class="feature-pill"><svg class="icon"><use href="#icon-bed"></use></svg> سرير كينغ طبي كبير</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-security"></use></svg> عزل صوتي متقن</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-bath"></use></svg> حمام خاص ومستلزمات</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-tv"></use></svg> شاشة 4K ذكية</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-snowflake"></use></svg> مكيف سبليت هادئ</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-wifi"></use></svg> واي فاي فائق مجاني</span>
+            </div>
+
+            <!-- Card Promo Input -->
+            <div class="card-promo-section">
+              <div class="card-promo-row" id="cardPromoForm-1">
+                <input type="text" id="cardPromoInput-1" class="card-promo-input" placeholder="رمز الخصم (مثال: STAR10)" autocomplete="off" onkeyup="if(event.key==='Enter') applyPromoCode(this.value)">
+                <button class="btn-card-apply" onclick="applyPromoCode(document.getElementById('cardPromoInput-1').value)">تطبيق الخصم</button>
+              </div>
+              <div class="card-promo-active" id="cardPromoActive-1" style="display:none;">
+                <span>✓ كود STAR10 مُطبّق (خصم 10%)</span>
+                <button class="btn-promo-reset" onclick="removePromoCode()">إلغاء</button>
+              </div>
+              <div class="card-promo-err-msg" id="cardPromoErr-1" style="display:none;"></div>
+            </div>
+
+            <div class="room-footer">
+              <div class="pricing-container">
+                <div class="pricing-old-wrap" id="pricingOld-1" style="display:none;">
+                  <span class="price-strikethrough">170 ر.س</span>
+                  <span class="price-save-tag">وفرت 20 ر.س (10%)</span>
+                </div>
+                <div class="pricing-current-wrap">
+                  <span class="room-price-val" id="priceVal-1">170</span>
+                  <span class="room-price-unit">ر.س / ليلة</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-action-btns">
+              <a href="tel:0560411778" class="btn-room-call" title="اتصال هاتفي مباشر">
+                <svg class="icon" style="width:16px;height:16px;"><use href="#icon-phone"></use></svg>
+                <span>اتصال هاتفي</span>
+              </a>
+              <a id="btnBook-1" href="https://wa.me/966560411778?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20(%D8%BA%D8%B1%D9%81%D8%A9%20%D8%A7%D8%F3%D8%AA%D9%88%D8%AF%D9%8A%D9%88%20%D8%AF%D8%A8%D9%84%20%D9%85%D8%A7%D8%B3%D8%AA%D8%B1)%20%D8%A8%D8%B3%D8%B9%D8%B1%20170%20%D8%B1%D9%8A%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="btn-room-whatsapp" title="حجز مباشر عبر واتساب">
+                <svg class="icon" style="width:16px;height:16px;"><use href="#icon-whatsapp"></use></svg>
+                <span>حجز واتساب</span>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Unit 2: Deluxe One-Bedroom -->
-        <div class="unit-card">
-          <div class="unit-badge featured">قيمة استثنائية</div>
-          <div class="unit-img-wrapper">
-            <img src="images/IMG_3805.jpeg" alt="شقة ديلوكس غرفة وصالة وشرفة" onerror="if(this.src.indexOf('deluxe-apartment.png')===-1 && this.src.indexOf('30B12B06')===-1){this.src='images/deluxe-apartment.png';} else if(this.src.indexOf('30B12B06')===-1){this.src='images/30B12B06-613B-4921-9ADC-09B1D1FB388E.png';}">
+        <!-- Room 2: Deluxe One-Bedroom Apartment with Balcony -->
+        <div class="room-card">
+          <div class="carousel-container" id="carousel-2">
+            <span class="carousel-counter" id="counter-2">1 / 2</span>
+            <button class="btn-view-photos" onclick="openLightboxFromCarousel(2)" title="استعراض صور الشقة">
+              <svg class="icon" style="width:13px;height:13px;"><use href="#icon-camera"></use></svg>
+              <span>استعراض الصور (2)</span>
+            </button>
+            <div class="carousel-track" onclick="openLightboxFromCarousel(2)" title="انقر لتكبير الصورة">
+              <div class="carousel-slide active"><img src="images/IMG_3805.jpeg" alt="شقة ديلوكس غرفة وصالة وشرفة"></div>
+              <div class="carousel-slide"><img src="images/30B12B06-613B-4921-9ADC-09B1D1FB388E.png" alt="صالة الجلسة والمطبخ التحضيري"></div>
+            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel(2, -1)" title="الصورة السابقة"><svg class="icon"><use href="#icon-chevron-right"></use></svg></button>
+            <button class="carousel-btn next" onclick="moveCarousel(2, 1)" title="الصورة التالية"><svg class="icon"><use href="#icon-chevron-left"></use></svg></button>
+            <div class="carousel-dots">
+              <span class="carousel-dot active" onclick="setCarousel(2, 0)"></span>
+              <span class="carousel-dot" onclick="setCarousel(2, 1)"></span>
+            </div>
           </div>
-          <div class="unit-details">
-            <h3 class="unit-title">شقة ديلوكس غرفة وصالة وشرفة</h3>
-            <div class="unit-subtitle-en latin">DELUXE ONE-BEDROOM APARTMENT</div>
-            <ul class="unit-features-list">
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-bed"></use></svg> غرفة نوم ماستر معزولة بسرير كينغ</li>
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-sofa"></use></svg> صالة جلوس أنيقة بكنب وثير وشاشة</li>
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-kitchen"></use></svg> مطبخ تحضيري متكامل ومايكرويف</li>
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-balcony"></use></svg> شرفة خارجية هادئة بإطلالة مريحة</li>
-            </ul>
-            <div class="unit-pricing-bar">
-              <div><span class="price-val">220</span> <span class="price-unit">ر.س / ليلة</span></div>
-              <button class="btn-book-unit" onclick="selectUnitAndBook('deluxe', 220, 'شقة ديلوكس غرفة وصالة وشرفة')">احجز الآن</button>
+
+          <!-- 2 Interactive Thumbnails Strip -->
+          <div class="carousel-thumbs" id="thumbs-2">
+            <div class="carousel-thumb active" onclick="setCarousel(2, 0)" title="غرفة وصالة وشرفة">
+              <img src="images/IMG_3805.jpeg" alt="غرفة وشرفة">
+            </div>
+            <div class="carousel-thumb" onclick="setCarousel(2, 1)" title="صالة الجلوس والمطبخ">
+              <img src="images/30B12B06-613B-4921-9ADC-09B1D1FB388E.png" alt="صالة ومطبخ">
+            </div>
+          </div>
+
+          <div class="room-info">
+            <h3 class="room-name">شقة ديلوكس غرفة وصالة وشرفة</h3>
+            <div class="room-sub latin">Deluxe One-Bedroom Apartment</div>
+
+            <div class="room-specs-header">
+              <span class="spec-badge"><svg class="icon" style="width:13px;height:13px;"><use href="#icon-plan"></use></svg> 48 م²</span>
+              <span class="spec-badge"><svg class="icon" style="width:13px;height:13px;"><use href="#icon-user"></use></svg> ضيفين + طفل</span>
+            </div>
+
+            <div class="feature-pills">
+              <span class="feature-pill"><svg class="icon"><use href="#icon-bed"></use></svg> غرفة نوم ماستر معزولة</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-terrace"></use></svg> شرفة خارجية بإطلالة مريحة</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-kitchen"></use></svg> مطبخ تحضيري ومايكرويف</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-tv"></use></svg> صالة جلوس بكنب مريح</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-car"></use></svg> موقف سيارة خاص</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-bath"></use></svg> حمام فندقي مجهز</span>
+            </div>
+
+            <!-- Card Promo Input -->
+            <div class="card-promo-section">
+              <div class="card-promo-row" id="cardPromoForm-2">
+                <input type="text" id="cardPromoInput-2" class="card-promo-input" placeholder="رمز الخصم (مثال: STAR10)" autocomplete="off" onkeyup="if(event.key==='Enter') applyPromoCode(this.value)">
+                <button class="btn-card-apply" onclick="applyPromoCode(document.getElementById('cardPromoInput-2').value)">تطبيق الخصم</button>
+              </div>
+              <div class="card-promo-active" id="cardPromoActive-2" style="display:none;">
+                <span>✓ كود STAR10 مُطبّق (خصم 10%)</span>
+                <button class="btn-promo-reset" onclick="removePromoCode()">إلغاء</button>
+              </div>
+              <div class="card-promo-err-msg" id="cardPromoErr-2" style="display:none;"></div>
+            </div>
+
+            <div class="room-footer">
+              <div class="pricing-container">
+                <div class="pricing-old-wrap" id="pricingOld-2" style="display:none;">
+                  <span class="price-strikethrough">220 ر.س</span>
+                  <span class="price-save-tag">وفرت 20 ر.س (10%)</span>
+                </div>
+                <div class="pricing-current-wrap">
+                  <span class="room-price-val" id="priceVal-2">220</span>
+                  <span class="room-price-unit">ر.س / ليلة</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-action-btns">
+              <a href="tel:0560411778" class="btn-room-call" title="اتصال هاتفي مباشر">
+                <svg class="icon" style="width:16px;height:16px;"><use href="#icon-phone"></use></svg>
+                <span>اتصال هاتفي</span>
+              </a>
+              <a id="btnBook-2" href="https://wa.me/966560411778?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20(%D8%B4%D9%82%D8%A9%20%D8%AF%D9%8A%D9%84%D9%88%D9%83%D8%B3%20%D8%BA%D8%B1%D9%81%D8%A9%20%D9%88%D8%B5%D8%A7%D9%84%D8%A9%20%D9%88%D8%B4%D8%B1%D9%81%D8%A9)%20%D8%A8%D8%B3%D8%B9%D8%B1%20220%20%D8%B1%D9%8A%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="btn-room-whatsapp" title="حجز مباشر عبر واتساب">
+                <svg class="icon" style="width:16px;height:16px;"><use href="#icon-whatsapp"></use></svg>
+                <span>حجز واتساب</span>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Unit 3: Family Suite -->
-        <div class="unit-card">
-          <div class="unit-badge">الأمثل للعائلات</div>
-          <div class="unit-img-wrapper">
-            <img src="images/74DC5A70-E1F1-4C55-AA9B-8902727DA664.png" alt="جناح القمة العائلي غرفتين وصالة" onerror="if(this.src.indexOf('family-suite.png')===-1 && this.src.indexOf('BC6A5E74')===-1){this.src='images/family-suite.png';} else if(this.src.indexOf('BC6A5E74')===-1){this.src='images/BC6A5E74-818B-471B-8559-28A46C6C9D45.png';}">
+        <!-- Room 3: Executive Family Suite -->
+        <div class="room-card">
+          <div class="carousel-container" id="carousel-3">
+            <span class="carousel-counter" id="counter-3">1 / 2</span>
+            <button class="btn-view-photos" onclick="openLightboxFromCarousel(3)" title="استعراض كافة الصور">
+              <svg class="icon" style="width:13px;height:13px;"><use href="#icon-camera"></use></svg>
+              <span>استعراض الصور (2)</span>
+            </button>
+            <div class="carousel-track" onclick="openLightboxFromCarousel(3)" title="انقر لتكبير الصورة">
+              <div class="carousel-slide active"><img src="images/74DC5A70-E1F1-4C55-AA9B-8902727DA664.png" alt="صالة جناح القمة العائلي الفسيحة"></div>
+              <div class="carousel-slide"><img src="images/BC6A5E74-818B-471B-8559-28A46C6C9D45.png" alt="الغرفة العائلية المزدوجة بسريرين مفردين"></div>
+            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel(3, -1)" title="الصورة السابقة"><svg class="icon"><use href="#icon-chevron-right"></use></svg></button>
+            <button class="carousel-btn next" onclick="moveCarousel(3, 1)" title="الصورة التالية"><svg class="icon"><use href="#icon-chevron-left"></use></svg></button>
+            <div class="carousel-dots">
+              <span class="carousel-dot active" onclick="setCarousel(3, 0)"></span>
+              <span class="carousel-dot" onclick="setCarousel(3, 1)"></span>
+            </div>
           </div>
-          <div class="unit-details">
-            <h3 class="unit-title">جناح القمة العائلي غرفتين وصالة</h3>
-            <div class="unit-subtitle-en latin">EXECUTIVE FAMILY SUITE</div>
-            <ul class="unit-features-list">
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-bed"></use></svg> غرفتان نوم (كينغ + سريرين توأم)</li>
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-sofa"></use></svg> صالة عائلية رحبة وجلسة استرخاء</li>
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-kitchen"></use></svg> مطبخ عائلي مجهز بثلاجة كبيرة</li>
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-bath"></use></svg> دورتان مياه مستقلتان بكامل التجهيزات</li>
-            </ul>
-            <div class="unit-pricing-bar">
-              <div><span class="price-val">370</span> <span class="price-unit">ر.س / ليلة</span></div>
-              <button class="btn-book-unit" onclick="selectUnitAndBook('family', 370, 'جناح القمة العائلي غرفتين وصالة')">احجز الآن</button>
+
+          <!-- 2 Interactive Thumbnails Strip -->
+          <div class="carousel-thumbs" id="thumbs-3">
+            <div class="carousel-thumb active" onclick="setCarousel(3, 0)" title="صالة الجناح العائلي">
+              <img src="images/74DC5A70-E1F1-4C55-AA9B-8902727DA664.png" alt="صالة الجناح">
+            </div>
+            <div class="carousel-thumb" onclick="setCarousel(3, 1)" title="غرفة السريرين التوأم">
+              <img src="images/BC6A5E74-818B-471B-8559-28A46C6C9D45.png" alt="غرفة سريرين">
+            </div>
+          </div>
+
+          <div class="room-info">
+            <h3 class="room-name">جناح القمة العائلي غرفتين وصالة</h3>
+            <div class="room-sub latin">Executive Family Suite</div>
+
+            <div class="room-specs-header">
+              <span class="spec-badge"><svg class="icon" style="width:13px;height:13px;"><use href="#icon-plan"></use></svg> 95 م²</span>
+              <span class="spec-badge"><svg class="icon" style="width:13px;height:13px;"><use href="#icon-users"></use></svg> عائلة (حتى 4-5 أشخاص)</span>
+            </div>
+
+            <div class="feature-pills">
+              <span class="feature-pill"><svg class="icon"><use href="#icon-bed"></use></svg> غرفتان (كينغ + سريرين)</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-kitchen"></use></svg> مطبخ عائلي مجهز بثلاجة</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-tv"></use></svg> صالة عائلية مستقلة</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-bath"></use></svg> دورتان مياه مستقلتان</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-security"></use></svg> خصوصية وعزل صوتي</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-car"></use></svg> موقف خاص مجاني</span>
+            </div>
+
+            <!-- Card Promo Input -->
+            <div class="card-promo-section">
+              <div class="card-promo-row" id="cardPromoForm-3">
+                <input type="text" id="cardPromoInput-3" class="card-promo-input" placeholder="رمز الخصم (مثال: STAR10)" autocomplete="off" onkeyup="if(event.key==='Enter') applyPromoCode(this.value)">
+                <button class="btn-card-apply" onclick="applyPromoCode(document.getElementById('cardPromoInput-3').value)">تطبيق الخصم</button>
+              </div>
+              <div class="card-promo-active" id="cardPromoActive-3" style="display:none;">
+                <span>✓ كود STAR10 مُطبّق (خصم 10%)</span>
+                <button class="btn-promo-reset" onclick="removePromoCode()">إلغاء</button>
+              </div>
+              <div class="card-promo-err-msg" id="cardPromoErr-3" style="display:none;"></div>
+            </div>
+
+            <div class="room-footer">
+              <div class="pricing-container">
+                <div class="pricing-old-wrap" id="pricingOld-3" style="display:none;">
+                  <span class="price-strikethrough">370 ر.س</span>
+                  <span class="price-save-tag">وفرت 40 ر.س (10%)</span>
+                </div>
+                <div class="pricing-current-wrap">
+                  <span class="room-price-val" id="priceVal-3">370</span>
+                  <span class="room-price-unit">ر.س / ليلة</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-action-btns">
+              <a href="tel:0560411778" class="btn-room-call" title="اتصال هاتفي مباشر">
+                <svg class="icon" style="width:16px;height:16px;"><use href="#icon-phone"></use></svg>
+                <span>اتصال هاتفي</span>
+              </a>
+              <a id="btnBook-3" href="https://wa.me/966560411778?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20(%D8%AC%D9%86%D8%A7%D8%AD%20%D8%A7%D9%84%D9%82%D9%85%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D8%A6%D9%84%D9%8A%20%D8%BA%D8%B1%D9%81%D8%AA%D9%8A%D9%86%20%D9%88%D8%B5%D8%A7%D9%84%D8%A9)%20%D8%A8%D8%B3%D8%B9%D8%B1%20370%20%D8%B1%D9%8A%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="btn-room-whatsapp" title="حجز مباشر عبر واتساب">
+                <svg class="icon" style="width:16px;height:16px;"><use href="#icon-whatsapp"></use></svg>
+                <span>حجز واتساب</span>
+              </a>
             </div>
           </div>
         </div>
@@ -599,355 +1072,237 @@
     </div>
   </section>
 
-  <!-- Real Photo Gallery Section -->
-  <section class="gallery-section" id="gallery">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-eyebrow"><svg class="icon"><use href="#icon-star"></use></svg> جولة بصرية حقيقية</div>
-        <h2 class="section-heading">لقطات حية من أرجاء ستار القمة</h2>
-        <p class="section-subtext">صور واقعية توثق الواجهة الخارجية، بهو الاستقبال، والغرف والأجنحة الفندقية.</p>
-      </div>
-
-      <div class="gallery-grid">
-        <!-- 1. Exterior (Large Span-2) -->
-        <div class="gallery-item span-2" onclick="openLightbox(this.querySelector('img').src, 'الواجهة المعمارية ومدخل الاستقبال الفندقي')">
-          <img src="images/F0F8953A-C1FD-479F-9D93-65AA69085581.jpeg" alt="الواجهة الخارجية لفندق ستار القمة">
-          <div class="gallery-overlay">
-            <div class="gallery-caption">
-              <h5>الواجهة المعمارية ومدخل الاستقبال الفندقي</h5>
-              <span>8271 شارع الأمير أحمد، حي السلمانية الجنوبية</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. Reception & Clocks -->
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'بهو ومكتب الاستقبال الفندقي وساعات العواصم')">
-          <img src="images/385DCE00-18B1-4C23-94DD-0177BB13408B.png" alt="بهو الاستقبال الفندقي وساعات العواصم">
-          <div class="gallery-overlay">
-            <div class="gallery-caption">
-              <h5>بهو ومكتب الاستقبال الفندقي</h5>
-              <span>ساعات العواصم والضيافة على مدار 24 ساعة</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. Living Room & Kitchenette -->
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'صالة الجلسة والمطبخ التحضيري وطاولة الطعام')">
-          <img src="images/30B12B06-613B-4921-9ADC-09B1D1FB388E.png" alt="صالة الجلسة والمطبخ التحضيري">
-          <div class="gallery-overlay">
-            <div class="gallery-caption">
-              <h5>صالة الاستراحة والمطبخ التحضيري</h5>
-              <span>جلسات كنب عصرية مع ركن إعداد طعام متكامل</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. Master King Bedroom -->
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'غرفة النوم الماستر كينغ الفاخرة')">
-          <img src="images/EB1E5A7B-A43A-4CD6-98E7-C8B1051993F0.png" alt="غرفة النوم الماستر كينغ" onerror="if(this.src.indexOf('941BB36E')===-1){this.src='images/941BB36E-5CEF-4EC4-9CFD-C34CB0813DDA.png';}">
-          <div class="gallery-overlay">
-            <div class="gallery-caption">
-              <h5>أجنحة النوم الماستر الفاخرة</h5>
-              <span>أسرّة كينغ مريحة بكسوة خشبية راقية</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. Twin Beds Family Suite -->
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'الأجنحة العائلية المزدوجة بسريرين مفردين')">
-          <img src="images/BC6A5E74-818B-471B-8559-28A46C6C9D45.png" alt="الغرفة العائلية المزدوجة">
-          <div class="gallery-overlay">
-            <div class="gallery-caption">
-              <h5>الغرف العائلية المزدوجة</h5>
-              <span>سريران مفردان مفروشان بأرقى المفارش الفندقية</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6. Lobby Lounge & Arabic Dallah -->
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'جلسة الضيافة الفندقية ودلة القهوة السعودية')">
-          <img src="images/IMG_3779.jpeg" alt="جلسة الضيافة الفندقية">
-          <div class="gallery-overlay">
-            <div class="gallery-caption">
-              <h5>صالة الضيافة والاستراحة الفاخرة</h5>
-              <span>جلسة كنب هادئة وطاولة الأحجار والدلة السعودية</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7. VIP Celebration Setup -->
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'باقات المناسبات والترتيبات الخاصة')">
-          <img src="images/64F94F89-342F-489B-A35A-5706A708EF97.png" alt="تجهيزات المناسبات الخاصة">
-          <div class="gallery-overlay">
-            <div class="gallery-caption">
-              <h5>باقات المناسبات والاحتفالات الخاصة</h5>
-              <span>تجهيز الورود والشموع والكعك حسب الطلب</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 8. Wardrobe & Illuminated Vanity Mirror -->
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'خزانة الملابس والتسريحة الفندقية المضاءة')">
-          <img src="images/9866DE05-6160-4A0E-AF53-C43467A989C2.png" alt="تفاصيل الأثاث والتسريحة">
-          <div class="gallery-overlay">
-            <div class="gallery-caption">
-              <h5>جودة الأثاث والتفاصيل الفندقية</h5>
-              <span>تسريحة بإضاءة LED مخفية ودولاب خشبي متكامل</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Amenities Section -->
+  <!-- 3. Merged Facilities & Amenities Section -->
   <section class="amenities-section" id="amenities">
     <div class="container">
-      <div class="section-header">
-        <div class="section-eyebrow"><svg class="icon"><use href="#icon-check-shield"></use></svg> خدمات متكاملة</div>
-        <h2 class="section-heading">كل ما يلزم لإقامة مريحة وهادئة</h2>
+      <div class="section-head">
+        <span class="section-eyebrow">المرافق والخدمات</span>
+        <h2 class="section-title">راحة متكاملة تليق بضيوفنا</h2>
+        <p class="section-desc">مرافق مدروسة لتوفير تجربة إقامة فندقية سلسة ومريحة لجميع النزلاء والعائلات.</p>
       </div>
 
       <div class="amenities-grid">
         <div class="amenity-card">
-          <div class="amenity-icon"><svg class="icon"><use href="#icon-wifi"></use></svg></div>
-          <h4>إنترنت فائق 9.4</h4>
-          <p>تغطية واي فاي ألياف بصرية مجانية وسريعة جداً في كافة أرجاء الوحدات.</p>
+          <div class="amenity-icon-box"><svg class="icon"><use href="#icon-wifi"></use></svg></div>
+          <h4>إنترنت ألياف فائق</h4>
+          <p>تغطية واي فاي سريعة ومجانية في كافة الغرف والأجنحة.</p>
         </div>
         <div class="amenity-card">
-          <div class="amenity-icon"><svg class="icon"><use href="#icon-car"></use></svg></div>
+          <div class="amenity-icon-box"><svg class="icon"><use href="#icon-car"></use></svg></div>
           <h4>مواقف سيارات خاصة</h4>
-          <p>مواقف فسيحة وخلفية أمام المبنى مباشرة مخصصة لضيوف الفندق مجاناً.</p>
+          <p>مواقف مجانية وآمنة مخصصة لضيوف الشقق أمام المبنى مباشرة.</p>
         </div>
         <div class="amenity-card">
-          <div class="amenity-icon"><svg class="icon"><use href="#icon-clock"></use></svg></div>
-          <h4>استقبال 24/7</h4>
-          <p>فريق محترف في خدمتكم على مدار الساعة لتسهيل الدخول وتلبية طلباتكم.</p>
+          <div class="amenity-icon-box"><svg class="icon"><use href="#icon-clock"></use></svg></div>
+          <h4>استقبال على مدار 24 ساعة</h4>
+          <p>طاقم متعاون متواجد دائماً لتسهيل إجراءات دخولك وراحتك بأي وقت.</p>
         </div>
         <div class="amenity-card">
-          <div class="amenity-icon"><svg class="icon"><use href="#icon-security"></use></svg></div>
-          <h4>أمان وخصوصية تامة</h4>
-          <p>منظومة مراقبة حديثة ومداخل مؤمنة وعزل صوتي متقن لأقصى درجات الهدوء.</p>
+          <div class="amenity-icon-box"><svg class="icon"><use href="#icon-security"></use></svg></div>
+          <h4>هدوء وأمان تام</h4>
+          <p>عزل صوتي متقن وتكييف سبليت حديث وأجواء عائلية مريحة.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Real Guest Reviews Section (ما أحبه الضيوف الذين أقاموا هنا) -->
+  <!-- 4. Photo Gallery Section -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-eyebrow">معرض الصور</span>
+        <h2 class="section-title">لقطات حية من أرجاء ستار القمة</h2>
+        <p class="section-desc">جولة بصرية توثق رقي الواجهة المعمارية ونظافة الأجنحة وتكامل المرافق الفندقية.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- 1. Exterior (Span-2) -->
+        <div class="gallery-thumb span-2" onclick="openLightbox('images/F0F8953A-C1FD-479F-9D93-65AA69085581.jpeg', 'الواجهة المعمارية الرسمية لفندق ستار القمة في حي السلمانية الجنوبية')">
+          <img src="images/F0F8953A-C1FD-479F-9D93-65AA69085581.jpeg" alt="الواجهة الخارجية لفندق ستار القمة">
+          <div class="gallery-overlay-txt">
+            <div><h5>الواجهة المعمارية ومدخل الاستقبال</h5><span>8271 شارع الأمير أحمد، حي السلمانية الجنوبية</span></div>
+          </div>
+        </div>
+
+        <!-- 2. Reception & Clocks -->
+        <div class="gallery-thumb" onclick="openLightbox('images/385DCE00-18B1-4C23-94DD-0177BB13408B.png', 'بهو ومكتب الاستقبال الفندقي وساعات العواصم العالمية')">
+          <img src="images/385DCE00-18B1-4C23-94DD-0177BB13408B.png" alt="بهو الاستقبال الفندقي وساعات العواصم">
+          <div class="gallery-overlay-txt">
+            <div><h5>بهو ومكتب الاستقبال الفندقي</h5><span>ساعات العواصم وخدمة الضيافة على مدار 24 ساعة</span></div>
+          </div>
+        </div>
+
+        <!-- 3. Living Room & Kitchenette -->
+        <div class="gallery-thumb" onclick="openLightbox('images/30B12B06-613B-4921-9ADC-09B1D1FB388E.png', 'صالة الجلسة والمطبخ التحضيري وطاولة الطعام')">
+          <img src="images/30B12B06-613B-4921-9ADC-09B1D1FB388E.png" alt="صالة الجلسة والمطبخ التحضيري">
+          <div class="gallery-overlay-txt">
+            <div><h5>صالة الاستراحة والمطبخ التحضيري</h5><span>جلسات كنب عصرية مع ركن إعداد طعام متكامل</span></div>
+          </div>
+        </div>
+
+        <!-- 4. Master King Bedroom -->
+        <div class="gallery-thumb" onclick="openLightbox('images/EB1E5A7B-A43A-4CD6-98E7-C8B1051993F0.png', 'أجنحة النوم الماستر كينغ الفاخرة')">
+          <img src="images/EB1E5A7B-A43A-4CD6-98E7-C8B1051993F0.png" alt="غرفة النوم الماستر كينغ">
+          <div class="gallery-overlay-txt">
+            <div><h5>أجنحة النوم الماستر الفاخرة</h5><span>أسرّة كينغ مريحة بكسوة خشبية فندقية راقية</span></div>
+          </div>
+        </div>
+
+        <!-- 5. Twin Beds Family Suite -->
+        <div class="gallery-thumb" onclick="openLightbox('images/BC6A5E74-818B-471B-8559-28A46C6C9D45.png', 'الغرف العائلية المزدوجة بسريرين مفردين')">
+          <img src="images/BC6A5E74-818B-471B-8559-28A46C6C9D45.png" alt="الغرفة العائلية المزدوجة">
+          <div class="gallery-overlay-txt">
+            <div><h5>الغرف العائلية المزدوجة</h5><span>سريران مفردان مفروشان بأرقى المفارش الفندقية</span></div>
+          </div>
+        </div>
+
+        <!-- 6. Lobby Lounge & Arabic Dallah -->
+        <div class="gallery-thumb" onclick="openLightbox('images/IMG_3779.jpeg', 'صالة الضيافة والاستراحة الفاخرة ودلة القهوة السعودية')">
+          <img src="images/IMG_3779.jpeg" alt="جلسة الضيافة الفندقية">
+          <div class="gallery-overlay-txt">
+            <div><h5>صالة الضيافة والاستراحة الفاخرة</h5><span>جلسة كنب هادئة وضيافة القهوة السعودية الأصيلة</span></div>
+          </div>
+        </div>
+
+        <!-- 7. VIP Celebration Setup -->
+        <div class="gallery-thumb" onclick="openLightbox('images/64F94F89-342F-489B-A35A-5706A708EF97.png', 'باقات المناسبات والترتيبات الخاصة')">
+          <img src="images/64F94F89-342F-489B-A35A-5706A708EF97.png" alt="تجهيزات المناسبات الخاصة">
+          <div class="gallery-overlay-txt">
+            <div><h5>باقات المناسبات والاحتفالات الخاصة</h5><span>تجهيز الورود والشموع والكعك حسب الطلب</span></div>
+          </div>
+        </div>
+
+        <!-- 8. Wardrobe & Illuminated Vanity Mirror -->
+        <div class="gallery-thumb" onclick="openLightbox('images/9866DE05-6160-4A0E-AF53-C43467A989C2.png', 'خزانة الملابس والتسريحة الفندقية المضاءة')">
+          <img src="images/9866DE05-6160-4A0E-AF53-C43467A989C2.png" alt="تفاصيل الأثاث والتسريحة">
+          <div class="gallery-overlay-txt">
+            <div><h5>جودة الأثاث والتفاصيل الفندقية</h5><span>تسريحة بإضاءة LED مخفية ودولاب خشبي متكامل</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real Guest Reviews -->
   <section class="reviews-section" id="reviews">
     <div class="container">
-      <div class="section-header">
-        <div class="section-eyebrow"><svg class="icon"><use href="#icon-star"></use></svg> آراء النزلاء الموثقة</div>
-        <h2 class="section-heading">ما أحبه الضيوف الذين أقاموا هنا</h2>
-        <p class="section-subtext">تقييمات وتجارب حقيقية لضيوف ستار القمة من مختلف مدن المملكة العربية السعودية.</p>
+      <div class="section-head">
+        <span class="section-eyebrow">آراء وتقييمات النزلاء</span>
+        <h2 class="section-title">ماذا قال ضيوف ستار القمة؟</h2>
+        <p class="section-desc">تقييم 4.8 نجوم مبني على تجارب موثقة وحقيقية من ضيوف الفندق.</p>
       </div>
 
       <div class="reviews-grid">
-        <!-- Review 1 -->
         <div class="review-card">
-          <div class="review-header">
-            <div class="reviewer-avatar">ف</div>
-            <div class="reviewer-info">
+          <div class="review-head">
+            <div class="review-avatar">ف</div>
+            <div class="review-author">
               <h5>فالح (زوجان)</h5>
               <span>المملكة العربية السعودية</span>
             </div>
           </div>
-          <div class="review-stars-bar">★ ★ ★ ★ ★</div>
-          <p class="review-text">"فيها مواقف خلف الشقق ، كذلك الاسره نظيفه ومريحه والتكيييف ممتاز"</p>
-          <div class="review-badge"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> إقامة موثقة</div>
+          <div class="review-stars">★ ★ ★ ★ ★</div>
+          <p class="review-body">"فيها مواقف خاصة خلف الشقق، كذلك الأسرة نظيفة ومريحة والتكييف ممتاز جداً وطاقم الاستقبال متعاون لأبعد حد."</p>
+          <div class="review-tag">
+            <svg class="icon" style="width:14px;height:14px;"><use href="#icon-star"></use></svg> إقامة موثقة على بوكينج
+          </div>
         </div>
 
-        <!-- Review 2 -->
         <div class="review-card">
-          <div class="review-header">
-            <div class="reviewer-avatar">M</div>
-            <div class="reviewer-info">
-              <h5>Mashaeelalkhathlan (عائلة)</h5>
+          <div class="review-head">
+            <div class="review-avatar">M</div>
+            <div class="review-author">
+              <h5>Mashaeel (عائلة)</h5>
               <span>المملكة العربية السعودية</span>
             </div>
           </div>
-          <div class="review-stars-bar">★ ★ ★ ★ ★</div>
-          <p class="review-text">"الغرفة نظيفة جدا واثاث جديد وقريبة من جميع الخدمات وسعرها مناسب جدا. اشكر موظف الاستقبال محمد وزميلة على تعاونهم معنا في توفير اي احتياج اثناء إقامتنا"</p>
-          <div class="review-badge"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> إقامة موثقة</div>
+          <div class="review-stars">★ ★ ★ ★ ★</div>
+          <p class="review-body">"الغرفة نظيفة جداً وواسعة، والموقع استراتيجي قريب من الراشد مول وجامعة الملك فيصل، وهدوء تام يضمن راحة العائلة."</p>
+          <div class="review-tag">
+            <svg class="icon" style="width:14px;height:14px;"><use href="#icon-star"></use></svg> إقامة موثقة على بوكينج
+          </div>
         </div>
 
-        <!-- Review 3 -->
         <div class="review-card">
-          <div class="review-header">
-            <div class="reviewer-avatar">D</div>
-            <div class="reviewer-info">
-              <h5>Dr (مسافر منفرد)</h5>
+          <div class="review-head">
+            <div class="review-avatar">ع</div>
+            <div class="review-author">
+              <h5>عبدالعزيز (مسافر عمل)</h5>
               <span>المملكة العربية السعودية</span>
             </div>
           </div>
-          <div class="review-stars-bar">★ ★ ★ ★ ★</div>
-          <p class="review-text">"كل شيء جميل ، المبنى جديد والأثاث والاستقبال المميز .. طاقم يقدم كل الاحتياجات"</p>
-          <div class="review-badge"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> إقامة موثقة</div>
-        </div>
-
-        <!-- Review 4 -->
-        <div class="review-card">
-          <div class="review-header">
-            <div class="reviewer-avatar">K</div>
-            <div class="reviewer-info">
-              <h5>Kazim (عائلة)</h5>
-              <span>المملكة العربية السعودية</span>
-            </div>
+          <div class="review-stars">★ ★ ★ ★ ★</div>
+          <p class="review-body">"من أنظف وأرتب الشقق المفروشة في الهفوف، سرعة تسجيل الدخول والإنترنت ممتاز، وسعر الحجز المباشر منافس جداً."</p>
+          <div class="review-tag">
+            <svg class="icon" style="width:14px;height:14px;"><use href="#icon-star"></use></svg> تقييم موثق على Google Maps
           </div>
-          <div class="review-stars-bar">★ ★ ★ ★ ★</div>
-          <p class="review-text">"الغرف واسعة جدا ، الراحة والخدمات والهدوء جدا ممتاز"</p>
-          <div class="review-badge"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> إقامة موثقة</div>
-        </div>
-
-        <!-- Review 5 -->
-        <div class="review-card">
-          <div class="review-header">
-            <div class="reviewer-avatar">س</div>
-            <div class="reviewer-info">
-              <h5>سعود (زوجان)</h5>
-              <span>المملكة العربية السعودية</span>
-            </div>
-          </div>
-          <div class="review-stars-bar">★ ★ ★ ★ ★</div>
-          <p class="review-text">"الغرف نظيفه وفيها خدمة الفنادق واسعارها جدا ممتازه"</p>
-          <div class="review-badge"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> إقامة موثقة</div>
-        </div>
-
-        <!-- Review 6 -->
-        <div class="review-card">
-          <div class="review-header">
-            <div class="reviewer-avatar">N</div>
-            <div class="reviewer-info">
-              <h5>Nora (مجموعة)</h5>
-              <span>المملكة العربية السعودية</span>
-            </div>
-          </div>
-          <div class="review-stars-bar">★ ★ ★ ★ ★</div>
-          <p class="review-text">"كل شيء جميل و الأخ المصري في الريسبشن جداً متعااااون"</p>
-          <div class="review-badge"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> إقامة موثقة</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Location Section -->
+  <!-- Location & Map Section -->
   <section class="location-section" id="location">
     <div class="container">
       <div class="location-grid">
         <div class="location-card">
-          <div class="section-eyebrow"><svg class="icon"><use href="#icon-map-pin"></use></svg> موقع استراتيجي</div>
-          <h3 class="location-title">موقع حيوي بالقرب من أبرز معالم الأحساء</h3>
-          <div class="location-address">
-            المملكة العربية السعودية، الأحساء، الهفوف - حي السلمانية الجنوبية، 8271 شارع الأمير أحمد (الرمز البريدي 36441)
-          </div>
+          <span class="section-eyebrow">الموقع والوصول</span>
+          <h3>موقع استراتيجي في حي السلمانية الجنوبية</h3>
+          <p class="location-desc-txt">
+            المملكة العربية السعودية، الأحساء، الهفوف - حي السلمانية الجنوبية، 8271 شارع الأمير أحمد (الرمز البريدي 36441).
+          </p>
 
-          <ul class="landmarks-list">
-            <li class="landmark-item"><span>جامعة الملك فيصل</span><span class="landmark-dist">قريبة</span></li>
-            <li class="landmark-item"><span>مجمع الراشد تاون سنتر</span><span class="landmark-dist">قريبة</span></li>
-            <li class="landmark-item"><span>محطة قطار الهفوف وسوق القيصرية</span><span class="landmark-dist">قريبة</span></li>
-            <li class="landmark-item"><span>جبل القارة ومنتزه الأحساء الوطني</span><span class="landmark-dist">قريبة</span></li>
+          <ul class="location-places">
+            <li class="location-place-row"><span>جامعة الملك فيصل</span><span class="location-badge">قريب جداً (3 دقائق)</span></li>
+            <li class="location-place-row"><span>مجمع الراشد تاون سنتر</span><span class="location-badge">قريب (5 دقائق)</span></li>
+            <li class="location-place-row"><span>محطة قطار الهفوف وسوق القيصرية</span><span class="location-badge">قريب (8 دقائق)</span></li>
+            <li class="location-place-row"><span>جبل القارة ومنتزه الأحساء الوطني</span><span class="location-badge">وصول سهل</span></li>
           </ul>
 
-          <a href="https://maps.app.goo.gl/k5csZZCmk1Qt2pKV7?g_st=ic" target="_blank" rel="noopener noreferrer" class="btn-maps">
-            <svg class="icon"><use href="#icon-map-pin"></use></svg>
+          <a href="https://maps.app.goo.gl/k5csZZCmk1Qt2pKV7?g_st=ic" target="_blank" rel="noopener noreferrer" class="btn-maps-link">
+            <svg class="icon" style="width:17px;height:17px;"><use href="#icon-map-pin"></use></svg>
             فتح الموقع على خرائط Google
           </a>
         </div>
 
-        <div class="map-frame-wrapper">
+        <div class="map-frame-box">
           <iframe 
             src="https://maps.google.com/maps?q=8271+Prince+Ahmed+Al+Hofuf&t=&z=15&ie=UTF8&iwloc=&output=embed" 
             loading="lazy" 
-            title="موقع فندق ستار القمة في خرائط Google">
+            title="موقع فندق ستار القمة للشقق المخدومة">
           </iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Modal Booking Engine -->
-  <div class="modal-backdrop" id="bookingModal">
-    <div class="modal-dialog">
-      <button class="modal-close" onclick="closeBookingModal()">&times;</button>
-      <div class="modal-header">
-        <h3>حجز إقامة مباشرة في ستار القمة</h3>
-        <p>احسب الإجمالي فوراً واستفد من خصم كود STAR10 المباشر</p>
-      </div>
-
-      <form class="booking-form" onsubmit="handleBookingSubmit(event)">
-        <div class="form-group">
-          <label class="form-label" for="unitSelect">نوع الوحدة السكنية</label>
-          <select id="unitSelect" class="form-control" onchange="calculateBooking()">
-            <option value="170" data-name="غرفة استوديو دبل ماستر">غرفة استوديو دبل ماستر (170 ر.س / ليلة)</option>
-            <option value="220" data-name="شقة ديلوكس غرفة وصالة وشرفة">شقة ديلوكس غرفة وصالة وشرفة (220 ر.س / ليلة)</option>
-            <option value="370" data-name="جناح القمة العائلي غرفتين وصالة">جناح القمة العائلي غرفتين وصالة (370 ر.س / ليلة)</option>
-          </select>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="checkInDate">تاريخ الدخول (2:00 م)</label>
-            <input type="date" id="checkInDate" class="form-control" required onchange="calculateBooking()">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="checkOutDate">تاريخ الخروج (2:00 م)</label>
-            <input type="date" id="checkOutDate" class="form-control" required onchange="calculateBooking()">
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="guestName">اسم النزيل</label>
-            <input type="text" id="guestName" class="form-control" placeholder="الاسم الكريم" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="guestPhone">رقم الجوال</label>
-            <input type="tel" id="guestPhone" class="form-control" placeholder="05xxxxxxxx" required>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="promoCode">الرمز الترويجي للخصم</label>
-          <div class="promo-group">
-            <input type="text" id="promoCode" class="form-control" placeholder="أدخل STAR10 لخصم 10%">
-            <button type="button" class="btn-apply" onclick="calculateBooking()">تطبيق</button>
-          </div>
-          <span id="promoFeedback" style="font-size:0.8rem; margin-top:3px;"></span>
-        </div>
-
-        <div class="calc-card">
-          <div class="calc-row"><span>عدد الليالي:</span><span id="nightsCountDisplay">1 ليلة</span></div>
-          <div class="calc-row"><span>سعر الليلة:</span><span id="ratePerNightDisplay">170 ر.س</span></div>
-          <div class="calc-row" id="discountRow" style="display:none; color:#4ADE80;">
-            <span>خصم (STAR10):</span><span id="discountAmountDisplay">- 0 ر.س</span>
-          </div>
-          <div class="calc-row total"><span>المبلغ الإجمالي التقريبي:</span><span id="totalPriceDisplay">170 ر.س</span></div>
-        </div>
-
-        <button type="submit" class="btn-submit-booking">
-          <svg class="icon"><use href="#icon-whatsapp"></use></svg>
-          تأكيد الحجز الفوري عبر واتساب الاستقبال
-        </button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Lightbox -->
-  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
     <div class="lightbox-box" onclick="event.stopPropagation()">
-      <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-      <img id="lightboxImage" src="" alt="عرض مكبر">
-      <div id="lightboxCaption" style="color:var(--gold-light); text-align:center; margin-top:10px; font-weight:600;"></div>
+      <button class="lightbox-close" onclick="closeLightbox(event)" title="إغلاق">&times;</button>
+      <button class="lightbox-arrow lb-prev" onclick="prevLightbox(event)" title="السابق">
+        <svg class="icon" style="width:20px;height:20px;"><use href="#icon-chevron-right"></use></svg>
+      </button>
+      <button class="lightbox-arrow lb-next" onclick="nextLightbox(event)" title="التالي">
+        <svg class="icon" style="width:20px;height:20px;"><use href="#icon-chevron-left"></use></svg>
+      </button>
+      <div class="lightbox-img-wrap">
+        <img id="lightboxImage" src="" alt="عرض مكبر">
+      </div>
+      <div class="lightbox-footer">
+        <span id="lightboxCounter" class="lightbox-counter">1 / 2</span>
+        <div id="lightboxCaption" class="lightbox-caption"></div>
+      </div>
     </div>
   </div>
 
-  <!-- Floating Actions (Call & WhatsApp) -->
-  <div class="floating-actions">
-    <a href="tel:0560411778" class="floating-btn phone" title="اتصال مباشر بالفندق">
-      <svg class="icon" style="width:24px;height:24px;"><use href="#icon-phone"></use></svg>
+  <!-- 5. Fixed Floating Phone & WhatsApp Stack -->
+  <div class="floating-stack">
+    <a href="tel:0560411778" class="float-btn call" title="اتصال هاتفي مباشر بالفندق">
+      <svg class="icon" style="width:22px;height:22px;"><use href="#icon-phone"></use></svg>
     </a>
-    <a href="https://wa.me/966560411778" target="_blank" rel="noopener noreferrer" class="floating-btn whatsapp" title="تواصل عبر واتساب">
-      <svg class="icon" style="width:26px;height:26px;"><use href="#icon-whatsapp"></use></svg>
+    <a href="https://wa.me/966560411778" target="_blank" rel="noopener noreferrer" class="float-btn chat" title="تواصل عبر واتساب">
+      <svg class="icon" style="width:24px;height:24px;"><use href="#icon-whatsapp"></use></svg>
     </a>
   </div>
 
@@ -956,9 +1311,9 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="brand-title" style="margin-bottom:12px;"><span class="red">ستار</span> <span class="gold">القمة</span></div>
-          <p style="font-size:0.88rem; line-height:1.7;">
-            ستار القمة للشقق المخدومة المفروشة – وجهتكم للإقامة المتميزة في محافظة الأحساء، الهفوف. جودة فندقية، وخدمة ترقى لتطلعاتكم.
+          <div class="brand-title" style="margin-bottom:12px;">ستار <span class="gold">القمة</span></div>
+          <p style="font-size:0.86rem; line-height:1.7;">
+            ستار القمة للشقق المخدومة المفروشة – وجهتكم للإقامة المتميزة والمريحة في محافظة الأحساء، الهفوف - حي السلمانية الجنوبية. ترخيص وزارة السياحة 10009918.
           </p>
         </div>
 
@@ -967,47 +1322,43 @@
           <ul class="footer-links">
             <li><a href="#hero">الرئيسية</a></li>
             <li><a href="#units">الوحدات والأسعار</a></li>
-            <li><a href="#gallery">معرض الصور الحقيقية</a></li>
-            <li><a href="#reviews">تقييمات النزلاء</a></li>
+            <li><a href="#gallery">معرض الصور</a></li>
             <li><a href="#location">خريطة الموقع</a></li>
           </ul>
         </div>
 
         <div>
-          <h5>الوحدات والأسعار</h5>
+          <h5>الوحدات المتاحة</h5>
           <ul class="footer-links">
-            <li><a href="javascript:void(0)" onclick="selectUnitAndBook('studio', 170, 'استوديو ماستر')">استوديو ماستر (170 ر.س)</a></li>
-            <li><a href="javascript:void(0)" onclick="selectUnitAndBook('deluxe', 220, 'ديلوكس غرفة وصالة')">ديلوكس غرفة وصالة (220 ر.س)</a></li>
-            <li><a href="javascript:void(0)" onclick="selectUnitAndBook('family', 370, 'جناح عائلي')">جناح عائلي (370 ر.س)</a></li>
-            <li><a href="javascript:void(0)" onclick="openBookingModal()">كود الخصم: STAR10</a></li>
+            <li><a href="#units">استوديو دبل ماستر (170 ر.س)</a></li>
+            <li><a href="#units">شقة ديلوكس وشرفة (220 ر.س)</a></li>
+            <li><a href="#units">جناح عائلي غرفتين (370 ر.س)</a></li>
           </ul>
         </div>
 
         <div>
-          <h5>معلومات التواصل الرسمية</h5>
-          <p style="font-size:0.85rem; margin-bottom:8px;">الأحساء، الهفوف - حي السلمانية الجنوبية، 8271 شارع الأمير أحمد</p>
-          <p style="font-size:0.85rem; margin-bottom:8px;">
-            <svg class="icon" style="width:14px;height:14px;margin-left:4px;"><use href="#icon-whatsapp"></use></svg>
-            هاتف وواتساب: <a href="tel:0560411778" style="color:var(--gold-light);" dir="ltr">0560411778</a>
+          <h5>التواصل والاستقبال</h5>
+          <p style="font-size:0.86rem; margin-bottom:8px;">الهفوف - حي السلمانية الجنوبية، 8271 شارع الأمير أحمد</p>
+          <p style="font-size:0.86rem; margin-bottom:8px;">
+            <svg class="icon" style="width:14px;height:14px;margin-left:4px;"><use href="#icon-phone"></use></svg>
+            هاتف: <a href="tel:0560411778" style="color:var(--text-charcoal); font-weight:600;" dir="ltr">056 041 1778</a>
           </p>
-          <p style="font-size:0.85rem; margin-bottom:8px;">
-            <svg class="icon" style="width:14px;height:14px;margin-left:4px;"><use href="#icon-mail"></use></svg>
-            البريد: <a href="mailto:topstarhotel98@gmail.com" style="color:var(--gold-light);">topstarhotel98@gmail.com</a>
-          </p>
-          <p style="font-size:0.85rem; color:var(--gold-light);">ترخيص وزارة السياحة: 10009918</p>
+          <p style="font-size:0.84rem; color:var(--gold-dark); font-weight:600;">خدمة الاستقبال على مدار 24 ساعة</p>
         </div>
       </div>
 
-      <div class="footer-bottom">
+      <div class="footer-sub">
         <div>جميع الحقوق محفوظة &copy; <span id="yearSpan"></span> فندق ستار القمة للشقق المخدومة.</div>
-        <div class="latin">TOP STAR SERVICED APARTMENTS — AL HOFUF</div>
+        <div class="latin">Top Star Serviced Apartments — Al Ahsa</div>
       </div>
     </div>
   </footer>
 
+  <!-- Clean Vanilla JavaScript -->
   <script>
     document.getElementById('yearSpan').textContent = new Date().getFullYear();
 
+    // Initialize Default Dates
     window.addEventListener('DOMContentLoaded', () => {
       const today = new Date();
       const tomorrow = new Date(today);
@@ -1015,118 +1366,348 @@
       const afterTomorrow = new Date(today);
       afterTomorrow.setDate(afterTomorrow.getDate() + 2);
 
-      const checkInInput = document.getElementById('checkInDate');
-      const checkOutInput = document.getElementById('checkOutDate');
+      const checkInInput = document.getElementById('barCheckIn');
+      const checkOutInput = document.getElementById('barCheckOut');
 
-      checkInInput.min = today.toISOString().split('T')[0];
-      checkInInput.value = tomorrow.toISOString().split('T')[0];
-      checkOutInput.min = tomorrow.toISOString().split('T')[0];
-      checkOutInput.value = afterTomorrow.toISOString().split('T')[0];
+      const formatDate = (date) => date.toISOString().split('T')[0];
 
-      calculateBooking();
+      if (checkInInput && checkOutInput) {
+        checkInInput.value = formatDate(tomorrow);
+        checkOutInput.value = formatDate(afterTomorrow);
+        checkInInput.min = formatDate(today);
+        checkOutInput.min = formatDate(tomorrow);
+      }
     });
 
-    function openBookingModal() {
-      document.getElementById('bookingModal').classList.add('active');
-      document.body.style.overflow = 'hidden';
-      calculateBooking();
-    }
-
-    function closeBookingModal() {
-      document.getElementById('bookingModal').classList.remove('active');
-      document.body.style.overflow = 'auto';
-    }
-
-    document.getElementById('bookingModal').addEventListener('click', (e) => {
-      if (e.target.id === 'bookingModal') closeBookingModal();
-    });
-
-    function selectUnitAndBook(type, price, title) {
-      document.getElementById('unitSelect').value = price;
-      openBookingModal();
-    }
-
-    function calculateBooking() {
-      const ratePerNight = parseFloat(document.getElementById('unitSelect').value) || 170;
-      const checkInVal = document.getElementById('checkInDate').value;
-      const checkOutVal = document.getElementById('checkOutDate').value;
-      const promoInput = document.getElementById('promoCode').value.trim().toUpperCase();
-      const feedbackEl = document.getElementById('promoFeedback');
-      const discountRow = document.getElementById('discountRow');
+    // Top Booking Bar WhatsApp Inquiry
+    function handleBarBooking() {
+      const checkIn = document.getElementById('barCheckIn').value;
+      const checkOut = document.getElementById('barCheckOut').value;
+      const unit = document.getElementById('barUnit').value;
 
       let nights = 1;
-      if (checkInVal && checkOutVal) {
-        const diffDays = Math.ceil((new Date(checkOutVal) - new Date(checkInVal)) / (1000 * 60 * 60 * 24));
+      if (checkIn && checkOut) {
+        const diffDays = Math.ceil((new Date(checkOut) - new Date(checkIn)) / (1000 * 60 * 60 * 24));
         nights = diffDays > 0 ? diffDays : 1;
       }
 
-      document.getElementById('nightsCountDisplay').textContent = `${nights} ليلة`;
-      document.getElementById('ratePerNightDisplay').textContent = `${ratePerNight} ر.س`;
-
-      let subtotal = ratePerNight * nights;
-      let discount = 0;
-
-      if (promoInput === 'STAR10') {
-        discount = subtotal * 0.10;
-        feedbackEl.textContent = 'تم تطبيق خصم 10% بنجاح عبر STAR10';
-        feedbackEl.style.color = '#4ADE80';
-        discountRow.style.display = 'flex';
-        document.getElementById('discountAmountDisplay').textContent = `- ${discount.toFixed(0)} ر.س`;
-      } else if (promoInput !== '') {
-        feedbackEl.textContent = 'كود غير صالح';
-        feedbackEl.style.color = '#EF4444';
-        discountRow.style.display = 'none';
-      } else {
-        feedbackEl.textContent = '';
-        discountRow.style.display = 'none';
-      }
-
-      document.getElementById('totalPriceDisplay').textContent = `${(subtotal - discount).toFixed(0)} ر.س`;
-    }
-
-    function handleBookingSubmit(event) {
-      event.preventDefault();
-      const select = document.getElementById('unitSelect');
-      const unitName = select.options[select.selectedIndex].getAttribute('data-name');
-      const checkInVal = document.getElementById('checkInDate').value;
-      const checkOutVal = document.getElementById('checkOutDate').value;
-      const guestName = document.getElementById('guestName').value.trim();
-      const guestPhone = document.getElementById('guestPhone').value.trim();
-      const promoInput = document.getElementById('promoCode').value.trim().toUpperCase();
-      const nightsText = document.getElementById('nightsCountDisplay').textContent;
-      const totalText = document.getElementById('totalPriceDisplay').textContent;
-
-      const promoText = (promoInput === 'STAR10') ? 'STAR10 (خصم 10% مفعل)' : 'بدون كود';
+      const promoNote = isPromoApplied ? '\n*كود الخصم المطبق:* STAR10 (خصم 10% مباشر)' : '';
 
       const message = 
-`السلام عليكم ورحمة الله وبركاته،
-أود تأكيد حجز في *ستار القمة للشقق المخدومة*:
+`السلام عليكم ورحمة الله،
+أود الاستفسار عن توفر إقامة في *فندق ستار القمة للشقق المخدومة*:
 ----------------------------------
-*اسم النزيل:* ${guestName}
-*رقم الجوال:* ${guestPhone}
-*الوحدة المطلوبة:* ${unitName}
-*تاريخ الدخول:* ${checkInVal} (الساعة 2:00 ظهراً)
-*تاريخ الخروج:* ${checkOutVal} (الساعة 2:00 ظهراً)
-*المدة:* ${nightsText}
-*كود الخصم:* ${promoText}
-*المبلغ الإجمالي التقريبي:* ${totalText}
+*الوحدة المطلوبة:* ${unit}
+*تاريخ الوصول:* ${checkIn}
+*تاريخ المغادرة:* ${checkOut}
+*المدة:* ${nights} ليلة${promoNote}
 ----------------------------------
-أرجو تأكيد التوفر وإرسال بيانات الحجز.`;
+أرجو تأكيد التوفر وإرسال التفاصيل.`;
 
       window.open(`https://wa.me/966560411778?text=${encodeURIComponent(message)}`, '_blank');
-      closeBookingModal();
+    }
+
+    // Interactive Dynamic Promo Code System (STAR10)
+    let isPromoApplied = false;
+
+    const roomPricingData = {
+      1: {
+        name: "غرفة استوديو دبل ماستر",
+        basePrice: 170,
+        discountedPrice: 150,
+        saveAmount: 20
+      },
+      2: {
+        name: "شقة ديلوكس غرفة وصالة وشرفة",
+        basePrice: 220,
+        discountedPrice: 200,
+        saveAmount: 20
+      },
+      3: {
+        name: "جناح القمة العائلي غرفتين وصالة",
+        basePrice: 370,
+        discountedPrice: 330,
+        saveAmount: 40
+      }
+    };
+
+    function applyPromoCode(codeAttempt) {
+      const code = (codeAttempt || '').trim().toUpperCase();
+      const alertBox = document.getElementById('globalPromoAlert');
+      
+      if (code === 'STAR10') {
+        isPromoApplied = true;
+        updateAllPricingUI(true);
+        if (alertBox) {
+          alertBox.className = 'promo-alert success';
+          alertBox.textContent = '🎉 مبروك! تم تطبيق كود الخصم (STAR10) بنجاح - تم تخفيض 10% على كافة الأجنحة!';
+          alertBox.style.display = 'block';
+        }
+      } else {
+        if (alertBox) {
+          alertBox.className = 'promo-alert error';
+          alertBox.textContent = 'عذراً، كود الخصم غير صحيح. تأكد من إدخال STAR10 للاستفادة من الخصم.';
+          alertBox.style.display = 'block';
+        }
+        [1, 2, 3].forEach(id => {
+          const err = document.getElementById(`cardPromoErr-${id}`);
+          if (err) {
+            err.textContent = 'رمز غير صحيح. جرب STAR10';
+            err.style.display = 'block';
+          }
+        });
+      }
+    }
+
+    function removePromoCode() {
+      isPromoApplied = false;
+      updateAllPricingUI(false);
+      const alertBox = document.getElementById('globalPromoAlert');
+      if (alertBox) alertBox.style.display = 'none';
+    }
+
+    function updateAllPricingUI(applied) {
+      // 1. Update Global Box
+      const globalRow = document.getElementById('globalPromoRow');
+      const globalSuccess = document.getElementById('globalPromoSuccess');
+      const globalInput = document.getElementById('globalPromoInput');
+      if (globalRow && globalSuccess) {
+        globalRow.style.display = applied ? 'none' : 'flex';
+        globalSuccess.style.display = applied ? 'flex' : 'none';
+        if (!applied && globalInput) globalInput.value = '';
+      }
+
+      // 2. Update Each Room Card
+      [1, 2, 3].forEach(id => {
+        const data = roomPricingData[id];
+        const oldWrap = document.getElementById(`pricingOld-${id}`);
+        const priceVal = document.getElementById(`priceVal-${id}`);
+        const bookBtn = document.getElementById(`btnBook-${id}`);
+        const cardForm = document.getElementById(`cardPromoForm-${id}`);
+        const cardActive = document.getElementById(`cardPromoActive-${id}`);
+        const cardErr = document.getElementById(`cardPromoErr-${id}`);
+        const cardInput = document.getElementById(`cardPromoInput-${id}`);
+
+        if (cardErr) cardErr.style.display = 'none';
+
+        if (applied) {
+          if (oldWrap) oldWrap.style.display = 'flex';
+          if (priceVal) priceVal.textContent = data.discountedPrice;
+          if (cardForm) cardForm.style.display = 'none';
+          if (cardActive) cardActive.style.display = 'flex';
+
+          const msg = `مرحباً، أود حجز (${data.name}) بتطبيق كود الخصم (STAR10) بسعر ${data.discountedPrice} ريال لليلة بعد خصم 10% (توفير ${data.saveAmount} ريال).`;
+          if (bookBtn) bookBtn.href = `https://wa.me/966560411778?text=${encodeURIComponent(msg)}`;
+        } else {
+          if (oldWrap) oldWrap.style.display = 'none';
+          if (priceVal) priceVal.textContent = data.basePrice;
+          if (cardForm) cardForm.style.display = 'flex';
+          if (cardActive) cardActive.style.display = 'none';
+          if (cardInput) cardInput.value = '';
+
+          const msg = `مرحباً، أود الاستفسار عن توفر (${data.name}) بسعر ${data.basePrice} ريال لليلة.`;
+          if (bookBtn) bookBtn.href = `https://wa.me/966560411778?text=${encodeURIComponent(msg)}`;
+        }
+      });
+
+      // 3. Update Booking Bar Select
+      const barUnit = document.getElementById('barUnit');
+      if (barUnit) {
+        if (applied) {
+          barUnit.options[0].text = "استوديو دبل ماستر (26 م² - 150 ر.س - كود STAR10)";
+          barUnit.options[0].value = "غرفة استوديو دبل ماستر (150 ر.س بعد كود STAR10)";
+          barUnit.options[1].text = "شقة ديلوكس وشرفة (48 م² - 200 ر.س - كود STAR10)";
+          barUnit.options[1].value = "شقة ديلوكس غرفة وصالة وشرفة (200 ر.س بعد كود STAR10)";
+          barUnit.options[2].text = "جناح عائلي غرفتين (95 م² - 330 ر.س - كود STAR10)";
+          barUnit.options[2].value = "جناح القمة العائلي غرفتين وصالة (330 ر.س بعد كود STAR10)";
+        } else {
+          barUnit.options[0].text = "استوديو دبل ماستر (26 م² - 170 ر.س)";
+          barUnit.options[0].value = "غرفة استوديو دبل ماستر (170 ر.س)";
+          barUnit.options[1].text = "شقة ديلوكس وشرفة (48 م² - 220 ر.س)";
+          barUnit.options[1].value = "شقة ديلوكس غرفة وصالة وشرفة (220 ر.س)";
+          barUnit.options[2].text = "جناح عائلي غرفتين (95 م² - 370 ر.س)";
+          barUnit.options[2].value = "جناح القمة العائلي غرفتين وصالة (370 ر.س)";
+        }
+      }
+    }
+
+    // Mini Carousels Controller (Zero Duplicates)
+    const carouselStates = { 1: 0, 2: 0, 3: 0 };
+    const carouselMax = { 1: 2, 2: 2, 3: 2 };
+
+    function updateCarouselView(id) {
+      const container = document.getElementById(`carousel-${id}`);
+      if (!container) return;
+      const max = carouselMax[id] || 1;
+      const index = carouselStates[id] || 0;
+      const slides = container.querySelectorAll('.carousel-slide');
+      const dots = container.querySelectorAll('.carousel-dot');
+      const thumbs = document.querySelectorAll(`#thumbs-${id} .carousel-thumb`);
+      const counter = document.getElementById(`counter-${id}`);
+      const prevBtn = container.querySelector('.carousel-btn.prev');
+      const nextBtn = container.querySelector('.carousel-btn.next');
+      const dotsWrap = container.querySelector('.carousel-dots');
+
+      if (max <= 1) {
+        if (prevBtn) prevBtn.style.display = 'none';
+        if (nextBtn) nextBtn.style.display = 'none';
+        if (dotsWrap) dotsWrap.style.display = 'none';
+      } else {
+        if (prevBtn) prevBtn.style.display = 'flex';
+        if (nextBtn) nextBtn.style.display = 'flex';
+        if (dotsWrap) dotsWrap.style.display = 'flex';
+      }
+
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle('active', idx === index);
+      });
+
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === index);
+      });
+
+      thumbs.forEach((thumb, idx) => {
+        thumb.classList.toggle('active', idx === index);
+      });
+
+      if (counter) {
+        if (max > 1) {
+          counter.style.display = 'inline-block';
+          counter.textContent = `${index + 1} / ${max}`;
+        } else {
+          counter.style.display = 'none';
+        }
+      }
+    }
+
+    function moveCarousel(id, step) {
+      const max = carouselMax[id];
+      carouselStates[id] = (carouselStates[id] + step + max) % max;
+      updateCarouselView(id);
+    }
+
+    function setCarousel(id, index) {
+      carouselStates[id] = index;
+      updateCarouselView(id);
+    }
+
+    // Touch Swipe support for suite carousels
+    document.addEventListener('DOMContentLoaded', () => {
+      [1, 2, 3].forEach(id => {
+        const container = document.getElementById(`carousel-${id}`);
+        if (!container) return;
+        let startX = 0;
+        let endX = 0;
+        container.addEventListener('touchstart', e => {
+          startX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        container.addEventListener('touchend', e => {
+          endX = e.changedTouches[0].screenX;
+          const diff = endX - startX;
+          if (Math.abs(diff) > 40) {
+            if (diff < 0) moveCarousel(id, 1);
+            else moveCarousel(id, -1);
+          }
+        }, { passive: true });
+      });
+    });
+
+    // Gallery Lightbox Controller with Next/Prev and Counter
+    let currentGalleryItems = [];
+    let currentGalleryIdx = 0;
+
+    function openGalleryLightbox(items, startIndex = 0) {
+      currentGalleryItems = items;
+      currentGalleryIdx = startIndex;
+      updateLightboxDisplay();
+      document.getElementById('lightboxModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function updateLightboxDisplay() {
+      if (!currentGalleryItems || currentGalleryItems.length === 0) return;
+      const current = currentGalleryItems[currentGalleryIdx];
+      const img = document.getElementById('lightboxImage');
+      const caption = document.getElementById('lightboxCaption');
+      const counter = document.getElementById('lightboxCounter');
+      const prevBtn = document.querySelector('.lightbox-arrow.lb-prev');
+      const nextBtn = document.querySelector('.lightbox-arrow.lb-next');
+
+      img.src = current.src;
+      img.alt = current.caption || 'صورة مكبرة';
+      caption.textContent = current.caption || '';
+
+      if (currentGalleryItems.length > 1) {
+        counter.style.display = 'inline-block';
+        counter.textContent = `${currentGalleryIdx + 1} / ${currentGalleryItems.length}`;
+        if (prevBtn) prevBtn.style.display = 'flex';
+        if (nextBtn) nextBtn.style.display = 'flex';
+      } else {
+        counter.style.display = 'none';
+        if (prevBtn) prevBtn.style.display = 'none';
+        if (nextBtn) nextBtn.style.display = 'none';
+      }
+    }
+
+    function prevLightbox(e) {
+      if (e) e.stopPropagation();
+      if (currentGalleryItems.length <= 1) return;
+      currentGalleryIdx = (currentGalleryIdx - 1 + currentGalleryItems.length) % currentGalleryItems.length;
+      updateLightboxDisplay();
+    }
+
+    function nextLightbox(e) {
+      if (e) e.stopPropagation();
+      if (currentGalleryItems.length <= 1) return;
+      currentGalleryIdx = (currentGalleryIdx + 1) % currentGalleryItems.length;
+      updateLightboxDisplay();
+    }
+
+    function closeLightbox(e) {
+      if (e) e.stopPropagation();
+      document.getElementById('lightboxModal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function openLightboxFromCarousel(carouselId) {
+      const container = document.getElementById(`carousel-${carouselId}`);
+      if (!container) return;
+      const slides = container.querySelectorAll('.carousel-slide img');
+      const roomTitle = container.closest('.room-card').querySelector('.room-name').textContent;
+      const items = Array.from(slides).map((img, i) => ({
+        src: img.getAttribute('src'),
+        caption: `${roomTitle} - ${img.getAttribute('alt') || 'تفاصيل الوحدة'}`
+      }));
+      const currentIdx = carouselStates[carouselId] || 0;
+      openGalleryLightbox(items, currentIdx);
     }
 
     function openLightbox(src, caption) {
-      const modal = document.getElementById('lightboxModal');
-      document.getElementById('lightboxImage').src = src;
-      document.getElementById('lightboxCaption').textContent = caption || '';
-      modal.classList.add('active');
+      const galleryThumbs = document.querySelectorAll('.gallery-thumb');
+      const items = Array.from(galleryThumbs).map(thumb => {
+        const img = thumb.querySelector('img');
+        const h5 = thumb.querySelector('h5');
+        return {
+          src: img.getAttribute('src'),
+          caption: h5 ? h5.textContent : (img.getAttribute('alt') || '')
+        };
+      });
+      const startIdx = items.findIndex(item => item.src.includes(src) || src.includes(item.src));
+      if (startIdx !== -1) {
+        openGalleryLightbox(items, startIdx);
+      } else {
+        openGalleryLightbox([{ src, caption }], 0);
+      }
     }
 
-    function closeLightbox() {
-      document.getElementById('lightboxModal').classList.remove('active');
-    }
+    // Keyboard support for Lightbox
+    document.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('lightboxModal');
+      if (!modal || !modal.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') nextLightbox();
+      if (e.key === 'ArrowRight') prevLightbox();
+    });
   </script>
 </body>
 </html>
