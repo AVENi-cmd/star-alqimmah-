@@ -7,7 +7,7 @@
   <meta name="description" content="فندق ستار القمة للشقق المخدومة في الأحساء، الهفوف - حي السلمانية الجنوبية. ترخيص وزارة السياحة 10009918.">
   <meta property="og:title" content="ستار القمة للشقق المخدومة المفروشة">
   <meta property="og:description" content="إقامة فاخرة تجمع بين الخصوصية الفندقية وكرم الضيافة في الأحساء، الهفوف.">
-  <meta property="og:image" content="images/exterior.jpg">
+  <meta property="og:image" content="images/F0F8953A-C1FD-479F-9D93-65AA69085581.jpeg">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,7 +82,8 @@
       overflow: hidden;
     }
     .hero-image-backdrop {
-      position: absolute; inset: 0; background-image: url('images/exterior.jpg');
+      position: absolute; inset: 0;
+      background-image: url('images/F0F8953A-C1FD-479F-9D93-65AA69085581.jpeg'), url('images/exterior.jpg');
       background-size: cover; background-position: center;
       filter: brightness(0.35) contrast(1.1); z-index: 0;
     }
@@ -163,8 +164,9 @@
       padding: 4px 12px; border-radius: 20px; z-index: 5;
     }
     .unit-badge.featured { background: var(--star-red); border-color: var(--star-red); color: #fff; }
-    .unit-img-wrapper { height: 230px; overflow: hidden; position: relative; background: #11141C; }
-    .unit-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+    .unit-img-wrapper { height: 240px; overflow: hidden; position: relative; background: #11141C; }
+    .unit-img-wrapper img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.5s ease; }
+    .unit-card:hover .unit-img-wrapper img { transform: scale(1.06); }
     .unit-details { padding: 22px; display: flex; flex-direction: column; flex-grow: 1; }
     .unit-title { font-size: 1.3rem; font-weight: 800; color: var(--text-white); }
     .unit-subtitle-en { font-size: 0.8rem; color: var(--gold-light); margin-bottom: 14px; }
@@ -186,11 +188,12 @@
     /* Gallery */
     .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
     .gallery-item {
-      height: 270px; border-radius: 12px; overflow: hidden; position: relative;
+      height: 280px; border-radius: 12px; overflow: hidden; position: relative;
       cursor: pointer; border: 1px solid var(--border-card); background: #11141C;
     }
     .gallery-item.span-2 { grid-column: span 2; }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.5s ease; }
+    .gallery-item:hover img { transform: scale(1.05); }
     .gallery-overlay {
       position: absolute; inset: 0;
       background: linear-gradient(180deg, transparent 40%, rgba(11,13,18,0.9) 100%);
@@ -222,7 +225,6 @@
       border-radius: 14px; padding: 22px; display: flex; flex-direction: column;
       position: relative;
     }
-    .review-card:hover { border-color: var(--border-subtle); }
     .review-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
     .reviewer-avatar {
       width: 42px; height: 42px; border-radius: 50%;
@@ -452,7 +454,6 @@
 
         <div class="hero-buttons">
           <button class="btn-primary" onclick="openBookingModal()">احجز شقتك الآن</button>
-          button class="btn-primary" onclick="openBookingModal()">احجز شقتك الآن</button>
           <a href="https://wa.me/966560411778" target="_blank" rel="noopener noreferrer" class="btn-secondary">
             <svg class="icon"><use href="#icon-whatsapp"></use></svg>
             استفسار فوري عبر واتساب
@@ -498,7 +499,7 @@
         <div class="unit-card">
           <div class="unit-badge">الأكثر طلباً للأفراد</div>
           <div class="unit-img-wrapper">
-            <img src="images/master-bedroom.jpg" alt="غرفة استوديو دبل ماستر" onerror="this.src='https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80'">
+            <img src="images/941BB36E-5CEF-4EC4-9CFD-C34CB0813DDA.png" alt="غرفة استوديو دبل ماستر" onerror="this.onerror=null; this.src='images/master-bedroom.jpg';">
           </div>
           <div class="unit-details">
             <h3 class="unit-title">غرفة استوديو دبل ماستر</h3>
@@ -520,11 +521,574 @@
         <div class="unit-card">
           <div class="unit-badge featured">قيمة استثنائية</div>
           <div class="unit-img-wrapper">
-            <img src="images/lounge.jpg" alt="شقة ديلوكس غرفة وصالة وشرفة" onerror="this.src='https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80'">
+            <img src="images/30B12B06-613B-4921-9ADC-09B1D1FB388E.png" alt="شقة ديلوكس غرفة وصالة وشرفة" onerror="this.onerror=null; this.src='images/lounge.jpg';">
           </div>
           <div class="unit-details">
             <h3 class="unit-title">شقة ديلوكس غرفة وصالة وشرفة</h3>
             <div class="unit-subtitle-en latin">DELUXE ONE-BEDROOM APARTMENT</div>
             <ul class="unit-features-list">
               <li class="unit-feature-item"><svg class="icon"><use href="#icon-bed"></use></svg> غرفة نوم ماستر معزولة بسرير كينغ</li>
-              <li class="unit
+              <li class="unit-feature-item"><svg class="icon"><use href="#icon-sofa"></use></svg> صالة جلوس أنيقة بكنب وثير وشاشة</li>
+              <li class="unit-feature-item"><svg class="icon"><use href="#icon-kitchen"></use></svg> مطبخ تحضيري متكامل ومايكرويف</li>
+              <li class="unit-feature-item"><svg class="icon"><use href="#icon-balcony"></use></svg> شرفة خارجية هادئة بإطلالة مريحة</li>
+            </ul>
+            <div class="unit-pricing-bar">
+              <div><span class="price-val">220</span> <span class="price-unit">ر.س / ليلة</span></div>
+              <button class="btn-book-unit" onclick="selectUnitAndBook('deluxe', 220, 'شقة ديلوكس غرفة وصالة وشرفة')">احجز الآن</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unit 3: Family Suite -->
+        <div class="unit-card">
+          <div class="unit-badge">الأمثل للعائلات</div>
+          <div class="unit-img-wrapper">
+            <img src="images/BC6A5E74-818B-471B-8559-28A46C6C9D45.png" alt="جناح القمة العائلي غرفتين وصالة" onerror="this.onerror=null; this.src='images/family-suite.jpg';">
+          </div>
+          <div class="unit-details">
+            <h3 class="unit-title">جناح القمة العائلي غرفتين وصالة</h3>
+            <div class="unit-subtitle-en latin">EXECUTIVE FAMILY SUITE</div>
+            <ul class="unit-features-list">
+              <li class="unit-feature-item"><svg class="icon"><use href="#icon-bed"></use></svg> غرفتان نوم (كينغ + سريرين توأم)</li>
+              <li class="unit-feature-item"><svg class="icon"><use href="#icon-sofa"></use></svg> صالة عائلية رحبة وجلسة استرخاء</li>
+              <li class="unit-feature-item"><svg class="icon"><use href="#icon-kitchen"></use></svg> مطبخ عائلي مجهز بثلاجة كبيرة</li>
+              <li class="unit-feature-item"><svg class="icon"><use href="#icon-bath"></use></svg> دورتان مياه مستقلتان بكامل التجهيزات</li>
+            </ul>
+            <div class="unit-pricing-bar">
+              <div><span class="price-val">370</span> <span class="price-unit">ر.س / ليلة</span></div>
+              <button class="btn-book-unit" onclick="selectUnitAndBook('family', 370, 'جناح القمة العائلي غرفتين وصالة')">احجز الآن</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real Photo Gallery Section -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow"><svg class="icon"><use href="#icon-star"></use></svg> جولة بصرية حقيقية</div>
+        <h2 class="section-heading">لقطات حية من أرجاء ستار القمة</h2>
+        <p class="section-subtext">صور واقعية توثق الواجهة الخارجية، بهو الاستقبال، والغرف والأجنحة الفندقية.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- 1. Exterior (Large Span-2) -->
+        <div class="gallery-item span-2" onclick="openLightbox('images/F0F8953A-C1FD-479F-9D93-65AA69085581.jpeg', 'الواجهة المعمارية ومدخل الاستقبال الفندقي')">
+          <img src="images/F0F8953A-C1FD-479F-9D93-65AA69085581.jpeg" alt="الواجهة الخارجية لفندق ستار القمة" onerror="this.onerror=null; this.src='images/exterior.jpg';">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h5>الواجهة المعمارية ومدخل الاستقبال الفندقي</h5>
+              <span>8271 شارع الأمير أحمد، حي السلمانية الجنوبية</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Reception & Clocks -->
+        <div class="gallery-item" onclick="openLightbox('images/385DCE00-18B1-4C23-94DD-0177BB13408B.png', 'بهو ومكتب الاستقبال الفندقي وساعات العواصم')">
+          <img src="images/385DCE00-18B1-4C23-94DD-0177BB13408B.png" alt="بهو الاستقبال الفندقي وساعات العواصم" onerror="this.onerror=null; this.src='images/reception.jpg';">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h5>بهو ومكتب الاستقبال الفندقي</h5>
+              <span>ساعات العواصم والضيافة على مدار 24 ساعة</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Living Room & Kitchenette -->
+        <div class="gallery-item" onclick="openLightbox('images/30B12B06-613B-4921-9ADC-09B1D1FB388E.png', 'صالة الجلسة والمطبخ التحضيري وطاولة الطعام')">
+          <img src="images/30B12B06-613B-4921-9ADC-09B1D1FB388E.png" alt="صالة الجلسة والمطبخ التحضيري" onerror="this.onerror=null; this.src='images/lounge.jpg';">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h5>صالة الاستراحة والمطبخ التحضيري</h5>
+              <span>جلسات كنب عصرية مع ركن إعداد طعام متكامل</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Master King Bedroom -->
+        <div class="gallery-item" onclick="openLightbox('images/941BB36E-5CEF-4EC4-9CFD-C34CB0813DDA.png', 'غرفة النوم الماستر كينغ الفاخرة')">
+          <img src="images/941BB36E-5CEF-4EC4-9CFD-C34CB0813DDA.png" alt="غرفة النوم الماستر كينغ" onerror="this.onerror=null; this.src='images/master-bedroom.jpg';">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h5>أجنحة النوم الماستر الفاخرة</h5>
+              <span>أسرّة كينغ مريحة بكسوة خشبية راقية</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Twin Beds Family Suite -->
+        <div class="gallery-item" onclick="openLightbox('images/BC6A5E74-818B-471B-8559-28A46C6C9D45.png', 'الأجنحة العائلية المزدوجة بسريرين مفردين')">
+          <img src="images/BC6A5E74-818B-471B-8559-28A46C6C9D45.png" alt="الغرفة العائلية المزدوجة" onerror="this.onerror=null; this.src='images/family-suite.jpg';">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h5>الغرف العائلية المزدوجة</h5>
+              <span>سريران مفردان مفروشان بأرقى المفارش الفندقية</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Lobby Lounge & Arabic Dallah -->
+        <div class="gallery-item" onclick="openLightbox('images/IMG_3779.jpeg', 'جلسة الضيافة الفندقية ودلة القهوة السعودية')">
+          <img src="images/IMG_3779.jpeg" alt="جلسة الضيافة الفندقية" onerror="this.onerror=null; this.src='images/lounge.jpg';">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h5>صالة الضيافة والاستراحة الفاخرة</h5>
+              <span>جلسة كنب هادئة وطاولة الأحجار والدلة السعودية</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. VIP Celebration Setup -->
+        <div class="gallery-item" onclick="openLightbox('images/64F94F89-342F-489B-A35A-5706A708EF97.png', 'باقات المناسبات والترتيبات الخاصة')">
+          <img src="images/64F94F89-342F-489B-A35A-5706A708EF97.png" alt="تجهيزات المناسبات الخاصة" onerror="this.onerror=null; this.src='images/vip-celebration.jpg';">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h5>باقات المناسبات والاحتفالات الخاصة</h5>
+              <span>تجهيز الورود والشموع والكعك حسب الطلب</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Wardrobe & Illuminated Vanity Mirror -->
+        <div class="gallery-item" onclick="openLightbox('images/9866DE05-6160-4A0E-AF53-C43467A989C2.png', 'خزانة الملابس والتسريحة الفندقية المضاءة')">
+          <img src="images/9866DE05-6160-4A0E-AF53-C43467A989C2.png" alt="تفاصيل الأثاث والتسريحة" onerror="this.onerror=null; this.src='images/room-details.jpg';">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h5>جودة الأثاث والتفاصيل الفندقية</h5>
+              <span>تسريحة بإضاءة LED مخفية ودولاب خشبي متكامل</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities Section -->
+  <section class="amenities-section" id="amenities">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow"><svg class="icon"><use href="#icon-check-shield"></use></svg> خدمات متكاملة</div>
+        <h2 class="section-heading">كل ما يلزم لإقامة مريحة وهادئة</h2>
+      </div>
+
+      <div class="amenities-grid">
+        <div class="amenity-card">
+          <div class="amenity-icon"><svg class="icon"><use href="#icon-wifi"></use></svg></div>
+          <h4>إنترنت فائق 9.4</h4>
+          <p>تغطية واي فاي ألياف بصرية مجانية وسريعة جداً في كافة أرجاء الوحدات.</p>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon"><svg class="icon"><use href="#icon-car"></use></svg></div>
+          <h4>مواقف سيارات خاصة</h4>
+          <p>مواقف فسيحة وخلفية أمام المبنى مباشرة مخصصة لضيوف الفندق مجاناً.</p>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon"><svg class="icon"><use href="#icon-clock"></use></svg></div>
+          <h4>استقبال 24/7</h4>
+          <p>فريق محترف في خدمتكم على مدار الساعة لتسهيل الدخول وتلبية طلباتكم.</p>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon"><svg class="icon"><use href="#icon-security"></use></svg></div>
+          <h4>أمان وخصوصية تامة</h4>
+          <p>منظومة مراقبة حديثة ومداخل مؤمنة وعزل صوتي متقن لأقصى درجات الهدوء.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real Guest Reviews Section (ما أحبه الضيوف الذين أقاموا هنا) -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow"><svg class="icon"><use href="#icon-star"></use></svg> آراء النزلاء الموثقة</div>
+        <h2 class="section-heading">ما أحبه الضيوف الذين أقاموا هنا</h2>
+        <p class="section-subtext">تقييمات وتجارب حقيقية لضيوف ستار القمة من مختلف مدن المملكة العربية السعودية.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">ف</div>
+            <div class="reviewer-info">
+              <h5>فالح (زوجان)</h5>
+              <span>المملكة العربية السعودية</span>
+            </div>
+          </div>
+          <div class="review-stars-bar">★ ★ ★ ★ ★</div>
+          <p class="review-text">"فيها مواقف خلف الشقق ، كذلك الاسره نظيفه ومريحه والتكيييف ممتاز"</p>
+          <div class="review-badge"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> إقامة موثقة</div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">M</div>
+            <div class="reviewer-info">
+              <h5>Mashaeelalkhathlan (عائلة)</h5>
+              <span>المملكة العربية السعودية</span>
+            </div>
+          </div>
+          <div class="review-stars-bar">★ ★ ★ ★ ★</div>
+          <p class="review-text">"الغرفة نظيفة جدا واثاث جديد وقريبة من جميع الخدمات وسعرها مناسب جدا. اشكر موظف الاستقبال محمد وزميلة على تعاونهم معنا في توفير اي احتياج اثناء إقامتنا"</p>
+          <div class="review-badge"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> إقامة موثقة</div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">D</div>
+            <div class="reviewer-info">
+              <h5>Dr (مسافر منفرد)</h5>
+              <span>المملكة العربية السعودية</span>
+            </div>
+          </div>
+          <div class="review-stars-bar">★ ★ ★ ★ ★</div>
+          <p class="review-text">"كل شيء جميل ، المبنى جديد والأثاث والاستقبال المميز .. طاقم يقدم كل الاحتياجات"</p>
+          <div class="review-badge"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> إقامة موثقة</div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">K</div>
+            <div class="reviewer-info">
+              <h5>Kazim (عائلة)</h5>
+              <span>المملكة العربية السعودية</span>
+            </div>
+          </div>
+          <div class="review-stars-bar">★ ★ ★ ★ ★</div>
+          <p class="review-text">"الغرف واسعة جدا ، الراحة والخدمات والهدوء جدا ممتاز"</p>
+          <div class="review-badge"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> إقامة موثقة</div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">س</div>
+            <div class="reviewer-info">
+              <h5>سعود (زوجان)</h5>
+              <span>المملكة العربية السعودية</span>
+            </div>
+          </div>
+          <div class="review-stars-bar">★ ★ ★ ★ ★</div>
+          <p class="review-text">"الغرف نظيفه وفيها خدمة الفنادق واسعارها جدا ممتازه"</p>
+          <div class="review-badge"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> إقامة موثقة</div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">N</div>
+            <div class="reviewer-info">
+              <h5>Nora (مجموعة)</h5>
+              <span>المملكة العربية السعودية</span>
+            </div>
+          </div>
+          <div class="review-stars-bar">★ ★ ★ ★ ★</div>
+          <p class="review-text">"كل شيء جميل و الأخ المصري في الريسبشن جداً متعااااون"</p>
+          <div class="review-badge"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> إقامة موثقة</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Section -->
+  <section class="location-section" id="location">
+    <div class="container">
+      <div class="location-grid">
+        <div class="location-card">
+          <div class="section-eyebrow"><svg class="icon"><use href="#icon-map-pin"></use></svg> موقع استراتيجي</div>
+          <h3 class="location-title">سهولة الوصول لقلب معالم الأحساء</h3>
+          <div class="location-address">
+            المملكة العربية السعودية، الأحساء، الهفوف - حي السلمانية الجنوبية، 8271 شارع الأمير أحمد (الرمز البريدي 36441)
+          </div>
+
+          <ul class="landmarks-list">
+            <li class="landmark-item"><span>جامعة الملك فيصل</span><span class="landmark-dist">5 دقائق</span></li>
+            <li class="landmark-item"><span>مجمع الراشد تاون سنتر</span><span class="landmark-dist">8 دقائق</span></li>
+            <li class="landmark-item"><span>محطة قطار الهفوف وسوق القيصرية</span><span class="landmark-dist">12 دقيقة</span></li>
+            <li class="landmark-item"><span>جبل القارة ومنتزه الأحساء الوطني</span><span class="landmark-dist">18 دقيقة</span></li>
+          </ul>
+
+          <a href="https://maps.google.com/?q=8271+الامير+احمد+الهفوف" target="_blank" rel="noopener noreferrer" class="btn-maps">
+            <svg class="icon"><use href="#icon-map-pin"></use></svg>
+            فتح الموقع على خرائط Google
+          </a>
+        </div>
+
+        <div class="map-frame-wrapper">
+          <iframe 
+            src="https://maps.google.com/maps?q=8271+Prince+Ahmed+Al+Hofuf&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            loading="lazy" 
+            title="موقع فندق ستار القمة في خرائط Google">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Booking Engine -->
+  <div class="modal-backdrop" id="bookingModal">
+    <div class="modal-dialog">
+      <button class="modal-close" onclick="closeBookingModal()">&times;</button>
+      <div class="modal-header">
+        <h3>حجز إقامة مباشرة في ستار القمة</h3>
+        <p>احسب الإجمالي فوراً واستفد من خصم كود STAR10 المباشر</p>
+      </div>
+
+      <form class="booking-form" onsubmit="handleBookingSubmit(event)">
+        <div class="form-group">
+          <label class="form-label" for="unitSelect">نوع الوحدة السكنية</label>
+          <select id="unitSelect" class="form-control" onchange="calculateBooking()">
+            <option value="170" data-name="غرفة استوديو دبل ماستر">غرفة استوديو دبل ماستر (170 ر.س / ليلة)</option>
+            <option value="220" data-name="شقة ديلوكس غرفة وصالة وشرفة">شقة ديلوكس غرفة وصالة وشرفة (220 ر.س / ليلة)</option>
+            <option value="370" data-name="جناح القمة العائلي غرفتين وصالة">جناح القمة العائلي غرفتين وصالة (370 ر.س / ليلة)</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="checkInDate">تاريخ الدخول (2:00 م)</label>
+            <input type="date" id="checkInDate" class="form-control" required onchange="calculateBooking()">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="checkOutDate">تاريخ الخروج (2:00 م)</label>
+            <input type="date" id="checkOutDate" class="form-control" required onchange="calculateBooking()">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="guestName">اسم النزيل</label>
+            <input type="text" id="guestName" class="form-control" placeholder="الاسم الكريم" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="guestPhone">رقم الجوال</label>
+            <input type="tel" id="guestPhone" class="form-control" placeholder="05xxxxxxxx" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="promoCode">الرمز الترويجي للخصم</label>
+          <div class="promo-group">
+            <input type="text" id="promoCode" class="form-control" placeholder="أدخل STAR10 لخصم 10%">
+            <button type="button" class="btn-apply" onclick="calculateBooking()">تطبيق</button>
+          </div>
+          <span id="promoFeedback" style="font-size:0.8rem; margin-top:3px;"></span>
+        </div>
+
+        <div class="calc-card">
+          <div class="calc-row"><span>عدد الليالي:</span><span id="nightsCountDisplay">1 ليلة</span></div>
+          <div class="calc-row"><span>سعر الليلة:</span><span id="ratePerNightDisplay">170 ر.س</span></div>
+          <div class="calc-row" id="discountRow" style="display:none; color:#4ADE80;">
+            <span>خصم (STAR10):</span><span id="discountAmountDisplay">- 0 ر.س</span>
+          </div>
+          <div class="calc-row total"><span>المبلغ الإجمالي التقريبي:</span><span id="totalPriceDisplay">170 ر.س</span></div>
+        </div>
+
+        <button type="submit" class="btn-submit-booking">
+          <svg class="icon"><use href="#icon-whatsapp"></use></svg>
+          تأكيد الحجز الفوري عبر واتساب الاستقبال
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <div class="lightbox-box" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+      <img id="lightboxImage" src="" alt="عرض مكبر">
+      <div id="lightboxCaption" style="color:var(--gold-light); text-align:center; margin-top:10px; font-weight:600;"></div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/966560411778" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" title="تواصل عبر واتساب">
+    <svg class="icon" style="width:28px;height:28px;"><use href="#icon-whatsapp"></use></svg>
+  </a>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-title" style="margin-bottom:12px;"><span class="red">ستار</span> <span class="gold">القمة</span></div>
+          <p style="font-size:0.88rem; line-height:1.7;">
+            ستار القمة للشقق المخدومة المفروشة – وجهتكم للإقامة المتميزة في محافظة الأحساء، الهفوف. جودة فندقية، وخدمة ترقى لتطلعاتكم.
+          </p>
+        </div>
+
+        <div>
+          <h5>روابط سريعة</h5>
+          <ul class="footer-links">
+            <li><a href="#hero">الرئيسية</a></li>
+            <li><a href="#units">الوحدات والأسعار</a></li>
+            <li><a href="#gallery">معرض الصور الحقيقية</a></li>
+            <li><a href="#reviews">تقييمات النزلاء</a></li>
+            <li><a href="#location">خريطة الموقع</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5>الوحدات والأسعار</h5>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="selectUnitAndBook('studio', 170, 'استوديو ماستر')">استوديو ماستر (170 ر.س)</a></li>
+            <li><a href="javascript:void(0)" onclick="selectUnitAndBook('deluxe', 220, 'ديلوكس غرفة وصالة')">ديلوكس غرفة وصالة (220 ر.س)</a></li>
+            <li><a href="javascript:void(0)" onclick="selectUnitAndBook('family', 370, 'جناح عائلي')">جناح عائلي (370 ر.س)</a></li>
+            <li><a href="javascript:void(0)" onclick="openBookingModal()">كود الخصم: STAR10</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5>معلومات التواصل الرسمية</h5>
+          <p style="font-size:0.85rem; margin-bottom:8px;">الأحساء، الهفوف - حي السلمانية الجنوبية، 8271 شارع الأمير أحمد</p>
+          <p style="font-size:0.85rem; margin-bottom:8px;">
+            <svg class="icon" style="width:14px;height:14px;margin-left:4px;"><use href="#icon-whatsapp"></use></svg>
+            هاتف وواتساب: <span dir="ltr">0560411778</span>
+          </p>
+          <p style="font-size:0.85rem; margin-bottom:8px;">
+            <svg class="icon" style="width:14px;height:14px;margin-left:4px;"><use href="#icon-mail"></use></svg>
+            البريد: <a href="mailto:topstarhotel98@gmail.com" style="color:var(--gold-light);">topstarhotel98@gmail.com</a>
+          </p>
+          <p style="font-size:0.85rem; color:var(--gold-light);">ترخيص وزارة السياحة: 10009918</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>جميع الحقوق محفوظة &copy; <span id="yearSpan"></span> فندق ستار القمة للشقق المخدومة.</div>
+        <div class="latin">TOP STAR SERVICED APARTMENTS — AL HOFUF</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yearSpan').textContent = new Date().getFullYear();
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const today = new Date();
+      const tomorrow = new Date(today);
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      const afterTomorrow = new Date(today);
+      afterTomorrow.setDate(afterTomorrow.getDate() + 2);
+
+      const checkInInput = document.getElementById('checkInDate');
+      const checkOutInput = document.getElementById('checkOutDate');
+
+      checkInInput.min = today.toISOString().split('T')[0];
+      checkInInput.value = tomorrow.toISOString().split('T')[0];
+      checkOutInput.min = tomorrow.toISOString().split('T')[0];
+      checkOutInput.value = afterTomorrow.toISOString().split('T')[0];
+
+      calculateBooking();
+    });
+
+    function openBookingModal() {
+      document.getElementById('bookingModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+      calculateBooking();
+    }
+
+    function closeBookingModal() {
+      document.getElementById('bookingModal').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    document.getElementById('bookingModal').addEventListener('click', (e) => {
+      if (e.target.id === 'bookingModal') closeBookingModal();
+    });
+
+    function selectUnitAndBook(type, price, title) {
+      document.getElementById('unitSelect').value = price;
+      openBookingModal();
+    }
+
+    function calculateBooking() {
+      const ratePerNight = parseFloat(document.getElementById('unitSelect').value) || 170;
+      const checkInVal = document.getElementById('checkInDate').value;
+      const checkOutVal = document.getElementById('checkOutDate').value;
+      const promoInput = document.getElementById('promoCode').value.trim().toUpperCase();
+      const feedbackEl = document.getElementById('promoFeedback');
+      const discountRow = document.getElementById('discountRow');
+
+      let nights = 1;
+      if (checkInVal && checkOutVal) {
+        const diffDays = Math.ceil((new Date(checkOutVal) - new Date(checkInVal)) / (1000 * 60 * 60 * 24));
+        nights = diffDays > 0 ? diffDays : 1;
+      }
+
+      document.getElementById('nightsCountDisplay').textContent = `${nights} ليلة`;
+      document.getElementById('ratePerNightDisplay').textContent = `${ratePerNight} ر.س`;
+
+      let subtotal = ratePerNight * nights;
+      let discount = 0;
+
+      if (promoInput === 'STAR10') {
+        discount = subtotal * 0.10;
+        feedbackEl.textContent = 'تم تطبيق خصم 10% بنجاح عبر STAR10';
+        feedbackEl.style.color = '#4ADE80';
+        discountRow.style.display = 'flex';
+        document.getElementById('discountAmountDisplay').textContent = `- ${discount.toFixed(0)} ر.س`;
+      } else if (promoInput !== '') {
+        feedbackEl.textContent = 'كود غير صالح';
+        feedbackEl.style.color = '#EF4444';
+        discountRow.style.display = 'none';
+      } else {
+        feedbackEl.textContent = '';
+        discountRow.style.display = 'none';
+      }
+
+      document.getElementById('totalPriceDisplay').textContent = `${(subtotal - discount).toFixed(0)} ر.س`;
+    }
+
+    function handleBookingSubmit(event) {
+      event.preventDefault();
+      const select = document.getElementById('unitSelect');
+      const unitName = select.options[select.selectedIndex].getAttribute('data-name');
+      const checkInVal = document.getElementById('checkInDate').value;
+      const checkOutVal = document.getElementById('checkOutDate').value;
+      const guestName = document.getElementById('guestName').value.trim();
+      const guestPhone = document.getElementById('guestPhone').value.trim();
+      const promoInput = document.getElementById('promoCode').value.trim().toUpperCase();
+      const nightsText = document.getElementById('nightsCountDisplay').textContent;
+      const totalText = document.getElementById('totalPriceDisplay').textContent;
+
+      const promoText = (promoInput === 'STAR10') ? 'STAR10 (خصم 10% مفعل)' : 'بدون كود';
+
+      const message = 
+`السلام عليكم ورحمة الله وبركاته،
+أود تأكيد حجز في *ستار القمة للشقق المخدومة*:
+----------------------------------
+*اسم النزيل:* ${guestName}
+*رقم الجوال:* ${guestPhone}
+*الوحدة المطلوبة:* ${unitName}
+*تاريخ الدخول:* ${checkInVal} (الساعة 2:00 ظهراً)
+*تاريخ الخروج:* ${checkOutVal} (الساعة 2:00 ظهراً)
+*المدة:* ${nightsText}
+*كود الخصم:* ${promoText}
+*المبلغ الإجمالي التقريبي:* ${totalText}
+----------------------------------
+أرجو تأكيد التوفر وإرسال بيانات الحجز.`;
+
+      window.open(`https://wa.me/96656041 الحجز.`;
+
+      window.open(`https://wa.me/966560411778?text=${encodeURIComponent(message)}`, '_blank');
+      closeBookingModal();
+    }
+
+    function openLightbox(src, caption) {
+      const modal = document.getElementById('lightboxModal');
+      document.getElementById('lightboxImage').src = src;
+      document.getElementById('lightboxCaption').textContent = caption || '';
+      modal.classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightboxModal').classList.remove('active');
+    }
+  </script>
+</body>
+</html>
