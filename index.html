@@ -1438,6 +1438,20 @@
 
   <!-- Clean Vanilla JavaScript -->
   <script>
+
+    // Force browser to always open at the very top (Hero Section)
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+
+    window.addEventListener('load', () => {
+      if (window.location.hash) {
+        history.replaceState(null, null, window.location.pathname);
+      }
+      window.scrollTo(0, 0);
+    });
+    
     document.getElementById('yearSpan').textContent = new Date().getFullYear();
 
     // Initialize Default Dates
