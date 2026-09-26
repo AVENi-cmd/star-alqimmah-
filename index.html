@@ -4,35 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ستار القمة للشقق المخدومة | TOP STAR Serviced Apartments - الأحساء</title>
-  <meta name="description" content="شقق وأجنحة فندقية مفروشة ومخدومة بالكامل في الهفوف - السلمانية الجنوبية. عزل صوتي فائق، نظافة فندقية معتمدة، استقبال 24 ساعة، وواي فاي فايبر فائق السرعة.">
+  <meta name="description" content="الموقع الرسمي لشقق ستار القمة المخدومة في الهفوف، السلمانية الجنوبية. ترخيص سياحي 10009918. إقامة فندقية فاخرة، عزل صوتي تام، إنترنت فايبر 9.4، واستقبال 24/7.">
 
-  <!-- الخطوط الرسمية للضيافة الفاخرة -->
+  <!-- الخطوط الرسمية الفاخرة للضيافة العالمية -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Cinzel:wght@700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+    /* ==========================================================================
+       نظام التصميم (Design System & CSS Tokens)
+       ========================================================================== */
     :root {
-      --bg-dark: #080B10;
-      --bg-surface: #0F141F;
-      --bg-card: #141B2A;
-      --bg-card-hover: #1A2438;
+      --bg-base: #070A0F;
+      --bg-surface: #0E131E;
+      --bg-card: #131A29;
+      --bg-card-hover: #192236;
+      --bg-glass: rgba(14, 19, 30, 0.88);
       
       --brand-red: #D92525;
-      --brand-red-glow: rgba(217, 37, 37, 0.4);
+      --brand-red-dark: #B91C1C;
+      --brand-red-glow: rgba(217, 37, 37, 0.45);
       
       --gold: #C5A880;
-      --gold-light: #E0C8A8;
+      --gold-light: #E4CFB6;
+      --gold-dark: #9A7B50;
       --gold-border: rgba(197, 168, 128, 0.28);
       
+      --text-pure: #FFFFFF;
       --text-main: #F8FAFC;
       --text-muted: #94A3B8;
       --text-dim: #64748B;
       
       --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-light: rgba(255, 255, 255, 0.14);
+      
       --radius-sm: 8px;
       --radius-md: 14px;
       --radius-lg: 20px;
+      --radius-xl: 28px;
+      
+      --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.4);
+      --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.6);
+      --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.8);
+      
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     * {
@@ -43,99 +59,175 @@
       -webkit-tap-highlight-color: transparent;
     }
 
-    body {
-      background-color: var(--bg-dark);
-      color: var(--text-main);
-      line-height: 1.6;
-      overflow-x: hidden;
+    html {
+      scroll-behavior: smooth;
     }
 
-    /* الشريط الفندقي العلوي */
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      line-height: 1.65;
+      overflow-x: hidden;
+      font-size: 15px;
+    }
+
+    /* الحاوية والشبكة العامة */
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* عناوين الأقسام الفندقية الفاخرة */
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+      position: relative;
+    }
+    .sec-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold-light);
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .sec-eyebrow::before, .sec-eyebrow::after {
+      content: '';
+      width: 24px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.6;
+    }
+    .sec-title {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 900;
+      color: var(--text-pure);
+      letter-spacing: -0.5px;
+      margin-bottom: 14px;
+      line-height: 1.25;
+    }
+    .sec-subtitle {
+      color: var(--text-muted);
+      font-size: clamp(14px, 1.8vw, 16px);
+      max-width: 640px;
+      margin: 0 auto;
+      font-weight: 400;
+    }
+
+    /* ==========================================================================
+       1. الشريط العلوي الفندقي (Top Utility Bar)
+       ========================================================================== */
     .hotel-topbar {
-      background: #040609;
+      background: #04060A;
       border-bottom: 1px solid var(--border-subtle);
-      padding: 9px 5%;
+      padding: 10px 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       font-size: 13px;
       color: var(--text-muted);
+      position: relative;
+      z-index: 1002;
     }
     .topbar-right {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       flex-wrap: wrap;
     }
     .topbar-badge {
       background: rgba(197, 168, 128, 0.12);
       border: 1px solid var(--gold-border);
       color: var(--gold-light);
-      padding: 2px 10px;
+      padding: 3px 10px;
       border-radius: 4px;
       font-size: 11.5px;
       font-weight: 700;
     }
-    .topbar-phone {
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .topbar-link {
       color: #FFF;
       text-decoration: none;
       font-weight: 700;
       display: flex;
       align-items: center;
       gap: 6px;
-      transition: color 0.2s;
+      transition: var(--transition);
     }
-    .topbar-phone:hover { color: var(--gold-light); }
+    .topbar-link:hover { color: var(--gold-light); }
+    .lang-switcher {
+      background: #0E131E;
+      border: 1px solid var(--border-subtle);
+      color: #FFF;
+      padding: 2px 10px;
+      border-radius: 4px;
+      font-size: 11.5px;
+      cursor: pointer;
+      font-weight: 700;
+    }
 
-    /* الهيدر الفندقي الثابت */
+    /* ==========================================================================
+       2. الهيدر الفندقي الرئيسي (Sticky Luxury Header)
+       ========================================================================== */
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(8, 11, 16, 0.94);
-      backdrop-filter: blur(14px);
+      background: rgba(7, 10, 15, 0.94);
+      backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border-subtle);
-      padding: 14px 5%;
+      padding: 16px 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      transition: var(--transition);
     }
-    .hotel-logo {
+    .brand-logo {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       text-decoration: none;
     }
-    .logo-symbol {
-      width: 44px;
-      height: 44px;
-      background: linear-gradient(135deg, #1C2436 0%, #0D121D 100%);
+    .logo-emblem {
+      width: 46px;
+      height: 46px;
+      background: linear-gradient(135deg, #1A2336 0%, #0B101A 100%);
       border: 1px solid var(--gold-border);
-      border-radius: 10px;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 22px;
+      font-size: 24px;
       color: var(--brand-red);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
       filter: drop-shadow(0 0 10px var(--brand-red-glow));
     }
-    .brand-names { display: flex; flex-direction: column; }
-    .brand-ar {
-      font-size: 22px;
+    .brand-text { display: flex; flex-direction: column; }
+    .brand-name-ar {
+      font-size: 23px;
       font-weight: 900;
-      color: #FFFFFF;
-      line-height: 1.15;
+      color: var(--text-pure);
+      line-height: 1.1;
       letter-spacing: -0.3px;
     }
-    .brand-sub {
-      font-size: 10.5px;
+    .brand-sub-ar {
+      font-size: 11px;
       font-weight: 600;
       color: var(--gold-light);
       letter-spacing: 0.5px;
     }
     .brand-en {
       font-family: 'Cinzel', serif;
-      font-size: 10.5px;
+      font-size: 11px;
       font-weight: 700;
       letter-spacing: 2.5px;
       color: #CBD5E1;
@@ -146,75 +238,1363 @@
     .brand-en .red-star {
       color: var(--brand-red);
       font-weight: 900;
-      text-shadow: 0 0 10px var(--brand-red-glow);
+      text-shadow: 0 0 12px var(--brand-red-glow);
     }
 
-    .nav-links {
+    .main-nav {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 26px;
       list-style: none;
     }
-    .nav-links a {
+    .main-nav a {
       color: #CBD5E1;
       text-decoration: none;
-      font-size: 13.5px;
+      font-size: 14px;
       font-weight: 600;
+      position: relative;
       transition: color 0.2s;
     }
-    .nav-links a:hover { color: var(--gold-light); }
+    .main-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      right: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--gold);
+      transition: width 0.3s;
+    }
+    .main-nav a:hover { color: var(--gold-light); }
+    .main-nav a:hover::after { width: 100%; }
 
-    .btn-header-cta {
-      background: linear-gradient(135deg, var(--brand-red) 0%, #B91C1C 100%);
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn-header-book {
+      background: linear-gradient(135deg, var(--brand-red) 0%, var(--brand-red-dark) 100%);
       color: #FFF;
       text-decoration: none;
-      padding: 9px 20px;
-      border-radius: 8px;
-      font-size: 13px;
+      padding: 10px 22px;
+      border-radius: var(--radius-sm);
+      font-size: 13.5px;
       font-weight: 800;
-      box-shadow: 0 4px 15px var(--brand-red-glow);
+      box-shadow: 0 4px 18px var(--brand-red-glow);
       display: flex;
       align-items: center;
       gap: 8px;
       border: none;
       cursor: pointer;
-      transition: transform 0.2s;
+      transition: var(--transition);
     }
-    .btn-header-cta:hover { transform: translateY(-2px); }
+    .btn-header-book:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(217, 37, 37, 0.6);
+    }
+    .mobile-menu-btn {
+      display: none;
+      background: #141B2A;
+      border: 1px solid var(--border-subtle);
+      color: #FFF;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      font-size: 20px;
+      cursor: pointer;
+    }
 
-    /* الهيرو الرئيسي الفندقي */
-    .hero {
+    /* ==========================================================================
+       3. قسم الهيرو الفندقي البانورامي (Hero Section with Video/Atmosphere)
+       ========================================================================== */
+    .hero-section {
       position: relative;
-      min-height: 82vh;
+      min-height: 85vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 70px 20px 110px;
+      padding: 90px 20px 140px;
       background: 
-        linear-gradient(180deg, rgba(8, 11, 16, 0.45) 0%, rgba(8, 11, 16, 0.95) 100%),
+        linear-gradient(180deg, rgba(7, 10, 15, 0.55) 0%, rgba(7, 10, 15, 0.98) 100%),
+        radial-gradient(circle at 50% 30%, rgba(26, 35, 54, 0.6) 0%, rgba(7, 10, 15, 0.95) 75%),
         url('https://cf.bstatic.com/xdata/images/hotel/max1024x768/701071087.jpg?k=46d4a3ed2f12f08bca999efc7b1858780eb178609dbc2c290ca2fada994ea53e&o=') center/cover no-repeat;
     }
     .hero-content {
       position: relative;
       z-index: 2;
-      max-width: 860px;
+      max-width: 900px;
       margin: 0 auto;
     }
-    .hero-badge {
+    .hero-official-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(197, 168, 128, 0.12);
+      border: 1px solid var(--gold-border);
+      color: var(--gold-light);
+      padding: 7px 22px;
+      border-radius: 40px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      backdrop-filter: blur(10px);
+    }
+    .hero-official-badge .dot {
+      width: 7px;
+      height: 7px;
+      background: var(--brand-red);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--brand-red);
+    }
+    .hero-main-title {
+      font-size: clamp(34px, 5.8vw, 58px);
+      font-weight: 900;
+      color: var(--text-pure);
+      line-height: 1.18;
+      margin-bottom: 10px;
+      text-shadow: 0 4px 25px rgba(0, 0, 0, 0.85);
+    }
+    .hero-en-sub {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(14px, 2.4vw, 20px);
+      letter-spacing: 6px;
+      color: #E2E8F0;
+      margin-bottom: 22px;
+      font-weight: 700;
+    }
+    .hero-en-sub span {
+      color: var(--brand-red);
+      font-weight: 900;
+    }
+    .hero-lead-text {
+      color: #CBD5E1;
+      font-size: clamp(15px, 2vw, 18px);
+      line-height: 1.85;
+      max-width: 720px;
+      margin: 0 auto 36px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+    }
+    .hero-cta-group {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-hero-primary {
+      background: linear-gradient(135deg, var(--brand-red) 0%, var(--brand-red-dark) 100%);
+      color: #FFF;
+      padding: 13px 32px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 6px 25px var(--brand-red-glow);
+      transition: var(--transition);
       display: inline-flex;
       align-items: center;
       gap: 8px;
+    }
+    .btn-hero-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(217, 37, 37, 0.65);
+    }
+    .btn-hero-secondary {
+      background: rgba(14, 19, 30, 0.7);
+      border: 1.5px solid var(--gold-border);
+      color: var(--gold-light);
+      padding: 13px 28px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      backdrop-filter: blur(8px);
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-hero-secondary:hover {
+      background: var(--gold);
+      color: #070A0F;
+      border-color: var(--gold);
+    }
+
+    /* ==========================================================================
+       4. محرك الحجز والكونسيرج العائم (Interactive Booking Engine Widget)
+       ========================================================================== */
+    .booking-engine-wrapper {
+      max-width: 1100px;
+      margin: -65px auto 85px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 30;
+    }
+    .booking-engine-card {
+      background: rgba(19, 26, 41, 0.96);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-lg);
+      padding: 26px 30px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(25px);
+    }
+    .engine-header-tabs {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 14px;
+    }
+    .engine-tab {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 13.5px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .engine-tab.active {
       background: rgba(197, 168, 128, 0.15);
+      color: var(--gold-light);
+      border: 1px solid var(--gold-border);
+    }
+    .engine-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)) 160px;
+      gap: 16px;
+      align-items: end;
+    }
+    .engine-field { display: flex; flex-direction: column; }
+    .engine-field label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gold-light);
+      margin-bottom: 7px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .engine-field select, .engine-field input {
+      width: 100%;
+      background: #080B11;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      color: #FFF;
+      padding: 12px 14px;
+      font-size: 13.5px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .engine-field select:focus, .engine-field input:focus {
+      border-color: var(--gold);
+    }
+    .btn-engine-submit {
+      width: 100%;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+      color: #070A0F;
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 13px;
+      font-weight: 900;
+      font-size: 14.5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      height: 48px;
+      transition: var(--transition);
+      box-shadow: 0 4px 15px rgba(197, 168, 128, 0.25);
+    }
+    .btn-engine-submit:hover {
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(197, 168, 128, 0.4);
+    }
+
+    /* ==========================================================================
+       5. شريط العروض الحصرية والعد التنازلي (Seasonal Offers & Countdown)
+       ========================================================================== */
+    .offers-banner {
+      background: linear-gradient(135deg, #1C1217 0%, #121826 100%);
+      border: 1px solid rgba(217, 37, 37, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 36px 40px;
+      margin-bottom: 95px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+    .offers-banner::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 300px;
+      height: 300px;
+      background: var(--brand-red-glow);
+      filter: blur(80px);
+      pointer-events: none;
+    }
+    .offer-details { max-width: 580px; position: relative; z-index: 2; }
+    .offer-tag {
+      background: rgba(217, 37, 37, 0.2);
+      color: #FF6B6B;
+      border: 1px solid rgba(217, 37, 37, 0.4);
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-size: 11.5px;
+      font-weight: 800;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .offer-title {
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 900;
+      color: #FFF;
+      margin-bottom: 8px;
+    }
+    .offer-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .countdown-box {
+      display: flex;
+      gap: 12px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    .count-unit {
+      background: #080B11;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      min-width: 65px;
+    }
+    .count-num {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--gold-light);
+      line-height: 1;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .count-lbl {
+      font-size: 10.5px;
+      color: var(--text-dim);
+      margin-top: 4px;
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       6. ركائز الضيافة الفندقية (The Star Pillars)
+       ========================================================================== */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-bottom: 100px;
+    }
+    .pillar-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 32px 24px;
+      transition: var(--transition);
+      position: relative;
+    }
+    .pillar-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold-border);
+      background: var(--bg-card);
+      box-shadow: var(--shadow-sm);
+    }
+    .pillar-icon {
+      width: 54px;
+      height: 54px;
+      background: rgba(197, 168, 128, 0.1);
+      border: 1px solid var(--gold-border);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: var(--gold-light);
+    }
+    .pillar-title {
+      font-size: 18.5px;
+      font-weight: 800;
+      color: var(--text-pure);
+      margin-bottom: 10px;
+    }
+    .pillar-p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    /* ==========================================================================
+       7. الأجنحة والشقق مع الفلاتر (Suites Showcase with Filters)
+       ========================================================================== */
+    .filter-tabs-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--gold);
+      color: #070A0F;
+      border-color: var(--gold);
+    }
+    .suites-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      gap: 30px;
+      margin-bottom: 100px;
+    }
+    .suite-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+    }
+    .suite-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(217, 37, 37, 0.45);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
+    }
+    .suite-img-holder {
+      height: 230px;
+      position: relative;
+      overflow: hidden;
+      background: #141B2A;
+    }
+    .suite-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .suite-card:hover .suite-photo {
+      transform: scale(1.06);
+    }
+    .suite-corner-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(7, 10, 15, 0.9);
       border: 1px solid var(--gold-border);
       color: var(--gold-light);
-      padding: 6px 18px;
-      border-radius: 30px;
-      font-size: 13px;
+      font-size: 11px;
       font-weight: 700;
-      margin-bottom: 20px;
+      padding: 4px 12px;
+      border-radius: 20px;
       backdrop-filter: blur(8px);
     }
-    .hero-title {
-      font-size: clamp(32px, 5.5vw, 54px);
-      
+    .suite-content {
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .suite-name-ar {
+      font-size: 21px;
+      font-weight: 900;
+      color: var(--text-pure);
+      margin-bottom: 4px;
+    }
+    .suite-en-tag {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      color: var(--gold-light);
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+    }
+    .suite-features-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 24px;
+      font-size: 12.5px;
+      color: #CBD5E1;
+    }
+    .suite-features-list li {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .suite-features-list li::before {
+      content: '✓';
+      color: var(--brand-red);
+      font-weight: 900;
+    }
+    .suite-card-footer {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 18px;
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .suite-rate-box { display: flex; flex-direction: column; }
+    .rate-amount {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--text-pure);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .rate-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .btn-suite-action {
+      background: #182236;
+      color: #FFF;
+      border: 1px solid var(--gold-border);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .btn-suite-action:hover {
+      background: var(--brand-red);
+      border-color: var(--brand-red);
+      box-shadow: 0 4px 15px var(--brand-red-glow);
+    }
+
+    /* ==========================================================================
+       8. شبكة المرافق الفندقية المتكاملة (Hotel Amenities Grid)
+       ========================================================================== */
+    .amenities-wrapper {
+      background: #0B0F17;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 85px 0;
+      margin-bottom: 100px;
+    }
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+    .amenity-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 28px 20px;
+      transition: var(--transition);
+    }
+    .amenity-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold-border);
+      background: var(--bg-card);
+    }
+    .a-emoji { font-size: 32px; margin-bottom: 12px; }
+    .a-title { font-size: 16px; font-weight: 800; color: #FFF; margin-bottom: 6px; }
+    .a-desc { font-size: 12.5px; color: var(--text-muted); line-height: 1.6; }
+
+    /* ==========================================================================
+       9. معرض الصور التفاعلي (Interactive Masonry Gallery & Lightbox)
+       ========================================================================== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-bottom: 100px;
+    }
+    .gallery-item {
+      height: 220px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      border: 1px solid var(--border-subtle);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .gallery-item:hover img { transform: scale(1.08); }
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(7, 10, 15, 0.95) 100%);
+      display: flex;
+      align-items: flex-end;
+      padding: 16px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-caption {
+      color: #FFF;
+      font-size: 13.5px;
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       10. الجولة الافتراضية بالفيديو (Virtual Video Tour Section)
+       ========================================================================== */
+    .video-tour-banner {
+      background: linear-gradient(135deg, #131A29 0%, #0A0E17 100%);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-lg);
+      padding: 50px 30px;
+      text-align: center;
+      margin-bottom: 100px;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-play-tour {
+      width: 72px;
+      height: 72px;
+      background: var(--brand-red);
+      color: #FFF;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 30px var(--brand-red-glow);
+      margin-bottom: 20px;
+      transition: transform 0.25s;
+    }
+    .btn-play-tour:hover { transform: scale(1.1); }
+
+    /* ==========================================================================
+       11. تقييمات قوقل ماب الحقيقية (Real Google Maps Reviews)
+       ========================================================================== */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-bottom: 100px;
+    }
+    .review-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      position: relative;
+    }
+    .review-stars {
+      color: #F59E0B;
+      font-size: 15px;
+      margin-bottom: 12px;
+      display: flex;
+      gap: 3px;
+    }
+    .review-text {
+      font-size: 14px;
+      color: #CBD5E1;
+      line-height: 1.8;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+    .review-author {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--gold-light);
+    }
+    .review-meta {
+      font-size: 11px;
+      color: var(--text-dim);
+    }
+
+    /* ==========================================================================
+       12. دليل الموقع ومعالم الأحساء (Location & Landmark Distances)
+       ========================================================================== */
+    .location-wrapper {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 40px 36px;
+      margin-bottom: 100px;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    @media(max-width: 850px) {
+      .location-wrapper { grid-template-columns: 1fr; }
+      .main-nav { display: none; }
+      .mobile-menu-btn { display: block; }
+      .hotel-topbar { flex-direction: column; gap: 8px; text-align: center; }
+      .engine-grid { grid-template-columns: 1fr; }
+    }
+    .loc-title { font-size: 26px; font-weight: 900; color: #FFF; margin-bottom: 10px; }
+    .loc-desc { font-size: 14.5px; color: var(--text-muted); line-height: 1.8; margin-bottom: 22px; }
+    .distance-list { display: flex; flex-direction: column; gap: 10px; }
+    .dist-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13.5px;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 8px;
+    }
+    .dist-row span:last-child { color: var(--gold-light); font-weight: 800; }
+    .btn-maps-external {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #182236;
+      color: #FFF;
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: var(--radius-sm);
+      font-size: 13.5px;
+      font-weight: 700;
+      border: 1px solid var(--border-subtle);
+      margin-top: 18px;
+      transition: var(--transition);
+    }
+    .btn-maps-external:hover { border-color: var(--gold); }
+
+    /* ==========================================================================
+       13. الأسئلة الشائعة الفندقية (Interactive FAQ Accordion)
+       ========================================================================== */
+    .faq-container {
+      max-width: 840px;
+      margin: 0 auto 100px;
+    }
+    .faq-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .faq-item.active { border-color: var(--gold-border); background: var(--bg-card); }
+    .faq-question {
+      padding: 18px 22px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 15.5px;
+      font-weight: 700;
+      color: #FFF;
+      user-select: none;
+    }
+    .faq-icon {
+      font-size: 18px;
+      color: var(--gold-light);
+      transition: transform 0.3s;
+    }
+    .faq-item.active .faq-icon { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      padding: 0 22px;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+      padding: 0 22px 18px;
+    }
+
+    /* ==========================================================================
+       14. الفوتر الفندقي الشامل (Comprehensive Luxury Footer)
+       ========================================================================== */
+    footer {
+      background: #040609;
+      border-top: 1px solid var(--border-subtle);
+      padding: 70px 20px 30px;
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+    .footer-grid {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+    @media(max-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    }
+    .f-brand-title { font-size: 21px; font-weight: 900; color: #FFF; margin-bottom: 4px; }
+    .f-brand-en {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--brand-red);
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+    .f-links-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .f-links-list a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .f-links-list a:hover { color: var(--gold-light); }
+    .newsletter-form { display: flex; gap: 8px; margin-top: 12px; }
+    .newsletter-form input {
+      flex-grow: 1;
+      background: #0E131E;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: #FFF;
+      padding: 9px 12px;
+      font-size: 13px;
+      outline: none;
+    }
+    .newsletter-form button {
+      background: var(--gold);
+      color: #070A0F;
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 0 16px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       15. نافذة تدفق الحجز المتقدم متعدد الخطوات (Multi-Step Booking Funnel)
+       ========================================================================== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.82);
+      backdrop-filter: blur(12px);
+      z-index: 5000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .modal-overlay.active { display: flex; }
+    .booking-modal-card {
+      background: #111726;
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 580px;
+      max-height: 92vh;
+      overflow-y: auto;
+      padding: 30px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9);
+      position: relative;
+    }
+    .modal-close-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      color: #FFF;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    
+    /* شريط التقدم الفندقي */
+    .funnel-progress {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 26px;
+      position: relative;
+    }
+    .funnel-progress::before {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 20px;
+      right: 20px;
+      height: 2px;
+      background: var(--border-subtle);
+      z-index: 1;
+    }
+    .funnel-step {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .step-circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #0E131E;
+      border: 1.5px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--text-muted);
+      transition: var(--transition);
+    }
+    .funnel-step.active .step-circle {
+      background: var(--brand-red);
+      border-color: var(--brand-red);
+      color: #FFF;
+      box-shadow: 0 0 12px var(--brand-red-glow);
+    }
+    .funnel-step.completed .step-circle {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: #070A0F;
+    }
+    .step-label { font-size: 11px; font-weight: 700; color: var(--text-muted); }
+
+    .step-content { display: none; }
+    .step-content.active { display: block; animation: fadeIn 0.3s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+    .modal-step-title {
+      font-size: 18px;
+      font-weight: 900;
+      color: #FFF;
+      margin-bottom: 16px;
+    }
+    .billing-summary-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      font-size: 13.5px;
+    }
+    .billing-summary-table td {
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .billing-summary-table td:last-child {
+      text-align: left;
+      font-weight: 800;
+      color: #FFF;
+    }
+
+    .form-group { margin-bottom: 14px; }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gold-light);
+      margin-bottom: 6px;
+    }
+    .form-input {
+      width: 100%;
+      background: #080B11;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      color: #FFF;
+      padding: 11px 13px;
+      font-size: 13.5px;
+      outline: none;
+    }
+    .form-input:focus { border-color: var(--gold); }
+
+    .addon-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0B0F17;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .addon-card:hover { border-color: var(--gold-border); }
+
+    .modal-btn-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .btn-step-next {
+      flex: 1;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+      color: #070A0F;
+      border: none;
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      font-weight: 900;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .btn-step-prev {
+      background: #182236;
+      color: #FFF;
+      border: 1px solid var(--border-subtle);
+      padding: 12px 20px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 13.5px;
+      cursor: pointer;
+    }
+    .btn-step-whatsapp {
+      flex: 1;
+      background: linear-gradient(135deg, #25D366 0%, #1CA851 100%);
+      color: #FFF;
+      border: none;
+      padding: 13px;
+      border-radius: var(--radius-sm);
+      font-weight: 900;
+      font-size: 14.5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. شريط الاستقبال العلوي الفندقي -->
+  <div class="hotel-topbar">
+    <div class="topbar-right">
+      <span>📍 الهفوف - السلمانية الجنوبية، شارع الأمير أحمد</span>
+      <span class="topbar-badge">⭐ تقييم 4.5 في خرائط قوقل (256 تقييم)</span>
+      <span class="topbar-badge">📶 تقييم الواي فاي 9.4</span>
+      <span class="topbar-badge">🏛️ ترخيص سياحي: 10009918</span>
+    </div>
+    <div class="topbar-left">
+      <a href="tel:0560411778" class="topbar-link">
+        <span>هاتف الاستقبال:</span>
+        <span dir="ltr">0560411778</span>
+      </a>
+      <select class="lang-switcher" onchange="alert('اللغة الإنجليزية ستتوفر في التحديث القادم')">
+        <option>العربية (AR)</option>
+        <option>English (EN)</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- 2. الهيدر الفندقي الرئيسي -->
+  <header>
+    <a href="#" class="brand-logo">
+      <div class="logo-emblem">★</div>
+      <div class="brand-text">
+        <div class="brand-name-ar">ستار القمة</div>
+        <div class="brand-sub-ar">للشقق المخدومة المفروشة</div>
+        <div class="brand-en">TOP <span class="red-star">STAR</span> SERVICED APARTMENTS</div>
+      </div>
+    </a>
+
+    <ul class="main-nav">
+      <li><a href="#about">عن الفندق</a></li>
+      <li><a href="#suites">الأجنحة والشقق</a></li>
+      <li><a href="#amenities">المرافق الفندقية</a></li>
+      <li><a href="#gallery">المعرض</a></li>
+      <li><a href="#reviews">آراء النزلاء</a></li>
+      <li><a href="#location">الموقع بالهفوف</a></li>
+      <li><a href="#faq">الأسئلة الشائعة</a></li>
+    </ul>
+
+    <div class="header-actions">
+      <button class="btn-header-book" onclick="startFunnel('غرفة استوديو دبل ماستر', 190)">
+        <span>احجز إقامتك</span>
+        <span>💬</span>
+      </button>
+      <button class="mobile-menu-btn" onclick="toggleMobileNav()">☰</button>
+    </div>
+  </header>
+
+  <!-- 3. قسم الهيرو البانورامي -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-official-badge">
+        <span class="dot"></span>
+        <span>ضيافة فندقية مرخصة ومعتمدة في محافظة الأحساء</span>
+      </div>
+      <h1 class="hero-main-title">ستار القمة للشقق المخدومة</h1>
+      <div class="hero-en-sub">TOP <span>STAR</span> SERVICED APARTMENTS</div>
+      <p class="hero-lead-text">
+        قمة الراحة والهدوء في قلب الهفوف. أجنحة وشقق فندقية مجهزة بالكامل بعوازل صوتية متطورة، ونظافة فندقية معتمدة تضمن لكم أعلى مستويات الخصوصية والراحة العائلية وتنفيذ الأعمال.
+      </p>
+      <div class="hero-cta-group">
+        <button class="btn-hero-primary" onclick="startFunnel('شقة ديلوكس غرفة وصالة وشرفة', 250)">
+          <span>طلب حجز مباشر للكونسيرج</span>
+          <span>➔</span>
+        </button>
+        <a href="#suites" class="btn-hero-secondary">
+          <span>استعراض تشكيلة الأجنحة</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. محرك الحجز والكونسيرج العائم -->
+  <div class="booking-engine-wrapper">
+    <div class="booking-engine-card">
+      <div class="engine-header-tabs">
+        <button class="engine-tab active" onclick="switchStayType(this, 'يومي')">إقامة يومية</button>
+        <button class="engine-tab" onclick="switchStayType(this, 'أسبوعي')">إقامة أسبوعية (تخفيض 10%)</button>
+        <button class="engine-tab" onclick="switchStayType(this, 'شهري')">إقامة شهرية مخدومة</button>
+      </div>
+      <div class="engine-grid">
+        <div class="engine-field">
+          <label>الوحدة السكنية:</label>
+          <select id="engineSuite">
+            <option value="غرفة استوديو دبل ماستر" data-rate="190">استوديو دبل ماستر (190 ر.س)</option>
+            <option value="شقة ديلوكس غرفة وصالة وشرفة" data-rate="250">شقة غرفة وصالة وشرفة (250 ر.س)</option>
+            <option value="جناح القمة العائلي غرفتين وصالة" data-rate="380">جناح القمة غرفتين وصالة (380 ر.س)</option>
+          </select>
+        </div>
+        <div class="engine-field">
+          <label>تاريخ الوصول:</label>
+          <input type="date" id="engineIn">
+        </div>
+        <div class="engine-field">
+          <label>تاريخ المغادرة:</label>
+          <input type="date" id="engineOut">
+        </div>
+        <div class="engine-field">
+          <label>النزلاء والضيوف:</label>
+          <select id="engineGuests">
+            <option value="1">شخص واحد</option>
+            <option value="2" selected>شخصان</option>
+            <option value="3">3 أشخاص</option>
+            <option value="4+">عائلة (4 أشخاص أو أكثر)</option>
+          </select>
+        </div>
+        <button class="btn-engine-submit" onclick="submitEngineSearch()">
+          <span>استعلام التوفر</span>
+          <span>🔍</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- 5. شريط العروض والعد التنازلي -->
+    <div class="offers-banner">
+      <div class="offer-details">
+        <span class="offer-tag">عرض موسمي حصري</span>
+        <h3 class="offer-title">خصم 15% على الإقامات الأسبوعية والشهرية</h3>
+        <p class="offer-desc">
+          احجز مباشرة عبر الموقع الرسمي واستفد من خصم مباشر بالإضافة لخدمة تنظيف دورية مجانية وموقف سيارة مظلل أمام المدخل.
+        </p>
+      </div>
+      <div class="countdown-box">
+        <div class="count-unit">
+          <div class="count-num" id="cdDays">04</div>
+          <div class="count-lbl">أيام</div>
+        </div>
+        <div class="count-unit">
+          <div class="count-num" id="cdHours">16</div>
+          <div class="count-lbl">ساعات</div>
+        </div>
+        <div class="count-unit">
+          <div class="count-num" id="cdMins">42</div>
+          <div class="count-lbl">دقائق</div>
+        </div>
+        <div class="count-unit">
+          <div class="count-num" id="cdSecs">20</div>
+          <div class="count-lbl">ثواني</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. ركائز الضيافة الفندقية -->
+    <div class="section-header" id="about">
+      <span class="sec-eyebrow">THE STAR PILLARS</span>
+      <h2 class="sec-title">معايير الضيافة والهدوء في ستار القمة</h2>
+      <p class="sec-subtitle">صُممت مرافقنا لتوفر لكم تجربة استثنائية تمزج بين الهدوء المطلق والخدمة المتفانية</p>
+    </div>
+
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-icon">🔇</div>
+        <h3 class="pillar-title">عزل صوتي فائق وهدوء تام</h3>
+        <p class="pillar-p">تجهيز هندسي متكامل بعوازل جدارية وزجاج مزدوج يمنع أي ضوضاء خارجية لتنعم بنوم عميق وهدوء حقيقي.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">✨</div>
+        <h3 class="pillar-title">تعقيم ونظافة فندقية دورية</h3>
+        <p class="pillar-p">مفارش فندقية معقمة بعناية فائقة، وبروتوكول نظافة دوري شامل للغرف ودورات المياه والمطابخ التحضيرية.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">📶</div>
+        <h3 class="pillar-title">إنترنت فايبر عالي السرعة (9.4)</h3>
+        <p class="pillar-p">تغطية ألياف بصرية مجانية سريعة جداً نالت إشادة النزلاء بتقييم 9.4 في بوكينج لدعم العمل والترفيه والبث المباشر.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">🛎️</div>
+        <h3 class="pillar-title">استقبال وخدمة 24/7</h3>
+        <p class="pillar-p">طاقم استقبال متواجد على مدار اليوم بقيادة الأستاذ محمد حسن لضمان سرعة تلبية الطلبات وإجراءات الدخول الفورية.</p>
+      </div>
+    </div>
+
+    <!-- 7. الأجنحة والشقق مع الفلاتر -->
+    <div class="section-header" id="suites">
+      <span class="sec-eyebrow">ACCOMMODATIONS</span>
+      <h2 class="sec-title">أجنحة وشقق ستار القمة المخدومة</h2>
+      <p class="sec-subtitle">اختر المساحة التي تناسب متطلبات إقامتك اليومية أو العائلية بتشطيب راقٍ ومواصفات موثقة</p>
+    </div>
+
+    <div class="filter-tabs-wrapper">
+      <button class="filter-btn active" onclick="filterSuites('all', this)">كافة الأجنحة</button>
+      <button class="filter-btn" onclick="filterSuites('studio', this)">استوديوهات (شخصان)</button>
+      <button class="filter-btn" onclick="filterSuites('1bed', this)">غرفة وصالة (شخصان إلى 3)</button>
+      <button class="filter-btn" onclick="filterSuites('2bed', this)">أجنحة عائلية (4-5 أفراد)</button>
+    </div>
+
+    <div class="suites-grid">
+      <!-- 1. استوديو ماستر -->
+      <div class="suite-card" data-category="studio">
+        <div class="suite-img-holder">
+          <span class="suite-corner-badge">الأكثر طلباً للنزلاء الفرديين</span>
+          <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/701071087.jpg?k=46d4a3ed2f12f08bca999efc7b1858780eb178609dbc2c290ca2fada994ea53e&o=" alt="استوديو ماستر فندقي" class="suite-photo">
+        </div>
+        <div class="suite-content">
+          <h3 class="suite-name-ar">غرفة استوديو دبل ماستر</h3>
+          <div class="suite-en-tag">DOUBLE ROOM WITH PRIVATE BATH • 30 SQM</div>
+          <ul class="suite-features-list">
+            <li>سرير ماستر كينغ مريح</li>
+            <li>دورة مياه مستقلة فاخرة</li>
+            <li>شاشة تلفزيون سمارت</li>
+            <li>ثلاجة ميني وركن غلاية</li>
+            <li>تكييف مركزي متطور</li>
+            <li>إنترنت ألياف سريع مجاناً</li>
+          </ul>
+          <div class="suite-card-footer">
+            <div class="suite-rate-box">
+              <span class="rate-amount">190 ر.س</span>
+              <span class="rate-sub">لليلة الواحدة (شامل الضريبة)</span>
+            </div>
+            <button class="btn-suite-action" onclick="startFunnel('غرفة استوديو دبل ماستر', 190)">حجز الجناح</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. شقة ديلوكس غرفة وصالة وشرفة -->
+      <div class="suite-card" data-category="1bed">
+        <div class="suite-img-holder">
+          <span class="suite-corner-badge">راحة وخصوصية للمدة الطويلة</span>
+          <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/701071087.jpg?k=46d4a3ed2f12f08bca999efc7b185=46d4a3ed2f12f08bca999efc7b1858780eb178609dbc2c290ca2fada994ea53e&o=" alt="شقة ديلوكس غرفة وصالة" class="suite-photo">
+        </div>
+        <div class="suite-content">
+          <h3 class="suite-name-ar">شقة ديلوكس (غرفة نوم وصالة وشرفة)</h3>
+          <div class="suite-en-tag">STANDARD DOUBLE SUITE WITH BALCONY • 60 SQM</div>
+          <ul class="suite-features-list">
+            <li>غرفة نوم ماستر معزولة</li>
+            <li>صالة جلوس واسعة بكنب راقٍ</li>
+            <li>شرفة خاصة بإطلالة هادئة</li>
+            <li>مطبخ تحضيري متكامل</li>
+            <li>عزل صوتي تام للهدوء</li>
+            <li>خدمة غسيل ومفارش دورية</li>
+          </ul>
+          <div class="suite-card-footer">
+            <div class="suite-rate-box">
+              <span class="rate-amount">250 ر.س</span>
+              <span class="rate-sub">لليلة الواحدة (شامل الضريبة)</span>
+            </div>
+            <button class="btn-suite-action" onclick="startFunnel('شقة ديلوكس (غرفة نوم وصالة وشرفة)', 250)">حجز الشقة</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. جناح القمة العائلي غرفتين وصالة -->
+      <div class="suite-card" data-category="2bed">
+        <div class="suite-img-holder">
+          <span class="suite-corner-badge">الخيار العائلي الأرقى بالأحساء</span>
+          <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/701071087.jpg?k=46d4a3ed2f12f08bca999efc7b1858780eb178609dbc2c290ca2fada994ea53e&o=" alt="جناح القمة العائلي" class="suite-photo">
+        </div>
+        <div class="suite-content">
+          <h3 class="suite-name-ar">جناح القمة العائلي (غرفتين وصالة)</h3>
+          <div class="suite-en-tag">TWO-BEDROOM ROYAL FAMILY SUITE • 90 SQM</div>
+          <ul class="suite-features-list">
+            <li>غرفتان نوم منفصلتان بالكامل</li>
+            <li>صالة عائلية رحبة تتسع لـ 5 أفراد</li>
+            <li>مطبخ متكامل بثلاجة ومايكرويف</li>
+            <li>دورتان مياه فندقيتان مجهزتان</li>
+            <li>مواقف سيارات مخصصة أمام المبنى</li>
+            <li>تسجيل دخول عائلي سريع</li>
+          </ul>
+          <div class="suite-card-footer">
+            <div class="suite-rate-box">
+              <span class="rate-amount">380 ر.س</span>
+              <span class="rate-sub">لليلة الواحدة (شامل الضريبة)</span>
+            </div>
+            <button class="btn-suite-action" onclick="startFunnel('جناح القمة العائلي (غرفتين وصالة)', 380)">حجز الجناح</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 8. شبكة المرافق الفندقية -->
+  <section class="amenities-wrapper" id="amenities">
+    <div class="container">
+      <div class="section-header">
+        <span class="sec-eyebrow">HOTEL AMENITIES</span>
+        <h2 class="sec-title">مرافق وخدمات فندقية متكاملة</h2>
+        <p class="sec-subtitle">كل ما تحتاجه لتجربة سكن سلسة ومريحة داخل الفندق</p>
+      </div>
+
+      <div class="amenities-grid">
+        <div class="amenity-card">
+          <div class="a-emoji">🚗</div>
+          <div class="a-title">مواقف سيارات خاصة</div>
+          <div class="a-desc">مواقف مخصصة ومظللة للنزلاء أمام المبنى مباشرة بأمان تام</div>
+        </div>
+        <div class="amenity-card">
+          <div class="a-emoji">⚡</div>
+          <div class="a-title">فايبر فائق السرعة</div>
+          <div class="a-desc">شبكة ألياف ضوئية سريعة تغطي كافة أرجاء الأجنحة مجاناً</div>
+        </div>
+        <div class="amenity-card">
+          <div class="a-emoji">🛗</div>
+          <div class="a-title">مصاعد ومداخل مريحة</div>
+          <div class="a-desc">مصاعد حديثة ومداخل مهيأة بالكامل لكبار السن والعائلات</div>
+        </div>
+        <div class="amenity-card">
+          <div class="a-emoji">🕒</div>
+          <div class="a-title">استقبال على مدار 24 ساعة</div>
+          <div class="a-desc">تسجيل دخول وخروج سلس في أي وقت من اليوم بكل ترحاب</div>
+        </div>
+        <div class="amenity-card">
+          <div class="a-emoji">🍳</div>
+          <div class="a-title">مطابخ تحضيرية مجهزة</div>
+          <div class="a-desc">ثلاجة، مايكرويف، وغلاية ماء لتلبية احتياجاتك اليومية</div>
+        </div>
+        <div class="amenity-card">
+          <div class="a-emoji">🧼</div>
+          
