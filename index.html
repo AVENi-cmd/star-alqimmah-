@@ -83,7 +83,7 @@
     }
     .hero-image-backdrop {
       position: absolute; inset: 0;
-      background-image: url('images/F0F8953A-C1FD-479F-9D93-65AA69085581.jpeg'), url('images/exterior.jpg');
+      background-image: url('images/F0F8953A-C1FD-479F-9D93-65AA69085581.jpeg');
       background-size: cover; background-position: center;
       filter: brightness(0.35) contrast(1.1); z-index: 0;
     }
@@ -499,7 +499,7 @@
         <div class="unit-card">
           <div class="unit-badge">الأكثر طلباً للأفراد</div>
           <div class="unit-img-wrapper">
-            <img src="images/941BB36E-5CEF-4EC4-9CFD-C34CB0813DDA.png" alt="غرفة استوديو دبل ماستر" onerror="this.onerror=null; this.src='images/master-bedroom.jpg';">
+            <img src="images/EB1E5A7B-A43A-4CD6-98E7-C8B1051993F0.png" alt="غرفة استوديو دبل ماستر" onerror="if(this.src.indexOf('941BB36E')===-1){this.src='images/941BB36E-5CEF-4EC4-9CFD-C34CB0813DDA.png';}">
           </div>
           <div class="unit-details">
             <h3 class="unit-title">غرفة استوديو دبل ماستر</h3>
@@ -521,7 +521,7 @@
         <div class="unit-card">
           <div class="unit-badge featured">قيمة استثنائية</div>
           <div class="unit-img-wrapper">
-            <img src="images/30B12B06-613B-4921-9ADC-09B1D1FB388E.png" alt="شقة ديلوكس غرفة وصالة وشرفة" onerror="this.onerror=null; this.src='images/lounge.jpg';">
+            <img src="images/IMG_3805.jpeg" alt="شقة ديلوكس غرفة وصالة وشرفة" onerror="if(this.src.indexOf('deluxe-apartment.png')===-1 && this.src.indexOf('30B12B06')===-1){this.src='images/deluxe-apartment.png';} else if(this.src.indexOf('30B12B06')===-1){this.src='images/30B12B06-613B-4921-9ADC-09B1D1FB388E.png';}">
           </div>
           <div class="unit-details">
             <h3 class="unit-title">شقة ديلوكس غرفة وصالة وشرفة</h3>
@@ -543,7 +543,7 @@
         <div class="unit-card">
           <div class="unit-badge">الأمثل للعائلات</div>
           <div class="unit-img-wrapper">
-            <img src="images/BC6A5E74-818B-471B-8559-28A46C6C9D45.png" alt="جناح القمة العائلي غرفتين وصالة" onerror="this.onerror=null; this.src='images/family-suite.jpg';">
+            <img src="images/74DC5A70-E1F1-4C55-AA9B-8902727DA664.png" alt="جناح القمة العائلي غرفتين وصالة" onerror="if(this.src.indexOf('family-suite.png')===-1 && this.src.indexOf('BC6A5E74')===-1){this.src='images/family-suite.png';} else if(this.src.indexOf('BC6A5E74')===-1){this.src='images/BC6A5E74-818B-471B-8559-28A46C6C9D45.png';}">
           </div>
           <div class="unit-details">
             <h3 class="unit-title">جناح القمة العائلي غرفتين وصالة</h3>
@@ -575,8 +575,8 @@
 
       <div class="gallery-grid">
         <!-- 1. Exterior (Large Span-2) -->
-        <div class="gallery-item span-2" onclick="openLightbox('images/F0F8953A-C1FD-479F-9D93-65AA69085581.jpeg', 'الواجهة المعمارية ومدخل الاستقبال الفندقي')">
-          <img src="images/F0F8953A-C1FD-479F-9D93-65AA69085581.jpeg" alt="الواجهة الخارجية لفندق ستار القمة" onerror="this.onerror=null; this.src='images/exterior.jpg';">
+        <div class="gallery-item span-2" onclick="openLightbox(this.querySelector('img').src, 'الواجهة المعمارية ومدخل الاستقبال الفندقي')">
+          <img src="images/F0F8953A-C1FD-479F-9D93-65AA69085581.jpeg" alt="الواجهة الخارجية لفندق ستار القمة">
           <div class="gallery-overlay">
             <div class="gallery-caption">
               <h5>الواجهة المعمارية ومدخل الاستقبال الفندقي</h5>
@@ -586,8 +586,8 @@
         </div>
 
         <!-- 2. Reception & Clocks -->
-        <div class="gallery-item" onclick="openLightbox('images/385DCE00-18B1-4C23-94DD-0177BB13408B.png', 'بهو ومكتب الاستقبال الفندقي وساعات العواصم')">
-          <img src="images/385DCE00-18B1-4C23-94DD-0177BB13408B.png" alt="بهو الاستقبال الفندقي وساعات العواصم" onerror="this.onerror=null; this.src='images/reception.jpg';">
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'بهو ومكتب الاستقبال الفندقي وساعات العواصم')">
+          <img src="images/385DCE00-18B1-4C23-94DD-0177BB13408B.png" alt="بهو الاستقبال الفندقي وساعات العواصم">
           <div class="gallery-overlay">
             <div class="gallery-caption">
               <h5>بهو ومكتب الاستقبال الفندقي</h5>
@@ -597,8 +597,8 @@
         </div>
 
         <!-- 3. Living Room & Kitchenette -->
-        <div class="gallery-item" onclick="openLightbox('images/30B12B06-613B-4921-9ADC-09B1D1FB388E.png', 'صالة الجلسة والمطبخ التحضيري وطاولة الطعام')">
-          <img src="images/30B12B06-613B-4921-9ADC-09B1D1FB388E.png" alt="صالة الجلسة والمطبخ التحضيري" onerror="this.onerror=null; this.src='images/lounge.jpg';">
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'صالة الجلسة والمطبخ التحضيري وطاولة الطعام')">
+          <img src="images/30B12B06-613B-4921-9ADC-09B1D1FB388E.png" alt="صالة الجلسة والمطبخ التحضيري">
           <div class="gallery-overlay">
             <div class="gallery-caption">
               <h5>صالة الاستراحة والمطبخ التحضيري</h5>
@@ -608,8 +608,8 @@
         </div>
 
         <!-- 4. Master King Bedroom -->
-        <div class="gallery-item" onclick="openLightbox('images/941BB36E-5CEF-4EC4-9CFD-C34CB0813DDA.png', 'غرفة النوم الماستر كينغ الفاخرة')">
-          <img src="images/941BB36E-5CEF-4EC4-9CFD-C34CB0813DDA.png" alt="غرفة النوم الماستر كينغ" onerror="this.onerror=null; this.src='images/master-bedroom.jpg';">
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'غرفة النوم الماستر كينغ الفاخرة')">
+          <img src="images/EB1E5A7B-A43A-4CD6-98E7-C8B1051993F0.png" alt="غرفة النوم الماستر كينغ" onerror="if(this.src.indexOf('941BB36E')===-1){this.src='images/941BB36E-5CEF-4EC4-9CFD-C34CB0813DDA.png';}">
           <div class="gallery-overlay">
             <div class="gallery-caption">
               <h5>أجنحة النوم الماستر الفاخرة</h5>
@@ -619,8 +619,8 @@
         </div>
 
         <!-- 5. Twin Beds Family Suite -->
-        <div class="gallery-item" onclick="openLightbox('images/BC6A5E74-818B-471B-8559-28A46C6C9D45.png', 'الأجنحة العائلية المزدوجة بسريرين مفردين')">
-          <img src="images/BC6A5E74-818B-471B-8559-28A46C6C9D45.png" alt="الغرفة العائلية المزدوجة" onerror="this.onerror=null; this.src='images/family-suite.jpg';">
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'الأجنحة العائلية المزدوجة بسريرين مفردين')">
+          <img src="images/BC6A5E74-818B-471B-8559-28A46C6C9D45.png" alt="الغرفة العائلية المزدوجة">
           <div class="gallery-overlay">
             <div class="gallery-caption">
               <h5>الغرف العائلية المزدوجة</h5>
@@ -630,8 +630,8 @@
         </div>
 
         <!-- 6. Lobby Lounge & Arabic Dallah -->
-        <div class="gallery-item" onclick="openLightbox('images/IMG_3779.jpeg', 'جلسة الضيافة الفندقية ودلة القهوة السعودية')">
-          <img src="images/IMG_3779.jpeg" alt="جلسة الضيافة الفندقية" onerror="this.onerror=null; this.src='images/lounge.jpg';">
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'جلسة الضيافة الفندقية ودلة القهوة السعودية')">
+          <img src="images/IMG_3779.jpeg" alt="جلسة الضيافة الفندقية">
           <div class="gallery-overlay">
             <div class="gallery-caption">
               <h5>صالة الضيافة والاستراحة الفاخرة</h5>
@@ -641,8 +641,8 @@
         </div>
 
         <!-- 7. VIP Celebration Setup -->
-        <div class="gallery-item" onclick="openLightbox('images/64F94F89-342F-489B-A35A-5706A708EF97.png', 'باقات المناسبات والترتيبات الخاصة')">
-          <img src="images/64F94F89-342F-489B-A35A-5706A708EF97.png" alt="تجهيزات المناسبات الخاصة" onerror="this.onerror=null; this.src='images/vip-celebration.jpg';">
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'باقات المناسبات والترتيبات الخاصة')">
+          <img src="images/64F94F89-342F-489B-A35A-5706A708EF97.png" alt="تجهيزات المناسبات الخاصة">
           <div class="gallery-overlay">
             <div class="gallery-caption">
               <h5>باقات المناسبات والاحتفالات الخاصة</h5>
@@ -652,8 +652,8 @@
         </div>
 
         <!-- 8. Wardrobe & Illuminated Vanity Mirror -->
-        <div class="gallery-item" onclick="openLightbox('images/9866DE05-6160-4A0E-AF53-C43467A989C2.png', 'خزانة الملابس والتسريحة الفندقية المضاءة')">
-          <img src="images/9866DE05-6160-4A0E-AF53-C43467A989C2.png" alt="تفاصيل الأثاث والتسريحة" onerror="this.onerror=null; this.src='images/room-details.jpg';">
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'خزانة الملابس والتسريحة الفندقية المضاءة')">
+          <img src="images/9866DE05-6160-4A0E-AF53-C43467A989C2.png" alt="تفاصيل الأثاث والتسريحة">
           <div class="gallery-overlay">
             <div class="gallery-caption">
               <h5>جودة الأثاث والتفاصيل الفندقية</h5>
@@ -1073,8 +1073,6 @@
 ----------------------------------
 أرجو تأكيد التوفر وإرسال بيانات الحجز.`;
 
-      window.open(`https://wa.me/96656041 الحجز.`;
-
       window.open(`https://wa.me/966560411778?text=${encodeURIComponent(message)}`, '_blank');
       closeBookingModal();
     }
@@ -1092,3 +1090,4 @@
   </script>
 </body>
 </html>
+
